@@ -1,0 +1,33 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+Documentation:
+  Enabled: false
+AllCops:
+  TargetRubyVersion: 3.0
+  Include:
+    - Rakefile
+    - config.ru
+    - app/controllers/**
+    - app/models/**
+    - spec/**/**
+  Exclude:
+    - app/assets/**
+    - db/**
+    - config/**
+    - script/**
+    - bin/**
+    - tmp/**
+    - vender/**
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/BlockLength:
+  Max: 105
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
