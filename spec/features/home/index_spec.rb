@@ -11,13 +11,13 @@ RSpec.describe "Home", type: :feature do
     describe "Company Services Sections" do
       it "has a description of company services" do
         within ".company_services" do
-          expect(page).to have_content("TRUTOUCH SERVICES")
+          expect(page).to have_css("h1", text: "TRUTOUCH SERVICES")
         end
       end
 
       it "has a list of company services" do
         within ".company_services_list" do
-          expect(page).to have_selector("li#hed", text: "High End Detailing")
+          expect(page).to have_selector("li", text: "High End Detailing")
         end
       end
     end
