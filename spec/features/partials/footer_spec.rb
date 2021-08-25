@@ -3,18 +3,20 @@
 require "rails_helper"
 
 RSpec.describe "Footer", type: :feature do
-  before do
-    visit root_path
-  end
-
   describe "Social Media section" do
     it "is titled Social Media" do
+      visit root_path
+
       within ".footer" do
         expect(page).to have_css("h1", text: "Social Media")
       end
     end
 
     describe "Social Media Icons" do
+      before do
+        visit root_path
+      end
+
       it "has a icon to Facebook" do
         within ".social_media_outlets" do
           expect(page).to have_css("img", id: "facebook")
@@ -53,6 +55,11 @@ RSpec.describe "Footer", type: :feature do
     end
 
     describe "Social Media Links" do
+      before do
+        Capybara.current_driver = :selenium_chrome
+        visit root_path
+      end
+
       it "has a link to Facebook" do
         within ".social_media_outlets" do
           facebook = "https://www.facebook.com/TruTouchAuto/"
@@ -117,6 +124,8 @@ RSpec.describe "Footer", type: :feature do
 
   describe "Copyrights" do
     it "has a section with TruTouch Copyrights" do
+      visit root_path
+
       within ".copyrights" do
         expect(page).to have_css("span", text: "Copyright © 2018 TruTouch - All Rights Reserved.")
       end
