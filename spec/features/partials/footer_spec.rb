@@ -91,7 +91,7 @@ RSpec.describe "Footer", type: :feature do
       end
 
       # Test is failing becuase LinkedIn requires authoriaztion to view pages
-      # sometimes, which causes this to pass and fail at diff intervols.
+      # sometimes, which causes this to pass and fail at diff intervals.
       # The link does work and does pass when account auth is not needed.
       #
       # it "has a link to Linked-In" do
