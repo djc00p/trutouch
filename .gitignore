@@ -35,5 +35,8 @@
 yarn-debug.log*
 .yarn-integrity
 
+# Ignore Test Results
+spec/test_results.txt
+
 # Ignore Testing Coverage
 coverage/
