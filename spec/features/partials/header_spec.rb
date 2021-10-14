@@ -30,12 +30,6 @@ RSpec.describe "Header", type: :feature do
       end
     end
 
-    it "has a link to the CORONAVIRUS/COVID-19 page" do
-      within ".nav_links" do
-        expect(page).to have_link("Covid-19")
-      end
-    end
-
     it "has a link to the Our Services page" do
       within ".nav_links" do
         expect(page).to have_link("Our Services")
@@ -68,24 +62,12 @@ RSpec.describe "Header", type: :feature do
   end
 
   describe "Nav Links Functionality" do
-    it "links to the Home page" do
-      visit "covid_19"
-
-      click_on "Home"
-
-      expect(page).to have_current_path(root_path, ignore_query: true)
-    end
-
-    it "links to the CORONAVIRUS/COVID-19 page" do
-      click_on "Covid-19"
-
-      expect(page).to have_current_path(covid_19_path, ignore_query: true)
-    end
-
     it "links to the Our Services page" do
-      click_on "Our Services"
+      within ".nav_links" do
+        click_on "Our Services"
 
-      expect(page).to have_current_path(our_services_path, ignore_query: true)
+        expect(page).to have_current_path(our_services_path, ignore_query: true)
+      end
     end
 
     it "links to the Products Used page" do
