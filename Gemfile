@@ -42,6 +42,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'rails-controller-testing'
+  gem 'rails_real_favicon'
 end
 
 group :development do
