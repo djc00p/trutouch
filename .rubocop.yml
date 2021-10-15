@@ -19,6 +19,7 @@ AllCops:
     - bin/**
     - tmp/**
     - vender/**
+    - spec/test_results.txt
 
 Layout/LineLength:
   Max: 120
