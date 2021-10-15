@@ -43,6 +43,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rails-controller-testing'
   gem 'rails_real_favicon'
+  gem 'dotenv-rails'
 end
 
 group :development do
