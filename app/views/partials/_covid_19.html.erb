@@ -1,0 +1,30 @@
+<div class="covid_19_info">
+  <button class="collapsible">Covid 19 Info</button>
+  <div class="covid_19_messages">
+    <div class="covid_welcome_message">
+      <h2>Hello, VALUED CUSTOMER</h2>
+      <p>While all of us, as a society deal with this very serious pandemic. TruTouch is here to support you.  We are taking every precaution to ensure our shop is safe for our customers and employees to continue business as usual.  We are following the proposed guidelines to from the World Health organization below and more.</p>
+    </div>
+    <div class="taking_steps">
+      <h1>STEPS WE ARE TAKING</h1>
+        <button class="collapsible">FREE Pickup and Drop Off Service</button>
+        <div class="covid_19_messages" id="fpdos">
+          <p>To help customers still struggling with coming out during these challenging times we are offering a pick and drop off service. This will help with limiting the amount of time outside the house.  We will need you to come out and inspect the vehicle before and after our work is complete.</p>
+        </div>
+        <button class="collapsible">Onsite or At Home Vehicle Inspections</button>
+        <div class="covid_19_messages" id="oahvi">
+          <p>All details have a base price that can be viewed on <%= link_to "Our Services", our_services_path %> page but with each base price we do an onsite inspection to evaluate additional time impacts related to doing the detail which could result in additional costs. We will ask the customer to come outside to inspect the car at pick up and drop off. We will maintain social distancing guidelines during walk of the vehicle.</p>
+        </div>
+        <button class="collapsible">Washing Hands and Wearing Protective Gear</button>
+        <div class="covid_19_messages" id="whwpg">
+          <p>We are encouraging all customers  and employees to wash their hands frequently  and wear protective gear when interacting with others.  We will also have our employees wear protective gear during the cleaning of vehicles along the pick up / drop off to customers to ensure we maintain a containment free zone.</p>
+        </div>
+        <button class="collapsible">Employees Feeling Sick</button>
+        <div class="covid_19_messages" id="efs">
+          <p>Employees feeling sick
+            We are asking our employees not feeling well to stay home and if they come in sick  we will respectfully ask them to leave to protect our customers and other employees on the premises.</p>
+        </div>
+    </div>
+  </div>
+</div>
+<%= javascript_pack_tag 'covid_19' %>
