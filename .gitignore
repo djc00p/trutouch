@@ -40,3 +40,6 @@ spec/test_results.txt
 
 # Ignore Testing Coverage
 coverage/
+
+# Ignore application configuration
+/config/application.yml
