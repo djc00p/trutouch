@@ -1,4 +1,5 @@
 DetailService.destroy_all
+TintService.destroy_all
 
 
 DetailService.create([
@@ -131,3 +132,112 @@ DetailService.create([
     Steam cleaning does not guarantee removal of all dirt."
   }
 ])
+puts "Detail Services added"
+TintService.create([
+  {
+    name: "Full Tint",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "sedan",
+    price: 190,
+    description: "Lexon window tint applied to four doors and the back window."
+  },
+  {
+    name: "Full Tint",
+    tint_manufacturer: "3M",
+    vehicle_type: "sedan",
+    price: 260,
+    description: "3M window tint applied to four doors and the back window."
+  },
+  {
+    name: "Full Tint",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "Larger SUVs and MiniVans",
+    price: 290,
+    description: "Lexon window tint applied to four doors and the back window."
+  },
+  {
+    name: "Full Tint",
+    tint_manufacturer: "3M",
+    vehicle_type: "Larger SUVs and MiniVans",
+    price: 380,
+    description: "3M window tint applied to four doors and the back window."
+  },
+  {
+    name: "One Door Window",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "any",
+    price: 55,
+    description: "Lexon window tint applied to one door window."
+  },
+  {
+    name: "One Door Window",
+    tint_manufacturer: "3M",
+    vehicle_type: "any",
+    price: 75,
+    description: "3M window tint applied to one door window."
+  },
+  {
+    name: "Back Window",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "any",
+    price: 105,
+    description: "Lexon window tint applied to a large back window"
+  },
+  {
+    name: "Back Window",
+    tint_manufacturer: "3M",
+    vehicle_type: "any",
+    price: 140,
+    description: "3M window tint applied to a large back window"
+  },
+  {
+    name: "Two Windows",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "any",
+    price: 110,
+    description: "Lexon window tint applied to two full size door windows"
+  },
+  {
+    name: "Two Windows",
+    tint_manufacturer: "3M",
+    vehicle_type: "any",
+    price: 150,
+    description: "3M window tint applied to two full size door windows"
+  },
+  {
+    name: "Full Windshield",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "any",
+    price: 120,
+    description: "Lexon window tint applied to the front windshield."
+  },
+  {
+    name: "Full Windshield",
+    tint_manufacturer: "3M",
+    vehicle_type: "any",
+    price: 160,
+    description: "3M window tint applied to the front windshield."
+  },
+  {
+    name: "Visor Windshield",
+    tint_manufacturer: "Lexen",
+    vehicle_type: "any",
+    price: 40,
+    description: "Lexon window tint applied to the top of the windshield to ensure you block the sun at the visor level, which is within the legal guidelines."
+  },
+  {
+    name: "Visor Windshield",
+    tint_manufacturer: "3M",
+    vehicle_type: "any",
+    price: 50,
+    description: "3M window tint applied to the top of the windshield to ensure you block the sun at the visor level, which is within the legal guidelines."
+  },
+  {
+    name: "Tint Removal",
+    tint_manufacturer: "none",
+    vehicle_type: "any",
+    price: 150,
+    description: "Removal of tint. (Bubble Tint Removal) Some tint removal requires more time due to the quality of tint being removed and if bubbling has occurred.  An increase in time could occur to ensure no residue remains, which could impact future tint installation. Contact us to bring car in for evaluation."
+  }
+])
+puts "Tint Services added"
