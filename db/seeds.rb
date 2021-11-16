@@ -1,5 +1,6 @@
 DetailService.destroy_all
 TintService.destroy_all
+ClearBraService.destroy_all
 
 
 DetailService.create([
@@ -133,6 +134,7 @@ DetailService.create([
   }
 ])
 puts "Detail Services added"
+
 TintService.create([
   {
     name: "Full Tint",
@@ -241,3 +243,82 @@ TintService.create([
   }
 ])
 puts "Tint Services added"
+
+ClearBraService.create([
+  {
+    name: "Partial Mask",
+    price: 520,
+    description: "Includes (1/2 hood, fender, back of mirrors)"
+  },
+  {
+    name: "Full Mask",
+    price: 800,
+    description: "Includes (1/2 hood, fender, back of mirror, front bumper)"
+  },
+  {
+    name: "Complete Full Front End",
+    price: 990,
+    description: "Includes (full hood, fender, back of the mirrors, front bumper)"
+  },
+  {
+    name: "Rocker Panel",
+    price: 100,
+    description: "Under lower side panels"
+  },
+  {
+    name: "Rear Bumper Sliver",
+    price: 20,
+    description: "Covers the bumper next to the trunk opening to help protect the bumper paint from scratches created by pull and pushing things into the trunk."
+  },
+  {
+    name: "Full Rear Bumper",
+    price: 450,
+    description: "Goal is to protect the rear bumper paint from other vehicles and parking impacts resulting in cross paint contamination."
+  },
+  {
+    name: "Full Front Bumper",
+    price: 450,
+    description: "Goal is to protect the front bumper paint from other vehicles and parking impacts resulting in cross paint contamination."
+  },
+  {
+    name: "Both Bumpers Full Coverage",
+    price: 860,
+    description: "Goal is to protect the both bumpers paint from other vehicles and parking impacts resulting in cross paint contamination."
+  },
+  {
+    name: "Door Handles - 2",
+    price: 15,
+    description: "Underside of door handles."
+  },
+  {
+    name: "Door Handles - 4",
+    price: 30,
+    description: "Underside of door handles."
+  },
+  {
+    name: "Hatch Handle",
+    price: 15,
+    description: "Underside of the back door hatch"
+  },
+  {
+    name: "Headlights",
+    price: 40,
+    description: "Helps to reduce damage that occurs over time due to rocks and oxidation."
+  },
+  {
+    name: "Fog Lights",
+    price: 25,
+    description: "Helps to reduce damage that occurs over time due to rocks and oxidation."
+  },
+  {
+    name: "Door Edges",
+    price: 50,
+    description: "Protects paint while a person transition in and out of the car."
+  },
+  {
+    name: "Clearbra Removal",
+    price: 150,
+    description: "Removal of old clearbra.  Prices could change if more than a full mask removal is required."
+  }
+])
+puts "Clear Bra Services added"
