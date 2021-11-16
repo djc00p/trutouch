@@ -7,5 +7,6 @@ class CreateDetailServices < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index "detail_services", ["name"], unique: true
   end
 end

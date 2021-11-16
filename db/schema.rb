@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_180244) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_detail_services_on_name", unique: true
   end
 
 end

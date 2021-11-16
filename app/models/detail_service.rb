@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DetailService < ApplicationRecord
-  validates_uniqueness_of :name
-  validates_presence_of :base_price
-  validates_presence_of :description
+  validates :name, uniqueness: true
+  validates :base_price, presence: true
+  validates :description, presence: true
 end
