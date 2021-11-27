@@ -5,6 +5,16 @@ ClearBraService.destroy_all
 
 DetailService.create([
   {
+    name: "Interior Detail",
+    base_price: 210,
+    description: "Our Interior Detail package includes an in depth cleaning of the following; seats, console, headliners, inside door panels, carpet, dressing (give it a shine), vacuum, shampoo. Excludes trunks unless requested (must be empty). Remove all personal items and trash before detail. Cost could increase upon inspection."
+  },
+  {
+    name: "Exterior Detail",
+    base_price: 210,
+    description: "Our Exterior Detail package includes an in depth cleaning of the following; the engine bay, an ultra foam shampoo exterior wash, spraying off tires and rims plus tire dressing, minor paint correction, door jams, windows outside, exterior trim revitalization, Polish and butter wax finish."
+  },
+  {
     name: "Full Detail",
     base_price: 320,
     description: "With our Full Detail package you will recieve both an Interior and Exterior detail."
@@ -18,16 +28,6 @@ DetailService.create([
     name: "Presidential Full Detail",
     base_price: 420,
     description: "With our Presidential Full Detail package you receive everything that comes with the Full Detail Package, alonge with a ultra-premium patriot wax sealant. This longer lasting sealant, protects the clear coat from the elements. Finalized with a Brilliant Glaze, adding amazing depth and shine."
-  },
-  {
-    name: "Interior Detail",
-    base_price: 210,
-    description: "Our Interior Detail package includes an in depth cleaning of the following; seats, console, headliners, inside door panels, carpet, dressing (give it a shine), vacuum, shampoo. Excludes trunks unless requested (must be empty). Remove all personal items and trash before detail. Cost could increase upon inspection."
-  },
-  {
-    name: "Exterior Detail",
-    base_price: 210,
-    description: "Our Exterior Detail package includes an in depth cleaning of the following; the engine bay, an ultra foam shampoo exterior wash, spraying off tires and rims plus tire dressing, minor paint correction, door jams, windows outside, exterior trim revitalization, Polish and butter wax finish."
   },
   {
     name: "High-End Wash/Wax Revitalization",
@@ -62,14 +62,14 @@ DetailService.create([
     Please note excessive hazardous waste will have an up charge."
   },
   {
-    name: "Steam Cleaning",
-    base_price: 75,
-    description: "Steamer is used inorder to sterilize interior panels, steering wheel, front dash, leather seats, exterior. All surface areas that can withstand 175 to 250 degrees heat."
+    name: "Odor Bomb",
+    base_price: 95,
+    description: "Used in interior to kill germs, bacteria, mold/mildew, and viruses. Eliminates odors (smoke, pets, and many others). This product is industrial strength incorporates Chlorine Dioxide used for 50 yrs in various industries incl. surgical equipment sterilization."
   },
   {
     name: "Odor & Disinfection Bomb",
     base_price: 130,
-    description: "Used in interior to kill germs, bacteria, mold/mildew, and viruses.  Eliminates odors (smoke, pets, and many others).   This product is industrial strength incorporates Chlorine Dioxide used for 50 yrs in various industries incl. surgical equipment sterilization.
+    description: "Used in interior to kill germs, bacteria, mold/mildew, and viruses. Eliminates odors (smoke, pets, and many others). This product is industrial strength incorporates Chlorine Dioxide used for 50 yrs in various industries incl. surgical equipment sterilization.
 
     Available in a details with interiors for $95 dollars
     Recommend one uses the bomb with an interior detail to ensure all smells disappear / safety measures take hold
@@ -124,6 +124,11 @@ DetailService.create([
     Upgrade to a high-end wash / vac, full detail, or exterior detail for more service options"
   },
   {
+    name: "Steam Cleaning",
+    base_price: 75,
+    description: "Steamer is used inorder to sterilize interior panels, steering wheel, front dash, leather seats, exterior. All surface areas that can withstand 175 to 250 degrees heat."
+  },
+  {
     name: "Steam Cleaning Disinfection",
     base_price: 110,
     description: "Used on interior panels, steering wheel, front dash, leather seats, exterior. All surface areas that can withstand 175 to 250 degrees heat. Only heat of 175 or greater can kill bacteria and viruses based on CDC guidance.
@@ -133,7 +138,7 @@ DetailService.create([
     Steam cleaning does not guarantee removal of all dirt."
   }
 ])
-puts "Detail Services added"
+puts "Added #{DetailService.all.count} Detail Services"
 
 TintService.create([
   {
@@ -242,7 +247,7 @@ TintService.create([
     description: "Removal of tint. (Bubble Tint Removal) Some tint removal requires more time due to the quality of tint being removed and if bubbling has occurred.  An increase in time could occur to ensure no residue remains, which could impact future tint installation. Contact us to bring car in for evaluation."
   }
 ])
-puts "Tint Services added"
+puts "Added #{TintService.all.count} Tint Services"
 
 ClearBraService.create([
   {
@@ -321,4 +326,4 @@ ClearBraService.create([
     description: "Removal of old clearbra.  Prices could change if more than a full mask removal is required."
   }
 ])
-puts "Clear Bra Services added"
+puts "Added #{ClearBraService.all.count} Clear Bra Services"
