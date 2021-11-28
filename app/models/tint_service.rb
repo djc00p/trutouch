@@ -6,4 +6,9 @@ class TintService < ApplicationRecord
   validates :vehicle_type, presence: true
   validates :price, presence: true
   validates :description, presence: true
+
+  # Class Methods
+  def self.tint_services
+    all
+  end
 end
