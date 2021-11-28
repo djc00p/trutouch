@@ -2,10 +2,10 @@
 
 FactoryBot.define do
   factory :tint_service do
-    name { "MyString" }
-    tint_manufacturer { "MyString" }
-    vehicle_type { "MyString" }
-    price { "" }
-    description { "MyText" }
+    name { "Full Tint" }
+    tint_manufacturer { "3m" }
+    vehicle_type { "any" }
+    price { rand(10..100) }
+    description { "Window tint" }
   end
 end
