@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :detail_service do
-    name { "MyString" }
-    base_price { "" }
-    description { "MyText" }
+    sequence(:name) { |n| "Joe Mama#{n}" }
+    base_price { rand(10..100) }
+    description { "Cleaning services" }
   end
 end

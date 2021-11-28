@@ -62,8 +62,17 @@ RSpec.describe "Header", type: :feature do
   end
 
   describe "Nav Links Functionality" do
+    let(:details) do
+      s = ["Executive Full Detail", "Full Detail", "Odor Bomb", "Steam Cleaning"]
+      create_list(:detail_service, 4) do |service, i|
+        service.name = (s[i]).to_s
+        service.save
+      end
+    end
+
     it "links to the Our Services page" do
       within ".nav_links" do
+        details
         click_on "Our Services"
 
         expect(page).to have_current_path(our_services_path, ignore_query: true)
