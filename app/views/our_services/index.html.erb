@@ -74,21 +74,40 @@
       </div>
     </div>
     <div id="tint_services" class="tabcontent">
-      <h2>TINT INFORMATION</h2>
-      <span>Tint % Ranges</span>
-
-      <span>
-        Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
-      </span>
-
-      <span>
-        We use top of the line tint 3M and Lexen.  Please see pricing below.
-      </span>
-
-      <h2>TINT SERVICES</h2>
-      <p>
-        Any customer wanting their personal vehicle to receive tint service can select from any of the tint options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. TruTouch uses two tint companies and both sale top quality tint. TruTouch receives Lexen at a lower purchase price, and we are passing that saving on to you! Please view our "Products Used" page for tint details.
-      </p>
+      <div id="tint_info"class="">
+        <h2>TINT INFORMATION</h2>
+        <span>Tint % Ranges</span>
+        <span>
+          Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
+        </span>
+        <span>
+          We use top of the line tint 3M and Lexen.  Please see pricing below.
+        </span>
+      </div>
+      <div id="tint_service_header"class="">
+        <h1>TINT SERVICES</h1>
+        <p>
+          Any customer wanting their personal vehicle to receive tint service can select from any of the tint options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. TruTouch uses two tint companies and both sale top quality tint. TruTouch receives Lexen at a lower purchase price, and we are passing that saving on to you! Please view our "Products Used" page for tint details.
+        </p>
+      </div>
+      <div id="tso" class="tabcontent">
+        <h1>Additional Detail Services</h1>
+        <% @ts.each do |t| %>
+        <section id="service-<%= t.id %>">
+          <h2><%=t.name %></h2>
+          <ul>
+            <li>Tint Manufacturer: <%= t.tint_manufacturer %></li>
+            <li>Vehicle Type: <%= t.vehicle_type %></li>
+            <li>Price: $<%= t.price.to_s %></li>
+            <li>
+              <p>
+                <%= t.description %>
+              </p>
+            </li>
+          </ul>
+        </section>
+        <% end %>
+      </div>
     </div>
     <div id="clear_bra_services" class="tabcontent">
       <h2>CLEAR BRA / MASK SERVICES</h2>
