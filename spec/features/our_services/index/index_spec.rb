@@ -22,7 +22,7 @@ RSpec.describe "Our Services", type: :feature do
 
     describe "Detail Services Section" do
       it "has a h3 for Detail Services" do
-        within "#ds_service_header" do
+        within "#detail_service_header" do
           expect(page).to have_css("h1", text: "Detail Services")
         end
       end

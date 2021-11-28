@@ -30,19 +30,19 @@ RSpec.describe "Detail Services", type: :feature do
     let(:obd) { DetailService.select_detail("Odor Bomb") }
 
     it "has a h1 with Detail Services" do
-      within "#ds_service_header" do
+      within "#detail_service_header" do
         expect(page).to have_css("h1", text: "Detail Services")
       end
     end
 
     it "has a h4 with Additional Charges" do
-      within "#ds_service_header" do
+      within "#detail_service_header" do
         expect(page).to have_css("h4", text: "Additional Charges")
       end
     end
 
     it "has a list of additional charges to be added to the detail services." do
-      within "#ds_service_header" do
+      within "#detail_service_header" do
         expect(page).to have_css("ul/li", text: "Optional Odor Bomb $#{obd.base_price}")
       end
     end
