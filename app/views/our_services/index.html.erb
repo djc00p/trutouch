@@ -76,13 +76,14 @@
     <div id="tint_services" class="tabcontent">
       <div id="tint_info"class="">
         <h2>TINT INFORMATION</h2>
-        <span>Tint % Ranges</span>
-        <span>
+        <h4>Tint % Ranges</h4>
+        <%= image_tag "tint_percentage_example_img.jpeg", alt: "Tint Percentage Example", id: "logo"%>
+        <p>
           Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
-        </span>
-        <span>
+        </p>
+        <p>
           We use top of the line tint 3M and Lexen.  Please see pricing below.
-        </span>
+        </p>
       </div>
       <div id="tint_service_header"class="">
         <h1>TINT SERVICES</h1>
@@ -91,7 +92,6 @@
         </p>
       </div>
       <div id="tso" class="tabcontent">
-        <h1>Additional Detail Services</h1>
         <% @ts.each do |t| %>
         <section id="service-<%= t.id %>">
           <h2><%=t.name %></h2>
