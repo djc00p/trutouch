@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :clear_bra_service do
-    name { "MyString" }
+    sequence(:name) { |n| "Clear Bra#{n}" }
     price { 1 }
     description { "MyText" }
   end
