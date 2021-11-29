@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Tint Services", type: :feature do
+RSpec.describe "Our Services", type: :feature do
   let(:s) do
     [
       "Executive Full Detail",
@@ -40,7 +40,7 @@ RSpec.describe "Tint Services", type: :feature do
     visit our_services_path
   end
 
-  describe "Section" do
+  describe "Tint Services Section" do
     let(:tsc) { TintService.tint_services.count }
 
     it "shows the exact amount of Tint Service options available" do

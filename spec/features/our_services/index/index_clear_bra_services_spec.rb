@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Clear Bra Services", type: :feature do
+RSpec.describe "Our Services", type: :feature do
   let(:s) do
     [
       "Executive Full Detail",
@@ -39,7 +39,7 @@ RSpec.describe "Clear Bra Services", type: :feature do
     visit our_services_path
   end
 
-  describe "Section" do
+  describe "Clear Bra Services Section" do
     let(:tsc) { ClearBraService.all.count }
 
     it "has a h1 with Clear Bra Services" do

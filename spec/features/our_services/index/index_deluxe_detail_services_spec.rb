@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Detail Services", type: :feature do
+RSpec.describe "Our Services", type: :feature do
   let(:s) do
     [
       "Executive Full Detail",
