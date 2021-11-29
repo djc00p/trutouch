@@ -75,9 +75,9 @@
     </div>
     <div id="tint_services" class="tabcontent">
       <div id="tint_info"class="">
-        <h2>TINT INFORMATION</h2>
+        <h2>Tint Information</h2>
         <h4>Tint % Ranges</h4>
-        <%= image_tag "tint_percentage_example_img.jpeg", alt: "Tint Percentage Example", id: "logo"%>
+        <%= image_tag "tint_percentage_example_img.jpeg", alt: "Tint Percentage Example", id: "tpr"%>
         <p>
           Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
         </p>
@@ -86,7 +86,7 @@
         </p>
       </div>
       <div id="tint_service_header"class="">
-        <h1>TINT SERVICES</h1>
+        <h1>Tint Services</h1>
         <p>
           Any customer wanting their personal vehicle to receive tint service can select from any of the tint options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. TruTouch uses two tint companies and both sale top quality tint. TruTouch receives Lexen at a lower purchase price, and we are passing that saving on to you! Please view our "Products Used" page for tint details.
         </p>
@@ -110,10 +110,27 @@
       </div>
     </div>
     <div id="clear_bra_services" class="tabcontent">
-      <h2>CLEAR BRA / MASK SERVICES</h2>
-      <p>
-        Any customer wanting their personal vehicle to receive clearbra or a mask service completed can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. We do offer vehicle pick up / drop off services for Free or a drop off at appointment time can be done.
-      </p>
+      <div id="cb_service_header" class="">
+        <h1>Clear Bra / Mask Services</h1>
+        <p>
+          Any customer wanting their personal vehicle to receive clearbra or a mask service completed can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. We do offer vehicle pick up / drop off services for Free or a drop off at appointment time can be done.
+        </p>
+      </div>
+      <div id="cbso" class="tabcontent">
+        <% @cbs.each do |cb| %>
+        <section id="service-<%= cb.id %>">
+          <h2><%=cb.name %></h2>
+          <ul>
+            <li>Price: $<%= cb.price.to_s %></li>
+            <li>
+              <p>
+                <%= cb.description %>
+              </p>
+            </li>
+          </ul>
+        </section>
+        <% end %>
+      </div>
     </div>
     <div id="lbprs" class="tabcontent">
       <h2>LOWER BODY PAINT REPAIR SERVICES</h2>
