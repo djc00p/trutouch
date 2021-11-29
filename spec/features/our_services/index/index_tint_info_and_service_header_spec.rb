@@ -52,6 +52,7 @@ RSpec.describe "Tint Services", type: :feature do
         expect(page).to have_css("h4", text: "Tint % Ranges")
       end
     end
+
     it "has a example image with Tint % Ranges" do
       within "#tint_info" do
         expect(page).to have_css("img", id: "tpr")
