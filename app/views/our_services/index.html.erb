@@ -4,152 +4,156 @@
     <h2>FREE PICK UP / DROP OFF for all services</h2>
   </div>
   <div class="our_services">
-    <button class="tablink" onclick="openPage('detail_services', this, 'red')" id="defaultOpen">Detail Services</button>
-    <button class="tablink" onclick="openPage('tint_services', this, 'green')">Tint Services</button>
-    <button class="tablink" onclick="openPage('clear_bra_services', this, 'blue')">Clear Bra / Mask Services</button>
-    <button class="tablink" onclick="openPage('lbprs', this, 'orange')">Lower Body Paint Repair Services</button>
-    <div id="detail_services" class="tabcontent">
-      <div id="detail_service_header" class="service_header">
-        <h1>Detail Services</h1>
-        <p>
-          Detail services below have a base price with potential increases related to vehicles sizes and additional services. If during a detail or time of inspection a hazardous waste is found a fee will be added. Customers will be contacted before any additional work is completed. Please check for additional information below. All detail services take a minimum of 3-hrs and we will contact you once the service is complete. We offer vehicle pick up / drop off for FREE, or you can drop off and pick up.
-        </p>
-        <h4>Additional Charges</h4>
-        <ul>
-          <li>Compact/Lg. Sedans $0</li>
-          <li>SUV $40.00</li>
-          <li>Mini-vans/Lg. SUV/Trucks $60.00</li>
-          <li>Optional Odor Bomb $<%= @ds.select_detail("Odor Bomb").base_price.to_s %> added to a Details Service</li>
-          <li>Optional Steam Cleaning $<%= @ds.select_detail("Steam Cleaning").base_price.to_s %> added to a Details Service</li>
-          <li>Optional Minor Paint Correction $60 added to a Details Service</li>
-        </ul>
-      </div>
-      <div id="main_ds" class="tabcontent">
-        <h1>Main Detail Services</h1>
-        <% @mds.each do |ds| %>
-        <section id="service-<%= ds.id %>">
-          <h2><%=ds.name %></h2>
-          <ul>
-            <li>Base Price: $<%= ds.base_price.to_s %></li>
-            <li>
-              <p>
-                <%= ds.description %>
-              </p>
-            </li>
-          </ul>
-        </section>
-        <% end %>
-      </div>
-      <div id="deluxe_ds" class="tabcontent">
-        <h1>Deluxe Detail Services</h1>
-        <% @dds.each do |ds| %>
-        <section id="service-<%= ds.id %>">
-          <h2><%=ds.name %></h2>
-          <ul>
-            <li>Base Price: $<%= ds.base_price.to_s %></li>
-            <li>
-              <p>
-                <%= ds.description %>
-              </p>
-            </li>
-          </ul>
-        </section>
-        <% end %>
-      </div>
-      <div id="additional_ds" class="tabcontent">
-        <h1>Additional Detail Services</h1>
-        <% @ads.each do |ds| %>
-        <section id="service-<%= ds.id %>">
-          <h2><%=ds.name %></h2>
-          <ul>
-            <li>Base Price: $<%= ds.base_price.to_s %></li>
-            <li>
-              <p>
-                <%= ds.description %>
-              </p>
-            </li>
-          </ul>
-        </section>
-        <% end %>
-      </div>
+    <div class="">
+      <button class="tablink" id="defaultOpen">Detail Services</button>
+      <button class="tablink">Tint Services</button>
+      <button class="tablink">Clear Bra / Mask Services</button>
+      <button class="tablink">Lower Body Paint Repair Services</button>
     </div>
-    <div id="tint_services" class="tabcontent">
-      <div id="tint_info"class="">
-        <h2>Tint Information</h2>
-        <h4>Tint % Ranges</h4>
-        <%= image_tag "tint_percentage_example_img.jpeg", alt: "Tint Percentage Example", id: "tpr"%>
-        <p>
-          Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
-        </p>
-        <p>
-          We use top of the line tint 3M and Lexen.  Please see pricing below.
-        </p>
-      </div>
-      <div id="tint_service_header"class="">
-        <h1>Tint Services</h1>
-        <p>
-          Any customer wanting their personal vehicle to receive tint service can select from any of the tint options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. TruTouch uses two tint companies and both sale top quality tint. TruTouch receives Lexen at a lower purchase price, and we are passing that saving on to you! Please view our "Products Used" page for tint details.
-        </p>
-      </div>
-      <div id="tso" class="tabcontent">
-        <% @ts.each do |t| %>
-        <section id="service-<%= t.id %>">
-          <h2><%=t.name %></h2>
+    <div class="services">
+      <div id="detail_services" class="tabcontent">
+        <div id="detail_service_header" class="service_header">
+          <h1>Detail Services</h1>
+          <p>
+            Detail services below have a base price with potential increases related to vehicles sizes and additional services. If during a detail or time of inspection a hazardous waste is found a fee will be added. Customers will be contacted before any additional work is completed. Please check for additional information below. All detail services take a minimum of 3-hrs and we will contact you once the service is complete. We offer vehicle pick up / drop off for FREE, or you can drop off and pick up.
+          </p>
+          <h4>Additional Charges</h4>
           <ul>
-            <li>Tint Manufacturer: <%= t.tint_manufacturer %></li>
-            <li>Vehicle Type: <%= t.vehicle_type %></li>
-            <li>Price: $<%= t.price.to_s %></li>
-            <li>
-              <p>
-                <%= t.description %>
-              </p>
-            </li>
+            <li>Compact/Lg. Sedans $0</li>
+            <li>SUV $40.00</li>
+            <li>Mini-vans/Lg. SUV/Trucks $60.00</li>
+            <li>Optional Odor Bomb $<%= @ds.select_detail("Odor Bomb").base_price.to_s %> added to a Details Service</li>
+            <li>Optional Steam Cleaning $<%= @ds.select_detail("Steam Cleaning").base_price.to_s %> added to a Details Service</li>
+            <li>Optional Minor Paint Correction $60 added to a Details Service</li>
           </ul>
-        </section>
-        <% end %>
+        </div>
+        <div id="main_ds" class="">
+          <h1>Main Detail Services</h1>
+          <% @mds.each do |ds| %>
+          <section id="service-<%= ds.id %>">
+            <h2><%=ds.name %></h2>
+            <ul>
+              <li>Base Price: $<%= ds.base_price.to_s %></li>
+              <li>
+                <p>
+                  <%= ds.description %>
+                </p>
+              </li>
+            </ul>
+          </section>
+          <% end %>
+        </div>
+        <div id="deluxe_ds" class="">
+          <h1>Deluxe Detail Services</h1>
+          <% @dds.each do |ds| %>
+          <section id="service-<%= ds.id %>">
+            <h2><%=ds.name %></h2>
+            <ul>
+              <li>Base Price: $<%= ds.base_price.to_s %></li>
+              <li>
+                <p>
+                  <%= ds.description %>
+                </p>
+              </li>
+            </ul>
+          </section>
+          <% end %>
+        </div>
+        <div id="additional_ds" class="">
+          <h1>Additional Detail Services</h1>
+          <% @ads.each do |ds| %>
+          <section id="service-<%= ds.id %>">
+            <h2><%=ds.name %></h2>
+            <ul>
+              <li>Base Price: $<%= ds.base_price.to_s %></li>
+              <li>
+                <p>
+                  <%= ds.description %>
+                </p>
+              </li>
+            </ul>
+          </section>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div id="clear_bra_services" class="tabcontent">
-      <div id="cb_service_header" class="">
-        <h1>Clear Bra / Mask Services</h1>
+      <div id="tint_services" class="tabcontent">
+        <div id="tint_info"class="">
+          <h2>Tint Information</h2>
+          <h4>Tint % Ranges</h4>
+          <%= image_tag "tint_percentage_example_img.jpeg", alt: "Tint Percentage Example", id: "tpr"%>
+          <p>
+            Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
+          </p>
+          <p>
+            We use top of the line tint 3M and Lexen.  Please see pricing below.
+          </p>
+        </div>
+        <div id="tint_service_header"class="">
+          <h1>Tint Services</h1>
+          <p>
+            Any customer wanting their personal vehicle to receive tint service can select from any of the tint options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. TruTouch uses two tint companies and both sale top quality tint. TruTouch receives Lexen at a lower purchase price, and we are passing that saving on to you! Please view our "Products Used" page for tint details.
+          </p>
+        </div>
+        <div id="tso" class="">
+          <% @ts.each do |t| %>
+          <section id="service-<%= t.id %>">
+            <h2><%=t.name %></h2>
+            <ul>
+              <li>Tint Manufacturer: <%= t.tint_manufacturer %></li>
+              <li>Vehicle Type: <%= t.vehicle_type %></li>
+              <li>Price: $<%= t.price.to_s %></li>
+              <li>
+                <p>
+                  <%= t.description %>
+                </p>
+              </li>
+            </ul>
+          </section>
+          <% end %>
+        </div>
+      </div>
+      <div id="clear_bra_services" class="tabcontent">
+        <div id="cb_service_header" class="">
+          <h1>Clear Bra / Mask Services</h1>
+          <p>
+            Any customer wanting their personal vehicle to receive clearbra or a mask service completed can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. We do offer vehicle pick up / drop off services for Free or a drop off at appointment time can be done.
+          </p>
+        </div>
+        <div id="cbso" class="">
+          <% @cbs.each do |cb| %>
+          <section id="service-<%= cb.id %>">
+            <h2><%=cb.name %></h2>
+            <ul>
+              <li>Price: $<%= cb.price.to_s %></li>
+              <li>
+                <p>
+                  <%= cb.description %>
+                </p>
+              </li>
+            </ul>
+          </section>
+          <% end %>
+        </div>
+      </div>
+      <div id="lbprs" class="tabcontent">
+        <h2>LOWER BODY PAINT REPAIR SERVICES</h2>
         <p>
-          Any customer wanting their personal vehicle to receive clearbra or a mask service completed can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. We do offer vehicle pick up / drop off services for Free or a drop off at appointment time can be done.
+          Any customer wanting their personal vehicle to receive lower body paint and repair services can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can last up to 6+ hrs. We do offer vehicle pick up / drop off services or a drop off for assessment or appointments.
+        </p>
+        <h2>Assessment Required for ALL Services</h2>
+        <h3>Rear Bumper Repairs / Paint</h3>
+        <p>
+          Repair cost varies based on the rear bumpers damage due to labor requirements, product needs, and hours for completion.
+        </p>
+        <h3>Front Bumper Repairs / Paint</h3>
+        <p>
+          Repair cost varies based on the front bumpers damage due to labor requirements, fog lights or electrical impacts, product needs, and hours for completion.
+        </p>
+        <h3>Side Molding Repairs / Paint</h3>
+        <p>
+          Any vehicles side molding.
         </p>
       </div>
-      <div id="cbso" class="tabcontent">
-        <% @cbs.each do |cb| %>
-        <section id="service-<%= cb.id %>">
-          <h2><%=cb.name %></h2>
-          <ul>
-            <li>Price: $<%= cb.price.to_s %></li>
-            <li>
-              <p>
-                <%= cb.description %>
-              </p>
-            </li>
-          </ul>
-        </section>
-        <% end %>
-      </div>
-    </div>
-    <div id="lbprs" class="tabcontent">
-      <h2>LOWER BODY PAINT REPAIR SERVICES</h2>
-      <p>
-        Any customer wanting their personal vehicle to receive lower body paint and repair services can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can last up to 6+ hrs. We do offer vehicle pick up / drop off services or a drop off for assessment or appointments.
-      </p>
-      <h2>Assessment Required for ALL Services</h2>
-      <h3>Rear Bumper Repairs / Paint</h3>
-      <p>
-        Repair cost varies based on the rear bumpers damage due to labor requirements, product needs, and hours for completion.
-      </p>
-      <h3>Front Bumper Repairs / Paint</h3>
-      <p>
-        Repair cost varies based on the front bumpers damage due to labor requirements, fog lights or electrical impacts, product needs, and hours for completion.
-      </p>
-      <h3>Side Molding Repairs / Paint</h3>
-      <p>
-        Any vehicles side molding.
-      </p>
     </div>
   </div>
   <footer>
