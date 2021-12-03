@@ -27,6 +27,7 @@ development:
     adapter: postgresql
   primary_replica:
     database: trutouch_development
+    replica: true
     adapter: postgresql
 
   # The specified database role being used to connect to postgres.
@@ -60,6 +61,7 @@ test:
     adapter: postgresql
   primary_replica:
     database: trutouch_test
+    replica: true
     adapter: postgresql
 
 # As with config/credentials.yml, you never want to store sensitive information,
