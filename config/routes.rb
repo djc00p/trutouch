@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users, except: :index
   root 'home#index'
 
   get '/covid_19', to: 'covid_19#index'

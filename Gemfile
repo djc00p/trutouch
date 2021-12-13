@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
 # Use Active Storage variant
@@ -43,6 +43,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'rails-controller-testing'
