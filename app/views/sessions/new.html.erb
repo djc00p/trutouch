@@ -1,0 +1,18 @@
+
+<div class="userSignIn">
+  <section>
+    <%= form_for :session, url: sign_in_path do |f| %>
+      <div>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+      </div>
+      <div>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </div>
+      <%= f.submit 'Sign In' %>
+    <% end %>
+  </section>
+
+  <p>Don't have an account? <%= link_to 'Sign up now.', sign_up_path %></p>
+</div>

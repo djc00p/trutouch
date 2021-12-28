@@ -1,15 +1,19 @@
 <div class="header">
+  <div>
     <div class="logo">
       <a href="/">
         <%= image_tag "TruTouch_logo.jpeg", alt: "TruTouch Logo", id: "logo"%>
       </a>
     </div>
-    <div class="nav_links">
-      <%= link_to "Home", root_path %>
-      <%= link_to "Our Services", our_services_path %>
-      <%= link_to "Products Used", products_used_path %>
-      <%= link_to "Portfolio", portfolio_path %>
-      <%= link_to "Appointment", appointment_path %>
-      <%= link_to "Contact Us", contact_us_path %>
-    </div>
+    <%= render "partials/sessions" %>
+  </div>
+  <nav class="nav_links">
+    <%= link_to "Home", root_path %>
+    <%= link_to "Our Services", our_services_path %>
+    <%= link_to "Products Used", products_used_path %>
+    <%= link_to "Portfolio", portfolio_path %>
+    <%= link_to "Appointment", appointment_path %>
+    <%= link_to "Contact Us", contact_us_path %>
+  </nav>
 </div>
+<%= render "partials/covid_19" %>

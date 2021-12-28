@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  resources :users, except: :index
   root 'home#index'
 
-  get '/covid_19', to: 'covid_19#index'
+  # Users
+  resources :users, except: [:index, :new], path: '/profile', as: 'profile'
+  get '/sign_up', to: 'users#new', as: "sign_up"
+
+  # User Sign In and Out
+  get '/sign_in', to: 'sessions#new'
+  post '/sign_in', to: 'sessions#create'
+  delete '/sign_out', to: 'sessions#destroy'
+
+  # Navbar Links
   get '/our_services', to: 'our_services#index'
   get '/products_used', to: 'products_used#index'
   get '/portfolio', to: 'portfolio#index'

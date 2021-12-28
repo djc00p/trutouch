@@ -1,6 +1,6 @@
-<%= form_with(model: user) do |form| %>
+<%= form_with(model: user, :url => profile_path(user.id) ) do |form| %>
   <% if user.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-warning">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>

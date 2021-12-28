@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <%= render @user %>
 
 <div>
-  <%= button_to "Edit Profile", edit_user_path(@user) %>
-  <%= button_to "Destroy", user_path(@user), method: :delete %>
+  <%= button_to "Edit Profile", edit_profile_path(@user) %>
+  <%= button_to "Delete Profile", profile_path(@user), method: :delete, color: "red"%>
 </div>

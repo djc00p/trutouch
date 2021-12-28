@@ -13,8 +13,12 @@
   </head>
   <body>
     <%= render "partials/header" %>
-    <%= render "partials/covid_19" %>
     <div class="container-fluid">
+      <% flash.each do |type, msg| %>
+        <div class="alert alert-<%= type %>">
+          <%= msg %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
     <%= render "partials/footer" %>

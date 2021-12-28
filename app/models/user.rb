@@ -1,7 +1,7 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :phone_number
-  validates_uniqueness_of :email
+  validates :first_name, :last_name, :phone_number, :email, presence: true
+  validates :phone_number, :email, uniqueness: true # rubocop:disable Rails/UniqueValidationWithoutIndex
   has_secure_password
 end
