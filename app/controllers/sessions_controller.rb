@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def new
     if current_user
       flash[:danger] = "Already Signed In"
-      redirect_to profile_url(current_user), status: :unprocessable_entity
+      redirect_to profile_url(current_user)
     else
       @new ||= User.new
     end
