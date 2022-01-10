@@ -8,7 +8,12 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    if current_user
+      flash[:danger] = "Already Signed In! Please sign out to create a new account."
+      redirect_to profile_url(current_user)
+    else
+      @new = User.new
+    end
   end
 
   # GET /users/1/edit
