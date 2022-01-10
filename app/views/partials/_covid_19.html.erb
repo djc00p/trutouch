@@ -1,29 +1,72 @@
 <div class="covid_19_info">
-  <button class="collapsible">Covid 19 Info</button>
-  <div class="covid_19_messages">
-    <div class="covid_welcome_message">
-      <h2>Hello, VALUED CUSTOMER</h2>
-      <p>While all of us, as a society deal with this very serious pandemic. TruTouch is here to support you.  We are taking every precaution to ensure our shop is safe for our customers and employees to continue business as usual.  We are following the proposed guidelines to from the World Health organization below and more.</p>
-    </div>
-    <div class="taking_steps">
-      <h1>STEPS WE ARE TAKING</h1>
-        <button class="collapsible">FREE Pickup and Drop Off Service</button>
-        <div class="covid_19_messages" id="fpdos">
-          <p>To help customers still struggling with coming out during these challenging times we are offering a pick and drop off service. This will help with limiting the amount of time outside the house.  We will need you to come out and inspect the vehicle before and after our work is complete.</p>
+  <button class="c19i" type="button" data-toggle="collapse" data-target="#c19m" aria-expanded="false" aria-controls="c19m">
+    Covid 19 Info
+  </button>
+  <div id="c19m" class="collapse">
+    <div class="card card-body">
+      <div class="covid_welcome_message">
+        <h1 class="card-title">Hello, VALUED CUSTOMER</h2>
+        <p class="card-text">While all of us, as a society deal with this very serious pandemic. TruTouch is here to support you.  We are taking every precaution to ensure our shop is safe for our customers and employees to continue business as usual.  We are following the proposed guidelines to from the World Health organization below and more.</p>
+      </div>
+      <div class="accordion" id="accordionSwat">
+        <h1>STEPS WE ARE TAKING</h1>
+        <div class="card">
+          <div class="card-header" id="headingFpdos">
+            <h2 class="mb-0 text-center">
+              <button class="btn c19i" type="button" data-toggle="collapse" data-target="#collapseFpdos" aria-expanded="true" aria-controls="collapseFpdos">
+                FREE Pickup and Drop Off Service
+              </button>
+            </h2>
+          </div>
+          <div id="collapseFpdos" class="collapse show" aria-labelledby="headingFpdos" data-parent="#accordionSwat">
+            <div class="card-body">
+              To help customers still struggling with coming out during these challenging times we are offering a pick and drop off service. This will help with limiting the amount of time outside the house.  We will need you to come out and inspect the vehicle before and after our work is complete.
+            </div>
+          </div>
         </div>
-        <button class="collapsible">Onsite or At Home Vehicle Inspections</button>
-        <div class="covid_19_messages" id="oahvi">
-          <p>All details have a base price that can be viewed on <%= link_to "Our Services", our_services_path %> page but with each base price we do an onsite inspection to evaluate additional time impacts related to doing the detail which could result in additional costs. We will ask the customer to come outside to inspect the car at pick up and drop off. We will maintain social distancing guidelines during walk of the vehicle.</p>
+        <div class="card">
+          <div class="card-header" id="headingOahvi">
+            <h2 class="mb-0 text-center">
+              <button class="btn c19i" type="button" data-toggle="collapse" data-target="#collapseOahvi" aria-expanded="false" aria-controls="collapseOahvi">
+                Onsite or At Home Vehicle Inspections
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOahvi" class="collapse" aria-labelledby="headingOahvi" data-parent="#accordionSwat">
+            <div class="card-body">
+              All details have a base price that can be viewed on <%= link_to "Our Services", our_services_path %> page but with each base price we do an onsite inspection to evaluate additional time impacts related to doing the detail which could result in additional costs. We will ask the customer to come outside to inspect the car at pick up and drop off. We will maintain social distancing guidelines during walk of the vehicle.
+            </div>
+          </div>
         </div>
-        <button class="collapsible">Washing Hands and Wearing Protective Gear</button>
-        <div class="covid_19_messages" id="whwpg">
-          <p>We are encouraging all customers  and employees to wash their hands frequently  and wear protective gear when interacting with others.  We will also have our employees wear protective gear during the cleaning of vehicles along the pick up / drop off to customers to ensure we maintain a containment free zone.</p>
+        <div class="card">
+          <div class="card-header" id="headingWhwpg">
+            <h2 class="mb-0 text-center">
+              <button class="btn c19i" type="button" data-toggle="collapse" data-target="#collapseWhwpg" aria-expanded="false" aria-controls="collapseWhwpg">
+                Washing Hands and Wearing Protective Gear
+              </button>
+            </h2>
+          </div>
+          <div id="collapseWhwpg" class="collapse" aria-labelledby="headingWhwpg" data-parent="#accordionSwat">
+            <div class="card-body">
+              We are encouraging all customers  and employees to wash their hands frequently  and wear protective gear when interacting with others.  We will also have our employees wear protective gear during the cleaning of vehicles along the pick up / drop off to customers to ensure we maintain a containment free zone.
+            </div>
+          </div>
         </div>
-        <button class="collapsible">Employees Feeling Sick</button>
-        <div class="covid_19_messages" id="efs">
-          <p>Employees feeling sick
-            We are asking our employees not feeling well to stay home and if they come in sick  we will respectfully ask them to leave to protect our customers and other employees on the premises.</p>
+        <div class="card">
+          <div class="card-header" id="headingEfs">
+            <h2 class="mb-0 text-center">
+              <button class="btn c19i" type="button" data-toggle="collapse" data-target="#collapseEfs" aria-expanded="false" aria-controls="collapseEfs">
+                Employees Feeling Sick
+              </button>
+            </h2>
+          </div>
+          <div id="collapseEfs" class="collapse" aria-labelledby="headingEfs" data-parent="#accordionSwat">
+            <div class="card-body">
+              We are asking our employees not feeling well to stay home and if they come in sick  we will respectfully ask them to leave to protect our customers and other employees on the premises.
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>

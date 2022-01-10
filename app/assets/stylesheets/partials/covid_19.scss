@@ -1,0 +1,38 @@
+// h1,
+// h2 {
+//   text-align: center;
+// }
+
+.c19i {
+  background-color: #1e6bbf;
+  color: white;
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  z-index: 6;
+}
+
+.c19i:hover {
+  background-color: #d6d8d3;
+  color: black;
+}
+
+.c19i:on_click {
+  background-color: #d6d8d3;
+  color: black;
+}
+.covid_welcome_message {
+  padding: 18px 0px;
+}
+
+.covid_19_messages {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
