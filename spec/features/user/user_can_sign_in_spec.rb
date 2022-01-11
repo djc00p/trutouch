@@ -39,8 +39,6 @@ describe "User" do
 
     visit sign_in_path
 
-    click_on "redirected"
-
     expect(page).to have_content("Already Signed In")
   end
 end

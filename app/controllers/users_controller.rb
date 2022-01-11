@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:danger] = "Already Signed In! Please sign out to create a new account."
       redirect_to profile_url(current_user)
     else
-      @new = User.new
+      @user = User.new
     end
   end
 
