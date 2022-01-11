@@ -1,6 +1,20 @@
 <%= render @user %>
 
 <div>
-  <%= button_to "Edit Profile", edit_profile_path(@user) %>
-  <%= button_to "Delete Profile", profile_path(@user), method: :delete, color: "red"%>
+  <div class="">
+    <%=
+      button_to "Edit Profile",
+      edit_profile_path(@user),
+      method: :get,
+      class: "btn btn-secondary"
+    %>
+  </div>
+  <div class="">
+    <%=
+      button_to "Delete Profile",
+      profile_path(@user),
+      method: :delete,
+      class: "btn btn-danger"
+    %>
+  </div>
 </div>
