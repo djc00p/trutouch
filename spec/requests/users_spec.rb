@@ -23,9 +23,14 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
     }
   end
 
+  let(:user) { User.create! valid_attributes }
+
+  before do |test|
+    user unless test.metadata[:no_user_needed]
+  end
+
   describe "GET /show" do
     it "renders a successful response" do
-      user = User.create! valid_attributes
       get profile_url(user)
       expect(response).to be_successful
     end
@@ -40,7 +45,6 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
   describe "GET /edit" do
     it "render a successful response" do
-      user = User.create! valid_attributes
       get edit_profile_url(user)
       expect(response).to be_successful
     end
@@ -48,13 +52,13 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
   describe "POST /create" do
     context "with valid parameters" do
-      it "creates a new User" do
+      it "creates a new User", :no_user_needed do
         expect do
           post  profile_index_url, params: { user: valid_attributes }
         end.to change(User, :count).by(1)
       end
 
-      it "redirects to the created user" do
+      it "redirects to the created user", :no_user_needed do
         post profile_index_url, params: { user: valid_attributes }
         expect(response).to redirect_to(profile_url(User.last))
       end
@@ -86,14 +90,12 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
       end
 
       it "updates the requested user" do
-        user = User.create! valid_attributes
         patch profile_url(user), params: { user: new_attributes }
         user.reload
         expect(user.first_name).not_to eq(valid_attributes[:first_name])
       end
 
       it "redirects to the user" do
-        user = User.create! valid_attributes
         patch profile_url(user), params: { user: new_attributes }
         user.reload
         expect(response).to redirect_to(profile_url(user))
@@ -102,23 +104,25 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
     context "with invalid parameters" do
       it "renders a unsuccessful response (i.e. to display the 'edit' template)" do
-        user = User.create! valid_attributes
         patch profile_url(user), params: { user: invalid_attributes }
         expect(response).not_to be_successful
+      end
+
+      it "renders a unsuccessful response with status code 422" do
+        patch profile_url(user), params: { user: invalid_attributes }
+        expect(response.status).to(eq(302))
       end
     end
   end
 
   describe "DELETE /destroy" do
     it "destroys the requested user" do
-      user = User.create! valid_attributes
       expect do
         delete profile_url(user)
       end.to change(User, :count).by(-1)
     end
 
     it "redirects to the users list" do
-      user = User.create! valid_attributes
       delete profile_url(user)
       expect(response).to redirect_to(root_path)
     end
