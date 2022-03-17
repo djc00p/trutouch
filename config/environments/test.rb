@@ -36,6 +36,9 @@ Rails.application.configure do
   # Store uploaded files on the local file system in a temporary directory.
   config.active_storage.service = :test
 
+  # Active Job
+  config.active_job.queue_adapter = :test
+
   Rails.application.routes.default_url_options[:host] = { host: 'localhost:3000' }
   # Action Mailer
   config.action_mailer.default_url_options = { host: 'localhost:3000' } # for absolute urls in email
