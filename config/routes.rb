@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # User Activation
   get '/activation', to: 'users#activation', as: 'activation'
+  get '/thank_you', to: 'thank_you#index', as: 'thank_you'
 
   # User Sign In and Out
   get '/sign_in', to: 'sessions#new'
