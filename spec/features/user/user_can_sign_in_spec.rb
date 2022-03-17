@@ -31,7 +31,7 @@ describe "User" do
     expect(page).to have_content("Email or password is invalid, please try again.")
   end
 
-  it "can't visit sign in if signed in already" do # rubocop:disable RSpec/ExampleLength
+  it "can't visit sign in if signed in already" do
     fill_in "session[email]", with: user.email
     fill_in "session[password]", with: user.password
 
