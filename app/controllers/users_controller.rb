@@ -32,12 +32,9 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
-    if @user.update(user_params)
-      flash[:success] = "#{@user.first_name} profile info was successfully updated."
-      redirect_to profile_url(@user)
-    else
-      render :edit, status: :unprocessable_entity
-    end
+    redirect_to profile_url(@user) if @user.update(user_params)
+
+    flash[:success] = "#{@user.first_name} profile info was successfully updated."
   end
 
   # DELETE /users/1 or /users/1.json
