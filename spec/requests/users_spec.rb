@@ -122,9 +122,22 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
       end.to change(User, :count).by(-1)
     end
 
-    it "redirects to the users list" do
+    it "redirects to the root_path" do
       delete profile_url(user)
       expect(response).to redirect_to(root_path)
+    end
+  end
+
+  describe "GET /activation" do
+    it "sets the user's status to active" do
+      get activation_url, params: { email: user.email }
+      user.reload
+      expect(user.status).to eq("active")
+    end
+
+    it "redirects to the thank you page" do
+      get activation_url, params: { email: user.email }
+      expect(response).to redirect_to(thank_you_path)
     end
   end
 end
