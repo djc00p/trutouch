@@ -44,6 +44,16 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+
+  # GET /activation
+  def activation
+    user = User.find_by(email: params[:email])
+    redirect_to thank_you_path if user.update(status: "active")
+
+    flash[:success] = "#{user.first_name} your email has been confirmed"
+  end
+
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
