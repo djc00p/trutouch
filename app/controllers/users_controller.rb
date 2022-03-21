@@ -24,7 +24,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to TruTouch Auto Detail and Tint #{@user.first_name}!"
-      notify_user_activation(user)
+      flash[:info] = "This account has not yet been activated."\
+                     "Please check your email."
+      @user.user_activation_email
       redirect_to profile_url(@user)
     else
       render :new, status: :unprocessable_entity
@@ -43,13 +45,6 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:success] = "User was successfully destroyed."
     redirect_to root_path
-  end
-
-  def notify_user_activation(user)
-    flash[:info] = "This account has not yet been activated."\
-                   "Please check your email."
-
-    UserMailer.with(user: user).welcome_activation.deliver_now
   end
 
   # GET /activation
