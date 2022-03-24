@@ -33,7 +33,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Active Job
-  config.active_job.queue_adapter = :local
+  config.active_job.queue_adapter = :sidekiq
 
   # Action Mailer
   Rails.application.routes.default_url_options[:host] = { host: 'localhost:3000' }
