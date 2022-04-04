@@ -24,7 +24,7 @@ RSpec.describe UserMailer, type: :mailer do
     end
 
     it "renders the body with a confirmation code" do
-      expect(mail.body.encoded).to match("#{user.confirmation_code}")
+      expect(mail.body.encoded).to match(user.confirmation_code.to_s)
     end
   end
 end
