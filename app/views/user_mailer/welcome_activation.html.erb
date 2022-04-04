@@ -13,9 +13,10 @@
         You have successfully signed up to TruTouch<br>
       </p>
       <p>
-        Please confirm email below<br>
+        Please confirm email account by entering the confirmation_code:<br>
+
+        <h1><%= @user.confirmation_code %></h1>
       </p>
-      <%= link_to "Confirm Email", activation_url(email: @user.email)%>
       <p>Thanks for joining and have a great day!</p>
     </div>
   </body>

@@ -3,6 +3,8 @@ Welcome to TruTouch Auto Detailing and Window Tint, <%= @user.first_name %>
 
 You have successfully signed up to TruTouch.
 
-Click this link confirm email: <%= link_to "Confirm Email", activation_url(email: @user.email) %>.
+Please confirm email account by entering the confirmation_code:
+
+<%= @user.confirmation_code %>
 
 Thanks for joining and have a great day!
