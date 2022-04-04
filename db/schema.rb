@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_04_04_045334) do
+ActiveRecord::Schema[7.1].define(version: 2022_04_04_210643) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -78,12 +78,13 @@ ActiveRecord::Schema[7.1].define(version: 2022_04_04_045334) do
     t.string "password_digest"
     t.integer "role", default: 0
     t.string "google_token"
-    t.string "status", default: "inactive"
+    t.string "status", default: "unverified"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "confirmation_code"
+    t.integer "verification_code"
     t.string "prefered_method_of_contact"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["phone_number"], name: "index_users_on_phone_number", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
