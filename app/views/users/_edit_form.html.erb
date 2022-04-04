@@ -31,7 +31,30 @@
     <%= form.text_field :email %>
   </div>
 
+  <div class="field">
+    <%= form.label :prefered_method_of_contact %>
+    <ul>
+      <li>
+        <%= check_box_tag :email, "email", false, :name=> "user[prefered_method_of_contact]", onclick: "uncheckOtherPreferedMethodOfContact(this)" %> Email
+      </li>
+      <li>
+        <%= check_box_tag :text, "text", false, :name=> "user[prefered_method_of_contact]", onclick: "uncheckOtherPreferedMethodOfContact(this)" %> Text
+      </li>
+    </ul>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+<script language="javascript" type="text/javascript">
+function uncheckOtherPreferedMethodOfContact(obj)
+        {
+            if (obj.checked == true && obj.id == "text") {
+              document.getElementById("email").checked = false;
+            }
+            else {
+              document.getElementById("text").checked = false;
+            }
+        }
+</script>
