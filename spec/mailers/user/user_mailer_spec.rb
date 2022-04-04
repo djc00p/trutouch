@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe UserMailer, type: :mailer do
   describe "welcome activation" do
-    let(:user) { create(:user) }
+    let(:user) { create(:user, confirmation_code: SecureRandom.random_number(100_000..999_999)) }
     let(:mail) { described_class.with(user: user).welcome_activation }
 
     it "renders the subject" do
@@ -23,8 +23,8 @@ RSpec.describe UserMailer, type: :mailer do
       expect(mail.body.encoded).to match("Welcome to TruTouch Auto Detailing and Window Tint, #{user.first_name}")
     end
 
-    it "renders the body with actiavtion link" do
-      expect(mail.body.encoded).to have_link("Confirm Email")
+    it "renders the body with a confirmation code" do
+      expect(mail.body.encoded).to match("#{user.confirmation_code}")
     end
   end
 end
