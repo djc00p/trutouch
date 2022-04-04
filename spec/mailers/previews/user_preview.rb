@@ -4,7 +4,7 @@
 class UserPreview < ActionMailer::Preview
   def welcome_activation
     user = User.first
-    user.confirmation_code = SecureRandom.random_number(100_000..999_999)
+    user.verification_code = SecureRandom.random_number(100_000..999_999)
     UserMailer.with(user: user).welcome_activation
   end
 end
