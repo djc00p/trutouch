@@ -7,5 +7,6 @@ FactoryBot.define do
     phone_number { Faker::PhoneNumber.cell_phone }
     sequence(:email) { |n| "example#{n}@email.com" }
     password { "MyString123" }
+    prefered_method_of_contact { "email" }
   end
 end
