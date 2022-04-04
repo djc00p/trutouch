@@ -28,6 +28,8 @@ RSpec.describe "users/edit", type: :view do
       assert_select "input[name=?]", "user[phone_number]"
 
       assert_select "input[name=?]", "user[email]"
+
+      assert_select "input[name=?]", "user[prefered_method_of_contact]"
     end
   end
 end

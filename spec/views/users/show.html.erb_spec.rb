@@ -9,7 +9,8 @@ RSpec.describe "users/show", type: :view do
                             last_name: "Last Name",
                             phone_number: "Phone Number",
                             email: "Email",
-                            password: "Password Digest"
+                            password: "Password Digest",
+                            prefered_method_of_contact: "text"
                           ))
     render
   end
@@ -29,6 +30,10 @@ RSpec.describe "users/show", type: :view do
 
     it "email in <p>" do
       expect(rendered).to match(/Email/)
+    end
+
+    it "prefered_method_of_contact in <p>" do
+      expect(rendered).to match(/text/)
     end
   end
 end
