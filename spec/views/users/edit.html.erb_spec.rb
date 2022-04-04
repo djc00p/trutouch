@@ -9,7 +9,8 @@ RSpec.describe "users/edit", type: :view do
                     last_name: "MyString",
                     phone_number: "MyString",
                     email: "MyString",
-                    password: "MyString"
+                    password: "MyString",
+                    prefered_method_of_contact: "email"
                   ))
   end
 
