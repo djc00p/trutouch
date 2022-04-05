@@ -7,9 +7,10 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
     {
       first_name: "Luke",
       last_name: "Skywalker",
-      phone_number: "12379873",
+      phone_number: "+14123736103",
       email: "masterjedi@galacticsavior.com",
-      password: "Maythe4thBew/u"
+      password: "Maythe4thBew/u",
+      prefered_method_of_contact: "email"
     }
   end
 
@@ -18,8 +19,9 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
       first_name: Faker::Name.first_name,
       last_name: Faker::Name.last_name,
       email: Faker::Internet.email,
-      phone_number: "12379873",
-      password: ""
+      phone_number: "14123736103",
+      password: "",
+      prefered_method_of_contact: "email"
     }
   end
 
@@ -60,7 +62,7 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
       it "redirects to the created user", :no_user_needed do
         post profile_index_url, params: { user: valid_attributes }
-        expect(response).to redirect_to(profile_url(User.last))
+        expect(response).to redirect_to(verification_url(User.last))
       end
     end
 
@@ -84,7 +86,7 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
         {
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
-          phone_number: "12379873",
+          phone_number: "+14123736103",
           email: Faker::Internet.email
         }
       end
@@ -108,7 +110,7 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
         expect(response).not_to be_successful
       end
 
-      it "renders a unsuccessful response with status code 422" do
+      it "renders a unsuccessful response with status code 302" do
         patch profile_url(user), params: { user: invalid_attributes }
         expect(response.status).to(eq(302))
       end
@@ -128,16 +130,33 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
     end
   end
 
-  describe "GET /activation" do
-    it "sets the user's status to active" do
-      get activation_url, params: { email: user.email }
+  describe "GET /profile/:id/verification" do
+    it "sets the user verification_code not to nil" do
+      get verification_url(user)
       user.reload
-      expect(user.status).to eq("active")
+
+      expect(user.verification_code).not_to eq(nil)
     end
 
-    it "redirects to the thank you page" do
-      get activation_url, params: { email: user.email }
-      expect(response).to redirect_to(thank_you_path)
+    describe "PATCH /profile/:id/verify" do
+      it "update user status to verified" do
+        get verification_url(user)
+        user.reload
+
+        patch verify_url(user), params: { user: { verification_code: user.verification_code } }
+        user.reload
+
+        expect(user.status).to eq("verified")
+      end
+
+      it "redirects to the thank you page" do
+        get verification_url(user)
+        user.reload
+
+        patch verify_url(user), params: { user: { verification_code: user.verification_code } }
+
+        expect(response).to redirect_to(thank_you_path)
+      end
     end
   end
 end
