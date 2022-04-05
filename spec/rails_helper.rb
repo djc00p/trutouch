@@ -12,6 +12,7 @@ require "capybara/rails"
 require "support/factory_bot"
 require "simplecov"
 SimpleCov.start
+SmsSpec.driver = :"twilio-ruby"
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
