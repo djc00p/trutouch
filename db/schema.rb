@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_04_190836) do
-
+ActiveRecord::Schema[7.1].define(version: 2022_04_04_210643) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_12_04_190836) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", precision: 6, null: false
+    t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -33,7 +32,7 @@ ActiveRecord::Schema.define(version: 2021_12_04_190836) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
-    t.datetime "created_at", precision: 6, null: false
+    t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -47,8 +46,8 @@ ActiveRecord::Schema.define(version: 2021_12_04_190836) do
     t.string "name"
     t.integer "price"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["name"], name: "index_clear_bra_services_on_name", unique: true
   end
 
@@ -56,8 +55,8 @@ ActiveRecord::Schema.define(version: 2021_12_04_190836) do
     t.string "name"
     t.integer "base_price"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["name"], name: "index_detail_services_on_name", unique: true
   end
 
@@ -67,8 +66,8 @@ ActiveRecord::Schema.define(version: 2021_12_04_190836) do
     t.string "vehicle_type"
     t.integer "price"
     t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,10 +78,13 @@ ActiveRecord::Schema.define(version: 2021_12_04_190836) do
     t.string "password_digest"
     t.integer "role", default: 0
     t.string "google_token"
-    t.string "status", default: "inactive"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "unverified"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "verification_code"
+    t.string "prefered_method_of_contact"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["phone_number"], name: "index_users_on_phone_number", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

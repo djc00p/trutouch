@@ -11,7 +11,7 @@ RSpec.describe "Covid 19", type: :feature do
     describe "Statement to the customer" do
       it "has a welcome message on covid pandemic" do
         within ".covid_welcome_message" do
-          expect(page).to have_css("h2", text: "Hello, VALUED CUSTOMER")
+          expect(page).to have_css("h1", text: "Hello, VALUED CUSTOMER")
         end
       end
     end

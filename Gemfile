@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.0.alpha2'
+gem 'rails', github: 'rails/rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -19,6 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+gem 'sidekiq'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'rubocop-rails', require: false
@@ -30,8 +31,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0.2'
-gem 'importmap-rails'
-gem 'stimulus-rails'
+
+# Twilio texting
+gem 'twilio-ruby'
+gem "phonelib"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +52,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rails_real_favicon'
   gem 'figaro'
+  gem 'sms-spec', '~> 0.2.0' # testing Twilio sms
 end
 
 group :development do

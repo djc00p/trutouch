@@ -1,0 +1,26 @@
+<%= form_with(model: user, :url => verify_url(user)) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation" class="alert alert-warning">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being confirmed:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :verification_code %>
+    <%= form.number_field :verification_code, value: nil %>
+    <%= link_to "Resend code", verification_url(user) %>
+  </div>
+
+  <div class="link">
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

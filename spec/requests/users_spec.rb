@@ -7,9 +7,10 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
     {
       first_name: "Luke",
       last_name: "Skywalker",
-      phone_number: "12379873",
+      phone_number: "+14123736103",
       email: "masterjedi@galacticsavior.com",
-      password: "Maythe4thBew/u"
+      password: "Maythe4thBew/u",
+      prefered_method_of_contact: "email"
     }
   end
 
@@ -18,14 +19,20 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
       first_name: Faker::Name.first_name,
       last_name: Faker::Name.last_name,
       email: Faker::Internet.email,
-      phone_number: "12379873",
-      password: ""
+      phone_number: "14123736103",
+      password: "",
+      prefered_method_of_contact: "email"
     }
+  end
+
+  let(:user) { User.create! valid_attributes }
+
+  before do |test|
+    user unless test.metadata[:no_user_needed]
   end
 
   describe "GET /show" do
     it "renders a successful response" do
-      user = User.create! valid_attributes
       get profile_url(user)
       expect(response).to be_successful
     end
@@ -40,7 +47,6 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
   describe "GET /edit" do
     it "render a successful response" do
-      user = User.create! valid_attributes
       get edit_profile_url(user)
       expect(response).to be_successful
     end
@@ -48,15 +54,15 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
   describe "POST /create" do
     context "with valid parameters" do
-      it "creates a new User" do
+      it "creates a new User", :no_user_needed do
         expect do
           post  profile_index_url, params: { user: valid_attributes }
         end.to change(User, :count).by(1)
       end
 
-      it "redirects to the created user" do
+      it "redirects to the created user", :no_user_needed do
         post profile_index_url, params: { user: valid_attributes }
-        expect(response).to redirect_to(profile_url(User.last))
+        expect(response).to redirect_to(verification_url(User.last))
       end
     end
 
@@ -80,20 +86,18 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
         {
           first_name: Faker::Name.first_name,
           last_name: Faker::Name.last_name,
-          phone_number: "12379873",
+          phone_number: "+14123736103",
           email: Faker::Internet.email
         }
       end
 
       it "updates the requested user" do
-        user = User.create! valid_attributes
         patch profile_url(user), params: { user: new_attributes }
         user.reload
         expect(user.first_name).not_to eq(valid_attributes[:first_name])
       end
 
       it "redirects to the user" do
-        user = User.create! valid_attributes
         patch profile_url(user), params: { user: new_attributes }
         user.reload
         expect(response).to redirect_to(profile_url(user))
@@ -102,25 +106,57 @@ RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
 
     context "with invalid parameters" do
       it "renders a unsuccessful response (i.e. to display the 'edit' template)" do
-        user = User.create! valid_attributes
         patch profile_url(user), params: { user: invalid_attributes }
         expect(response).not_to be_successful
+      end
+
+      it "renders a unsuccessful response with status code 302" do
+        patch profile_url(user), params: { user: invalid_attributes }
+        expect(response.status).to(eq(302))
       end
     end
   end
 
   describe "DELETE /destroy" do
     it "destroys the requested user" do
-      user = User.create! valid_attributes
       expect do
         delete profile_url(user)
       end.to change(User, :count).by(-1)
     end
 
-    it "redirects to the users list" do
-      user = User.create! valid_attributes
+    it "redirects to the root_path" do
       delete profile_url(user)
       expect(response).to redirect_to(root_path)
+    end
+  end
+
+  describe "GET /profile/:id/verification" do
+    it "sets the user verification_code not to nil" do
+      get verification_url(user)
+      user.reload
+
+      expect(user.verification_code).not_to eq(nil)
+    end
+
+    describe "PATCH /profile/:id/verify" do
+      it "update user status to verified" do
+        get verification_url(user)
+        user.reload
+
+        patch verify_url(user), params: { user: { verification_code: user.verification_code } }
+        user.reload
+
+        expect(user.status).to eq("verified")
+      end
+
+      it "redirects to the thank you page" do
+        get verification_url(user)
+        user.reload
+
+        patch verify_url(user), params: { user: { verification_code: user.verification_code } }
+
+        expect(response).to redirect_to(thank_you_path)
+      end
     end
   end
 end

@@ -11,5 +11,25 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_uniqueness_of :phone_number }
     it { is_expected.to validate_uniqueness_of :email }
     it { is_expected.to validate_presence_of :password }
+    it { is_expected.to validate_presence_of :prefered_method_of_contact }
+  end
+
+  describe "Instance Methods" do
+    let(:user) { create :user }
+
+    context "when an user account is created" do
+      it "sends an verification email" do
+        expect { user.user_verification_email }
+          .to change { ActionMailer::Base.deliveries.count }.by(1)
+      end
+      # will update later need to create a working mock class for this.
+      # it "sends an verification text" do
+      #   include ActiveJob::TestHelper
+      #   ActiveJob::Base.queue_adapter = :test
+      #
+      #   expect { user.user_verification_text }
+      #     .to change { ActiveJob::Base.queue_adapter.enqueued_jobs }.by(1)
+      # end
+    end
   end
 end

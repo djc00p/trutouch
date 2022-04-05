@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   # Users
   resources :users, except: [:index, :new], path: '/profile', as: 'profile'
-  get '/sign_up', to: 'users#new', as: "sign_up"
+  get '/sign_up', to: 'users#new', as: 'sign_up'
+
+  # User Activation
+  get '/profile/:id/verification', to: 'users#verification', as: 'verification'
+  patch '/profile/:id/verify', to: 'users#verify', as: 'verify'
+  get '/thank_you', to: 'thank_you#index', as: 'thank_you'
 
   # User Sign In and Out
   get '/sign_in', to: 'sessions#new'

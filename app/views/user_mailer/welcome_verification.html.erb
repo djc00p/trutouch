@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <a href="https://trutouchauto.com/">
+      <img style="display:block; border-right: none; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:75% !important; width:75%; height:auto !important;" width="450" alt="TruTouch Auto" data-proportionally-constrained="true" data-responsive="true"src="https://www.facebook.com/TruTouchAuto/photos/a.998760206948912/2158001954358059/" alt="TruTouch Auto">
+    </a>
+    <div class="">
+      <h1>Welcome to TruTouch Auto Detailing and Window Tint, <%= @user.first_name %></h1>
+      <p>
+        You have successfully signed up to TruTouch<br>
+      </p>
+      <p>
+        Please verify email account by entering the verification code:<br>
+
+        <h1><%= @user.verification_code %></h1>
+      </p>
+      <p>Thanks for joining and have a great day!</p>
+    </div>
+  </body>
+</html>
