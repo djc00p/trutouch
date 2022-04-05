@@ -3,9 +3,9 @@
 require "rails_helper"
 
 RSpec.describe UserMailer, type: :mailer do
-  describe "welcome activation" do
+  describe "welcome verification" do
     let(:user) { create(:user, verification_code: SecureRandom.random_number(100_000..999_999)) }
-    let(:mail) { described_class.with(user: user).welcome_activation }
+    let(:mail) { described_class.with(user: user).welcome_verification }
 
     it "renders the subject" do
       expect(mail.subject).to eq("Welcome To TruTouch")
