@@ -7,7 +7,7 @@ RSpec.describe "users/new", type: :view do
     assign(:user, User.new(
                     first_name: "Luke",
                     last_name: "Skywalker",
-                    phone_number: "12379873",
+                    phone_number: "+14123736103",
                     email: "masterjedi@galacticsavior.com",
                     password: "Maythe4thBew/u"
                   ))

@@ -7,7 +7,7 @@ RSpec.describe "users/show", type: :view do
     @user = assign(:user, User.create!(
                             first_name: "First Name",
                             last_name: "Last Name",
-                            phone_number: "Phone Number",
+                            phone_number: "+14123736103",
                             email: "Email",
                             password: "Password Digest",
                             prefered_method_of_contact: "text"
@@ -22,10 +22,6 @@ RSpec.describe "users/show", type: :view do
 
     it "last_name in <p>" do
       expect(rendered).to match(/Last Name/)
-    end
-
-    it "phone_number in <p>" do
-      expect(rendered).to match(/Phone Number/)
     end
 
     it "email in <p>" do
