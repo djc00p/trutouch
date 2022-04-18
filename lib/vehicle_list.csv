@@ -215,8 +215,8 @@ Chevrolet,Beat,2010,-,Subcompact,,Car
 Chevrolet,S-10 Blazer,1994,2005,Mid-size,,SUV
 Chevrolet,Blazer,2019,-,Mid-size,,SUV
 Chevrolet,Bolt,2017,-,Subcompact,Electric,Hatchback
-Chevrolet,Camaro,1966,2002,Mid-size,Pony Car
-Chevrolet,Camaro,2010,-,Full-size,,Car
+Chevrolet,Camaro,1966,2002,Mid-size,,Pony Car
+Chevrolet,Camaro,2010,-,Full-size,,Pony Car
 Chevrolet,Captiva,2006,-,Compact,,CUV
 Chevrolet,Cavalier,1995,2005,Compact,,Car
 Chevrolet,Cobalt,2005,-,Compact,,Car
@@ -325,7 +325,7 @@ Dodge,Avenger,2007,2014,Mid-size,,Car
 Dodge,Caliber,2006,2012,Compact,,Hatchback
 Dodge,Caliber SRT-4,2007,2010,Compact,,Hatchback
 Dodge,Caravan,1995,2016,Full-size,,Minivan
-Dodge,Challenger,2008,-,Full-size,,Car
+Dodge,Challenger,2008,-,Full-size,,Pony Car
 Dodge,Charger,2006,-,Full-size,,Car
 Dodge,Dakota,2005,2011,Mid-size,,Pickup Truck
 Dodge,Dart,2012,2017,Compact,,Car
@@ -448,7 +448,7 @@ Ford,Kuga,2008,-,Compact,,CUV
 Ford,Lightning,2022,-,Full-size,Electric,Pickup Truck
 Ford,Maverick,1992,2009,Mid-size,,Pickup Truck
 Ford,Mondeo,2000,-,Full-size,,Wagon
-Ford,Mustang,1995,-,Mid-size,,Sports Car
+Ford,Mustang,1995,-,Mid-size,,Pony Car
 Ford,Mustang Mach-E,2020,-,Mid-size,Electric,CUV
 Ford,Mustang Shelby GT350,2016,-,Mid-size,Luxury,Supercar
 Ford,Mustang Shelby GT500,2020,-,Mid-size,Luxury,Supercar
@@ -979,11 +979,11 @@ Peugeot,Partner,1996,-,Compact,,Van
 Peugeot,RCZ Sport,2010,2015,Compact,,Sports Car
 Peugeot,Rifter,2018,-,Compact,,Minivan
 Peugeot,Traveller,2016,-,Mid-size,,Van
-Plymouth,Road Runner,1968,1970,Mid-size,,Sports Car
+Plymouth,Road Runner,1968,1970,Mid-size,,Pony Car
 Polestar,2,2022,-,Mid-size,Electric,CUV
 Pontiac,Aztec,2001,2005,Mid-size,,CUV
 Pontiac,Bonneville,1999,2005,Full-size,,Car
-Pontiac,Firebird,1993,2002,Mid-size,,Sports Car
+Pontiac,Firebird,1993,2002,Mid-size,,Pony Car
 Pontiac,G5 Pursuit,2004,2010,Compact,,Car
 Pontiac,G6,2004,2010,Mid-size,,Car
 Pontiac,G8,2008,2009,Full-size,,Car
