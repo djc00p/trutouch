@@ -659,8 +659,8 @@ Kia,K8,2021,-,Full-size,,Car
 Kia,K900,2019,-,Full-size,,Car
 Kia,Magentis,2001,2010,Mid-size,,Car
 Kia,Mohave,2008,-,Mid-size,,SUV
-Kia,Niro,2016,-,Compact,Hybrid,HPEV,CUV
-Kia,Niro EV,2019,-,Compact,Electric,Hybrid,CUV
+Kia,Niro,2016,-,Compact,,CUV
+Kia,Niro EV,2019,-,Compact,Electric,CUV
 Kia,Opirus,2003,2010,Full-size,Luxury,Car
 Kia,Optima,2010,2020,Mid-size,,Car
 Kia,Picanto,2004,-,Subcompact,,Hatchback
