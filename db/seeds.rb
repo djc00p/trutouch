@@ -1,7 +1,9 @@
+require "csv"
+
 DetailService.destroy_all
 TintService.destroy_all
 ClearBraService.destroy_all
-
+Vehicle.destroy_all
 
 DetailService.create([
   {
@@ -327,3 +329,10 @@ ClearBraService.create([
   }
 ])
 puts "Added #{ClearBraService.all.count} Clear Bra Services"
+
+vehicle_count = CSV.read("./lib/vehicle_list.csv", headers: true).count
+
+CSV.foreach("./lib/vehicle_list.csv", headers: true) do |row|
+  Vehicle.create(row.to_hash)
+end
+puts "Added #{Vehicle.all.count}/#{vehicle_count} Vehicles"
