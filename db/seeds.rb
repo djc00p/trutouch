@@ -1,9 +1,10 @@
 require "csv"
+# require "pry"
 
 DetailService.destroy_all
 TintService.destroy_all
 ClearBraService.destroy_all
-Vehicle.destroy_all
+ProductionVehicle.destroy_all
 
 DetailService.create([
   {
@@ -330,9 +331,22 @@ ClearBraService.create([
 ])
 puts "Added #{ClearBraService.all.count} Clear Bra Services"
 
-vehicle_count = CSV.read("./lib/vehicle_list.csv", headers: true).count
-
 CSV.foreach("./lib/vehicle_list.csv", headers: true) do |row|
-  Vehicle.create(row.to_hash)
+  stating_year = row.to_h["production_starting_year"].to_i
+  ending_year = row.to_h["production_ending_year"]
+  if ending_year == "-"
+    ending_year = Time.now.year.to_i
+    ending_year
+  end
+  (stating_year..ending_year.to_i).each do |year|
+    ProductionVehicle.create(
+      make: row.to_h["make"],
+      model: row.to_h["model"],
+      production_year: year.to_s,
+      vehicle_size: row.to_h["vehicle_size"],
+      vehicle_type: row.to_h["vehicle_type"],
+      vehicle_class: row.to_h["vehicle_class"]
+    )
+  end
 end
-puts "Added #{Vehicle.all.count}/#{vehicle_count} Vehicles"
+puts "Added #{ProductionVehicle.all.count} Vehicles"
