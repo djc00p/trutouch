@@ -46,7 +46,7 @@ RSpec.describe "/vehicles", type: :request do
     context "with invalid parameters" do
       it "does not create a new Vehicle" do
         expect do
-          post  vehicle_url, params: invalid_attributes
+          post vehicle_url, params: invalid_attributes
         end.to change(Vehicle, :count).by(0)
       end
 
