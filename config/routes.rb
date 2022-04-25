@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   delete '/sign_out', to: 'sessions#destroy'
 
   # Vehicles
+  resources :vehicles, only: [:create], path: 'my_vehicles', as: 'my_vehicles'
   get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
 
 
