@@ -15,6 +15,12 @@ Rails.application.routes.draw do
   post '/sign_in', to: 'sessions#create'
   delete '/sign_out', to: 'sessions#destroy'
 
+  # Vehicles
+  get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
+
+
+
+
   # Navbar Links
   get '/our_services', to: 'our_services#index'
   get '/products_used', to: 'products_used#index'
