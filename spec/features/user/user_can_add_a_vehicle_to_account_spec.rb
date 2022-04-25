@@ -20,7 +20,7 @@ describe "User" do
     click_on "Add New Vehicle" unless test.metadata[:dont_click_on]
   end
 
-  it "has an Add New Vehicle link", :dont_click_on do
+  it "has an Add New Vehicle button", :dont_click_on do
     expect(page).to have_button("Add New Vehicle")
   end
 

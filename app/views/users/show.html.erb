@@ -3,6 +3,16 @@
 <div>
   <div class="">
     <%=
+      button_to "Add New Vehicle",
+      add_my_vehicle_path,
+      method: :get,
+      class: "btn btn-secondary"
+    %>
+  </div>
+</div>
+<div>
+  <div class="">
+    <%=
       button_to "Edit Profile",
       edit_profile_path(@user),
       method: :get,
