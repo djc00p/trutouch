@@ -1,0 +1,38 @@
+<%= form_with(model: vehicles, :url => my_vehicles_path) do |form| %>
+
+  <% if vehicles.errors.any? %>
+    <div id="error_explanation" class="alert alert-warning">
+      <h2><%= pluralize(vehicles.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+        <% vehicles.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :make %>
+    <%= form.text_field :make %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Add Vehicle" %>
+  </div>
+<% end %>
