@@ -4,19 +4,13 @@ require "rails_helper"
 
 RSpec.describe "vehicles/new", type: :view do
   before do
-    assign(:user, User.new(
-                    first_name: "Luke",
-                    last_name: "Skywalker",
-                    phone_number: "+14123736103",
-                    email: "masterjedi@galacticsavior.com",
-                    password: "Maythe4thBew/u"
-                  ))
+    assign(:vehicle, build(:vehicle))
   end
 
   it "renders new vehicle form" do # rubocop:disable RSpec/ExampleLength
     render
 
-    assert_select "form[action=?][method=?]", vehicle_path, "post" do
+    assert_select "form[action=?][method=?]", my_vehicles_path, "post" do
       assert_select "input[name=?]", "vehicle[year]"
 
       assert_select "input[name=?]", "vehicle[color]"
