@@ -1,5 +1,7 @@
 class VehiclesController < ApplicationController
-  def new; end
+  def new
+    @vehicle = Vehicle.new
+  end
 
   def create
 
