@@ -16,7 +16,10 @@ describe "User" do
 
   before do |test|
     user
-    visit profile_url(user)
+    visit sign_in_path
+    fill_in "session[email]", with: user.email
+    fill_in "session[password]", with: user.password
+    click_button "Sign In"
     click_on "Add New Vehicle" unless test.metadata[:dont_click_on]
   end
 
@@ -43,7 +46,7 @@ describe "User" do
 
     click_on "Add Vehicle"
 
-    vehicle = Vehicle.last.where(user_id: user.id)
+    vehicle = Vehicle.last
 
     expect(page).to have_content("Vehicle Class: #{vehicle.classification}")
   end
