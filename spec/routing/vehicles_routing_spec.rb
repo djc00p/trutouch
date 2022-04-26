@@ -24,11 +24,11 @@ RSpec.describe VehiclesController, type: :routing do
       expect(get: "/my_vehicle/1").to route_to("vehicles#show", id: "1")
     end
 
-    it "routes to #update" do
+    it "routes to #update via PATCH" do
       expect(patch: "/my_vehicle/1").to route_to("vehicles#update", id: "1")
     end
 
-    it "routes to #update" do
+    it "routes to #update via PUT" do
       expect(put: "/my_vehicle/1").to route_to("vehicles#update", id: "1")
     end
 
