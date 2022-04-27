@@ -15,7 +15,7 @@ RSpec.describe Vehicle, type: :model do
   describe "Instance Methods" do
     let(:user) { create(:user) }
     let(:production_vehicle) { create(:production_vehicle) }
-    let(:classification_array) { [production_vehicle[:vehicle_size], production_vehicle[:vehicle_type], production_vehicle[:vehicle_class]] }
+    let(:classification_string) { [production_vehicle[:vehicle_size], production_vehicle[:vehicle_type], production_vehicle[:vehicle_class]].compact.join(" ") }
     let(:vehicle) { build(:vehicle,
       year: production_vehicle[:production_year],
       color: Faker::Vehicle.color,
@@ -30,12 +30,12 @@ RSpec.describe Vehicle, type: :model do
     end
 
     it "can create a string of production vehicle classification info" do
-      expect(vehicle.production_vehicle_classfication(production_vehicle)).to match(classification_array.compact.join(" "))
+      expect(vehicle.production_vehicle_classfication(production_vehicle)).to match(classification_string)
     end
 
     it "can assign vehicle classification info from production vehicle" do
       vehicle.assign_classifaction
-      expect(vehicle.classification).to match(classification_array.compact.join(" "))
+      expect(vehicle.classification).to match(classification_string)
     end
   end
 end
