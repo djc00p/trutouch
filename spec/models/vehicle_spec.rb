@@ -11,4 +11,31 @@ RSpec.describe Vehicle, type: :model do
     it { is_expected.to validate_presence_of :model }
     it { is_expected.to validate_presence_of :classification }
   end
+
+  describe "Instance Methods" do
+    let(:user) { create(:user) }
+    let(:production_vehicle) { create(:production_vehicle) }
+    let(:classification_array) { [production_vehicle[:vehicle_size], production_vehicle[:vehicle_type], production_vehicle[:vehicle_class]] }
+    let(:vehicle) { build(:vehicle,
+      year: production_vehicle[:production_year],
+      color: Faker::Vehicle.color,
+      make: production_vehicle[:make],
+      model: production_vehicle[:model],
+      classification: nil,
+      user_id: user.id)
+    }
+
+    it "can find the production vehicle to get classification info" do
+      expect(vehicle.production_vehicle).to match(production_vehicle)
+    end
+
+    it "can create a string of production vehicle classification info" do
+      expect(vehicle.production_vehicle_classfication(production_vehicle)).to match(classification_array.compact.join(" "))
+    end
+
+    it "can assign vehicle classification info from production vehicle" do
+      vehicle.assign_classifaction
+      expect(vehicle.classification).to match(classification_array.compact.join(" "))
+    end
+  end
 end
