@@ -15,15 +15,19 @@ RSpec.describe Vehicle, type: :model do
   describe "Instance Methods" do
     let(:user) { create(:user) }
     let(:production_vehicle) { create(:production_vehicle) }
-    let(:classification_string) { [production_vehicle[:vehicle_size], production_vehicle[:vehicle_type], production_vehicle[:vehicle_class]].compact.join(" ") }
-    let(:vehicle) { build(:vehicle,
-      year: production_vehicle[:production_year],
-      color: Faker::Vehicle.color,
-      make: production_vehicle[:make],
-      model: production_vehicle[:model],
-      classification: nil,
-      user_id: user.id)
-    }
+    let(:classification_string) do
+      [production_vehicle[:vehicle_size], production_vehicle[:vehicle_type],
+       production_vehicle[:vehicle_class]].compact.join(" ")
+    end
+    let(:vehicle) do
+      build(:vehicle,
+            year: production_vehicle[:production_year],
+            color: Faker::Vehicle.color,
+            make: production_vehicle[:make],
+            model: production_vehicle[:model],
+            classification: nil,
+            user_id: user.id)
+    end
 
     it "can find the production vehicle to get classification info" do
       expect(vehicle.production_vehicle).to match(production_vehicle)
