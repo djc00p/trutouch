@@ -10,6 +10,8 @@ class Vehicle < ApplicationRecord
   end
 
   def production_vehicle_classification(production_vehicle)
+    return unless production_vehicle
+
     production_vehicle.attributes.fetch_values("vehicle_size", "vehicle_type", "vehicle_class").compact.join(" ")
   end
 
@@ -22,6 +24,6 @@ class Vehicle < ApplicationRecord
   def update_vehicle_classification
     assigned_classification = production_vehicle_classification(production_vehicle)
 
-    update(classification: assigned_classification) if assigned_classification
+    update(classification: assigned_classification)
   end
 end
