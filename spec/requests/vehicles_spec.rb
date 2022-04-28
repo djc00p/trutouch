@@ -3,13 +3,14 @@
 require "rails_helper"
 
 RSpec.describe "/vehicles", type: :request do
-  let(:make) { Faker::Vehicle.make }
+  let(:user) { create(:user) }
+  let(:production_vehicle) { create(:production_vehicle) }
   let(:valid_attributes) do
     {
-      year: rand(1970..Time.zone.now.year),
+      year: production_vehicle[:production_year],
       color: Faker::Vehicle.color,
-      make: make,
-      model: Faker::Vehicle.model(make_of_model: make)
+      make: production_vehicle[:make],
+      model: production_vehicle[:model]
     }
   end
 
@@ -20,6 +21,18 @@ RSpec.describe "/vehicles", type: :request do
       make: Faker::Name.last_name,
       model: Faker::Name.first_name
     }
+  end
+
+  before do
+    # Trying to assin a current user but could not figure out the allow(). I will work on it later.
+    # let(:my_instance) {
+    #   instance_double(VehiclesController)
+    # }
+    # let(:double_class) {
+    #   class_double(Vehicle).as_stubbed_const
+    # }
+    # allow(my_instance).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
   end
 
   describe "GET /new" do
@@ -33,12 +46,12 @@ RSpec.describe "/vehicles", type: :request do
     context "with valid parameters" do
       it "creates a new Vehicle" do
         expect do
-          post my_vehicles_url, params: valid_attributes
+          post my_vehicles_url, params: { vehicle: valid_attributes }
         end.to change(Vehicle, :count).by(1)
       end
 
       it "redirects to the user profile" do
-        post my_vehicles_url, params: valid_attributes
+        post my_vehicles_url, params: { vehicle: valid_attributes }
         expect(response).to redirect_to(profile_url(user))
       end
     end
@@ -46,12 +59,12 @@ RSpec.describe "/vehicles", type: :request do
     context "with invalid parameters" do
       it "does not create a new Vehicle" do
         expect do
-          post my_vehicles_url, params: invalid_attributes
+          post my_vehicles_url, params: { vehicle: invalid_attributes }
         end.to change(Vehicle, :count).by(0)
       end
 
       it "renders a unsuccessful response (i.e. to display the 'new' template)" do
-        post my_vehicles_url, params: invalid_attributes
+        post my_vehicles_url, params: { vehicle: invalid_attributes }
         expect(response).not_to be_successful
       end
     end
