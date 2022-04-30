@@ -1,4 +1,4 @@
-<%= form_with(model: vehicles, :url => my_vehicles_path) do |form| %>
+<%= form_with(model: vehicles, :url => profile_my_vehicles_url(@user)) do |form| %>
   <% if vehicles.errors.any? %>
     <div id="error_explanation" class="alert alert-warning">
       <h2><%= pluralize(vehicles.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
