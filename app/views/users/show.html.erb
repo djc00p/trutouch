@@ -4,7 +4,7 @@
   <div class="">
     <%=
       button_to "Add New Vehicle",
-      add_my_vehicle_path,
+      profile_add_my_vehicle_path(@user),
       method: :get,
       class: "btn btn-secondary"
     %>
