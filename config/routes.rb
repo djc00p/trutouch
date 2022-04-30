@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # Users
-  resources :users, except: [:index, :new], path: '/profile', as: 'profile'
-  get '/sign_up', to: 'users#new', as: 'sign_up'
+  resources :users, except: [:index, :new], path: '/profile', as: 'profile' do
+    resources :vehicles, only: [:create], path: 'my_vehicles', as: 'my_vehicles'
+    get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
+  end
 
   # User Activation
   get '/profile/:id/verification', to: 'users#verification', as: 'verification'
@@ -14,13 +16,6 @@ Rails.application.routes.draw do
   get '/sign_in', to: 'sessions#new'
   post '/sign_in', to: 'sessions#create'
   delete '/sign_out', to: 'sessions#destroy'
-
-  # Vehicles
-  resources :vehicles, only: [:create], path: 'my_vehicles', as: 'my_vehicles'
-  get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
-
-
-
 
   # Navbar Links
   get '/our_services', to: 'our_services#index'
