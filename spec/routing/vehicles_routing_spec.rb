@@ -4,16 +4,21 @@ require "rails_helper"
 
 RSpec.describe VehiclesController, type: :routing do
   describe "routing" do
+    let(:user) { create(:user) }
+
     it "routes to #index" do
-      expect(get: "/my_vehicles").to route_to("vehicles#index")
+      expect(get: "/profile/#{user.id}/my_vehicles").to route_to(controller: "vehicles", action: "index",
+                                                                 profile_id: user.id.to_s)
     end
 
     it "routes to #create" do
-      expect(post: "/my_vehicles").to route_to("vehicles#create")
+      expect(post: "/profile/#{user.id}/my_vehicles").to route_to(controller: "vehicles", action: "create",
+                                                                  profile_id: user.id.to_s)
     end
 
     it "routes to #new" do
-      expect(get: "/add_my_vehicle").to route_to("vehicles#new")
+      expect(get: "/profile/#{user.id}/add_my_vehicle").to route_to(controller: "vehicles", action: "new",
+                                                                    profile_id: user.id.to_s)
     end
 
     it "routes to #edit" do
