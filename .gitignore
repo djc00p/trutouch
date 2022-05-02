@@ -41,5 +41,8 @@ spec/test_results.txt
 # Ignore Testing Coverage
 coverage/
 
+# Ignore Scratch Paper
+scratch_paper.rb
+
 # Ignore application configuration
 /config/application.yml
