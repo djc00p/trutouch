@@ -38,6 +38,13 @@ RSpec.describe "/vehicles", type: :request do
     end
   end
 
+  describe "GET /edit" do
+    it "render a successful response" do
+      get edit_my_vehicle_url(user)
+      expect(response).to be_successful
+    end
+  end
+
   describe "POST /create" do
     context "with valid parameters" do
       it "creates a new Vehicle" do
