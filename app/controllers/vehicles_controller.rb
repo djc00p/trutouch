@@ -7,6 +7,10 @@ class VehiclesController < ApplicationController
     @vehicle = @user.vehicles.build
   end
 
+  def show
+
+  end
+
   def create
     @vehicle = @user.vehicles.build(**vehicle_params)
     @vehicle.assign_classification
