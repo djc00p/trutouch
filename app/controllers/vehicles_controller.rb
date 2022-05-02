@@ -1,22 +1,30 @@
 # frozen_string_literal: true
 
 class VehiclesController < ApplicationController
+  before_action :get_user, only: %i[new create]
+
   def new
-    @vehicle = Vehicle.new
+    @vehicle = @user.vehicles.build
   end
 
   def create
-    @vehicle = Vehicle.new(**vehicle_params, user_id: current_user.id)
+    @vehicle = @user.vehicles.build(**vehicle_params)
     @vehicle.assign_classification
     if @vehicle.save
       flash[:success] = "Your #{@vehicle.color} #{@vehicle.make} #{@vehicle.model} has been add!"
-      redirect_to profile_url(current_user)
+      redirect_to profile_url(@user)
     else
-      render :new, status: :unprocessable_entity
+      flash[:danger] = "Vehicle not found. Couldn't assign vehicle class."
+      render :new, status: :temporary_redirect
     end
   end
 
   private
+
+  def get_user
+    profile_id = params[:profile_id]
+    @user = User.find(profile_id)
+  end
 
   def vehicle_params
     params.require(:vehicle).permit(:year, :color, :make, :model)
