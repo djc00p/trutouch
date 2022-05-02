@@ -2,14 +2,13 @@
 
 class VehiclesController < ApplicationController
   before_action :find_user, only: %i[new create]
+  before_action :set_vehicle, only: %i[show]
 
   def new
     @vehicle = @user.vehicles.build
   end
 
-  def show
-
-  end
+  def show; end
 
   def create
     @vehicle = @user.vehicles.build(**vehicle_params)
@@ -28,6 +27,10 @@ class VehiclesController < ApplicationController
   def find_user
     profile_id = params[:profile_id]
     @user = User.find(profile_id)
+  end
+
+  def set_vehicle
+    @vehicle = Vehicle.find(params[:id])
   end
 
   def vehicle_params
