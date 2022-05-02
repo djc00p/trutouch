@@ -1,10 +1,12 @@
 require "csv"
-# require "pry"
 
 DetailService.destroy_all
 TintService.destroy_all
 ClearBraService.destroy_all
 ProductionVehicle.destroy_all
+
+create(:user, ENV["CREATE_USER"])
+puts "user created"
 
 DetailService.create([
   {
@@ -335,7 +337,7 @@ CSV.foreach("./lib/vehicle_list.csv", headers: true) do |row|
   stating_year = row.to_h["production_starting_year"].to_i
   ending_year = row.to_h["production_ending_year"]
   if ending_year == "-"
-    ending_year = Time.now.year.to_i
+    ending_year = Time.now.year
     ending_year
   end
   (stating_year..ending_year.to_i).each do |year|
