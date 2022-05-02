@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class VehiclesController < ApplicationController
-  before_action :get_user, only: %i[new create]
+  before_action :find_user, only: %i[new create]
 
   def new
     @vehicle = @user.vehicles.build
@@ -21,7 +21,7 @@ class VehiclesController < ApplicationController
 
   private
 
-  def get_user
+  def find_user
     profile_id = params[:profile_id]
     @user = User.find(profile_id)
   end
