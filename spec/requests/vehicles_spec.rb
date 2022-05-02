@@ -5,6 +5,7 @@ require "rails_helper"
 RSpec.describe "/vehicles", type: :request do
   let(:user) { create(:user) }
   let(:production_vehicle) { create(:production_vehicle) }
+  let(:vehicle) { create(:vehicle, user_id: user.id) }
   let(:valid_attributes) do
     {
       year: production_vehicle[:production_year],
@@ -21,6 +22,13 @@ RSpec.describe "/vehicles", type: :request do
       make: Faker::Name.last_name,
       model: Faker::Name.first_name
     }
+  end
+
+  describe "GET /show" do
+    it "renders a successful response" do
+      get my_vehicle_url(vehicle)
+      expect(response).to be_successful
+    end
   end
 
   describe "GET /new" do
