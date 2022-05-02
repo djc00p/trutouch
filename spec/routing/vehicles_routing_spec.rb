@@ -22,23 +22,23 @@ RSpec.describe VehiclesController, type: :routing do
     end
 
     it "routes to #edit" do
-      expect(get: "/my_vehicle/1/edit").to route_to("vehicles#edit", id: "1")
+      expect(get: "/my_vehicles/1/edit").to route_to("vehicles#edit", id: "1")
     end
 
     it "routes to #show" do
-      expect(get: "/my_vehicle/1").to route_to("vehicles#show", id: "1")
+      expect(get: "/my_vehicles/1").to route_to("vehicles#show", id: "1")
     end
 
     it "routes to #update via PATCH" do
-      expect(patch: "/my_vehicle/1").to route_to("vehicles#update", id: "1")
+      expect(patch: "/my_vehicles/1").to route_to("vehicles#update", id: "1")
     end
 
     it "routes to #update via PUT" do
-      expect(put: "/my_vehicle/1").to route_to("vehicles#update", id: "1")
+      expect(put: "/my_vehicles/1").to route_to("vehicles#update", id: "1")
     end
 
     it "routes to #destroy" do
-      expect(delete: "/my_vehicle/1").to route_to("vehicles#destroy", id: "1")
+      expect(delete: "/my_vehicles/1").to route_to("vehicles#destroy", id: "1")
     end
   end
 end
