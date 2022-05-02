@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   # Users
   resources :users, except: [:index, :new], path: '/profile', as: 'profile' do
-    resources :vehicles, only: [:create], path: 'my_vehicles', as: 'my_vehicles'
+    resources :vehicles, except: [:new], path: 'my_vehicles', as: 'my_vehicles', shallow: true
     get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
   end
+  get '/sign_up', to: 'users#new', as: 'sign_up'
 
   # User Activation
   get '/profile/:id/verification', to: 'users#verification', as: 'verification'
