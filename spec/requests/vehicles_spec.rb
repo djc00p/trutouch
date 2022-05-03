@@ -65,4 +65,17 @@ RSpec.describe "/vehicles", type: :request do
       end
     end
   end
+
+  describe "DELETE /destroy" do
+    it "destroys the requested vehicle" do
+      expect do
+        delete vehicle_url(vehicle)
+      end.to change(Vehicle, :count).by(-1)
+    end
+
+    it "redirects to the profile_my_vehicles_url" do
+      delete vehicle_url(vehicle)
+      expect(response).to redirect_to(profile_my_vehicles_url(user))
+    end
+  end
 end
