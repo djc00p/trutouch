@@ -6,6 +6,7 @@ RSpec.describe "/vehicles", type: :request do
   let(:user) { create(:user) }
   let(:production_vehicle) { create(:production_vehicle) }
   let(:vehicle) { create(:vehicle, user_id: user.id) }
+  let(:vehicle2) { create(:vehicle, user_id: user.id) }
   let(:valid_attributes) do
     {
       year: production_vehicle[:production_year],
@@ -24,9 +25,10 @@ RSpec.describe "/vehicles", type: :request do
     }
   end
 
-  describe "GET /show" do
+  describe "GET /index" do
     it "renders a successful response" do
-      get my_vehicle_url(vehicle)
+      user.vehicles << [vehicle, vehicle2]
+      get profile_my_vehicles_url(user)
       expect(response).to be_successful
     end
   end
@@ -34,6 +36,13 @@ RSpec.describe "/vehicles", type: :request do
   describe "GET /new" do
     it "renders a successful response" do
       get profile_add_my_vehicle_url(user)
+      expect(response).to be_successful
+    end
+  end
+
+  describe "GET /show" do
+    it "renders a successful response" do
+      get my_vehicle_url(vehicle)
       expect(response).to be_successful
     end
   end
@@ -68,13 +77,15 @@ RSpec.describe "/vehicles", type: :request do
 
   describe "DELETE /destroy" do
     it "destroys the requested vehicle" do
+      user.vehicles << [vehicle, vehicle2]
       expect do
-        delete vehicle_url(vehicle)
+        delete my_vehicle_url(vehicle)
       end.to change(Vehicle, :count).by(-1)
     end
 
     it "redirects to the profile_my_vehicles_url" do
-      delete vehicle_url(vehicle)
+      user.vehicles << [vehicle, vehicle2]
+      delete my_vehicle_url(vehicle)
       expect(response).to redirect_to(profile_my_vehicles_url(user))
     end
   end
