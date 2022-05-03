@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
 class VehiclesController < ApplicationController
-  before_action :find_user, only: %i[new create]
-  before_action :set_vehicle, only: %i[show]
+  before_action :find_user, only: %i[index new create]
+  before_action :set_vehicle, only: %i[show destroy]
+
+  def index
+    @vehicles = @user.vehicles
+  end
 
   def new
     @vehicle = @user.vehicles.build
@@ -22,11 +26,17 @@ class VehiclesController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(@vehicle.user_id)
+    @vehicle.destroy
+    flash[:success] = "Your vehicle as been deleted!"
+    redirect_to profile_my_vehicles_url(@user)
+  end
+
   private
 
   def find_user
-    profile_id = params[:profile_id]
-    @user = User.find(profile_id)
+    @user = User.find(params[:profile_id])
   end
 
   def set_vehicle
