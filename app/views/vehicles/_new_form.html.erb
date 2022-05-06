@@ -13,25 +13,60 @@
 
   <div class="field">
     <%= form.label :year %>
-    <%= form.text_field :year %>
+    <%= form.collection_select :year, ProductionVehicle.list_of_production_years, :production_year, :production_year, { prompt: "Please Select a Year" }, { id: "vehicleYear" } %>
   </div>
 
-  <div class="field">
+  <div class="field" id="vehicleColorDiv" >
     <%= form.label :color %>
-    <%= form.text_field :color %>
+    <%= form.select :color, Vehicle.colors, { prompt: "Please Select a Color" }, { id: "vehicleColor" }%>
   </div>
-
-  <div class="field">
+  
+  <div class="field" id="vehicleMakeDiv" >
     <%= form.label :make %>
-    <%= form.text_field :make %>
+    <%= form.collection_select :make, ProductionVehicle.filter_by_year_for_makes,:production_year_and_make, :make, { prompt: "Please Select a Make" }, { id: "vehicleMake" }  %>
   </div>
 
-  <div class="field">
+  <div class="field" id="vehicleModelDiv" >
     <%= form.label :model %>
-    <%= form.text_field :model %>
+    <%= form.collection_select :model, ProductionVehicle.filter_by_year_and_make_for_model, :production_year_make_and_model, :model, { prompt: "Please Select a Model" }, { id: "vehicleModel" } %>
   </div>
-
   <div class="actions">
     <%= form.submit "Add Vehicle" %>
   </div>
 <% end %>
+<script type="text/javascript">
+  var $make = $("#vehicleMake");
+  var $model = $("#vehicleModel");
+  var $year = $("#vehicleYear");
+  var $makeValues = $make.find("option").clone();
+  var $modelValues = $model.find("option").clone();
+
+  // $make.empty().append('<option value="">Please Select a Make</option>');
+  // $model.empty().append('<option value="">Please Select a Model</option>');
+
+$year.change(function(event) {
+  var options, selected = $(this).val();
+
+  $make.find('option').not("option:first").remove();
+  $model.find('option').not("option:first").remove();
+  if (selected.length === 0 || selected === void 0) return false;
+
+  options = $makeValues.filter(function(index, element) {
+    value = element.value.slice(0,4)
+    return value === selected
+  }).appendTo($make);
+});
+
+$make.change(function(event) {
+  var options, selected = $(this).val();
+
+  $model.find('option').not("option:first").remove();
+  if (selected.length === 0 || selected === void 0) return false;
+
+  options = $modelValues.filter(function(index, element) {
+    element_value = element.value.split(", ", 2).join(", ")
+    return element_value === selected
+  }
+  ).appendTo($model);
+});
+</script>
