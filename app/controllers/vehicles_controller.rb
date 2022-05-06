@@ -44,6 +44,15 @@ class VehiclesController < ApplicationController
   end
 
   def vehicle_params
+    params_split?
+
     params.require(:vehicle).permit(:year, :color, :make, :model)
+  end
+
+  def params_split?
+    return unless (params[:vehicle][:make].split(", ").count && params[:vehicle][:model].split(", ").count) > 1
+
+    params[:vehicle][:make] = params[:vehicle][:make].split(", ").pop
+    params[:vehicle][:model] = params[:vehicle][:model].split(", ").pop
   end
 end
