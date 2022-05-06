@@ -41,7 +41,7 @@ RSpec.describe "/vehicles", type: :request do
 
   describe "GET /show" do
     it "renders a successful response" do
-      get my_vehicle_url(vehicle)
+      get my_vehicle_url(vehicles[0])
       expect(response).to be_successful
     end
   end
@@ -78,13 +78,13 @@ RSpec.describe "/vehicles", type: :request do
     it "destroys the requested vehicle" do
       user.vehicles << [vehicles[0], vehicles[1]]
       expect do
-        delete my_vehicle_url(vehicle)
+        delete my_vehicle_url(vehicles[0])
       end.to change(Vehicle, :count).by(-1)
     end
 
     it "redirects to the profile_my_vehicles_url" do
       user.vehicles << [vehicles[0], vehicles[1]]
-      delete my_vehicle_url(vehicle)
+      delete my_vehicle_url(vehicles[0])
       expect(response).to redirect_to(profile_my_vehicles_url(user))
     end
   end
