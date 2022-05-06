@@ -20,7 +20,7 @@
     <%= form.label :color %>
     <%= form.select :color, Vehicle.colors, { prompt: "Please Select a Color" }, { id: "vehicleColor" }%>
   </div>
-  
+
   <div class="field" id="vehicleMakeDiv" >
     <%= form.label :make %>
     <%= form.collection_select :make, ProductionVehicle.filter_by_year_for_makes,:production_year_and_make, :make, { prompt: "Please Select a Make" }, { id: "vehicleMake" }  %>
@@ -30,43 +30,9 @@
     <%= form.label :model %>
     <%= form.collection_select :model, ProductionVehicle.filter_by_year_and_make_for_model, :production_year_make_and_model, :model, { prompt: "Please Select a Model" }, { id: "vehicleModel" } %>
   </div>
+
   <div class="actions">
-    <%= form.submit "Add Vehicle" %>
+    <%= form.submit "Add Vehicle", id: "register" %>
   </div>
 <% end %>
-<script type="text/javascript">
-  var $make = $("#vehicleMake");
-  var $model = $("#vehicleModel");
-  var $year = $("#vehicleYear");
-  var $makeValues = $make.find("option").clone();
-  var $modelValues = $model.find("option").clone();
-
-  // $make.empty().append('<option value="">Please Select a Make</option>');
-  // $model.empty().append('<option value="">Please Select a Model</option>');
-
-$year.change(function(event) {
-  var options, selected = $(this).val();
-
-  $make.find('option').not("option:first").remove();
-  $model.find('option').not("option:first").remove();
-  if (selected.length === 0 || selected === void 0) return false;
-
-  options = $makeValues.filter(function(index, element) {
-    value = element.value.slice(0,4)
-    return value === selected
-  }).appendTo($make);
-});
-
-$make.change(function(event) {
-  var options, selected = $(this).val();
-
-  $model.find('option').not("option:first").remove();
-  if (selected.length === 0 || selected === void 0) return false;
-
-  options = $modelValues.filter(function(index, element) {
-    element_value = element.value.split(", ", 2).join(", ")
-    return element_value === selected
-  }
-  ).appendTo($model);
-});
-</script>
+<%= javascript_pack_tag 'new_vehicle_form' %>
