@@ -12,3 +12,14 @@
     <% end %>
   <% end %>
 </div>
+<div class="">
+  <div class="">
+    <%=
+      button_to "Add New Vehicle",
+      profile_add_my_vehicle_path(@user),
+      method: :get,
+      class: "btn btn-secondary",
+      disabled: @vehicles.size >= 10
+    %>
+  </div>
+</div>
