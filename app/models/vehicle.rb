@@ -19,6 +19,11 @@ class Vehicle < ApplicationRecord
     update_vehicle_classification
   end
 
+  # Class Methods
+  def self.colors
+    ["Beige", "Black", "Blue", "Brown", "Gold", "Gray", "Green", "Orange", "Pink", "Purple", "Red", "Silver", "White", "Yellow"]
+  end
+
   private
 
   def update_vehicle_classification
