@@ -21,13 +21,13 @@ RSpec.describe "vehicles/new", type: :view do
     render
 
     assert_select "form[action=?][method=?]", profile_my_vehicles_url(user), "post" do
-      assert_select "input[name=?]", "vehicle[year]"
+      assert_select "select[name=?]", "vehicle[year]"
 
-      assert_select "input[name=?]", "vehicle[color]"
+      assert_select "select[name=?]", "vehicle[color]"
 
-      assert_select "input[name=?]", "vehicle[make]"
+      assert_select "select[name=?]", "vehicle[make]"
 
-      assert_select "input[name=?]", "vehicle[model]"
+      assert_select "select[name=?]", "vehicle[model]"
     end
   end
 end
