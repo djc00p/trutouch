@@ -21,7 +21,8 @@ class Vehicle < ApplicationRecord
 
   # Class Methods
   def self.colors
-    ["Beige", "Black", "Blue", "Brown", "Gold", "Gray", "Green", "Orange", "Pink", "Purple", "Red", "Silver", "White", "Yellow"]
+    %w[Beige Black Blue Brown Gold Gray Green Orange Pink Purple Red Silver White
+       Yellow]
   end
 
   private
