@@ -29,7 +29,7 @@ class VehiclesController < ApplicationController
   def destroy
     @user = User.find(@vehicle.user_id)
     @vehicle.destroy
-    flash[:success] = "Your vehicle as been deleted!"
+    flash[:success] = "Your vehicle has been deleted!"
     redirect_to profile_my_vehicles_url(@user)
   end
 
