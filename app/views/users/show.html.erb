@@ -1,31 +1,45 @@
-<%= render @user %>
-<%= render "my_vehicles" %>
-<div>
+<div class="container">
   <div class="">
-    <%=
-      button_to "Add New Vehicle",
-      profile_add_my_vehicle_path(@user),
-      method: :get,
-      class: "btn btn-secondary",
-      disabled: @user.vehicles.size >= 10
-    %>
+    <%= render @user %>
+    <div class="btn-group" role="group" >
+      <div class="">
+        <%=
+        button_to "Edit Profile",
+        edit_profile_path(@user),
+        method: :get,
+        class: "btn btn-primary"
+        %>
+      </div>
+      <div class="">
+        <%=
+        button_to "Delete Profile",
+        profile_path(@user),
+        method: :delete,
+        class: "btn btn-danger"
+        %>
+      </div>
+    </div>
   </div>
-</div>
-<div>
   <div class="">
-    <%=
-      button_to "Edit Profile",
-      edit_profile_path(@user),
-      method: :get,
-      class: "btn btn-secondary"
-    %>
-  </div>
-  <div class="">
-    <%=
-      button_to "Delete Profile",
-      profile_path(@user),
-      method: :delete,
-      class: "btn btn-danger"
-    %>
+    <%= render "my_vehicles" %>
+    <div class="btn-group" role="group" >
+      <div class="">
+        <%=
+        button_to "My Vehicles",
+        profile_my_vehicles_path(@user),
+        method: :get,
+        class: "btn btn-primary"
+        %>
+      </div>
+      <div class="">
+        <%=
+        button_to "Add New Vehicle",
+        profile_add_my_vehicle_path(@user),
+        method: :get,
+        class: "btn btn-success",
+        disabled: @user.vehicles.size >= 10
+        %>
+      </div>
+    </div>
   </div>
 </div>
