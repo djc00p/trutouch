@@ -27,7 +27,7 @@ describe "User" do
       within "#vehicle-#{vehicles[1].id}" do
         click_button "Show"
       end
-      
+
       click_button "Delete Vehicle"
 
       expect(page).to have_content("Your vehicle has been deleted!")
