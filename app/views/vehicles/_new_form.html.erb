@@ -13,26 +13,26 @@
 
   <div class="field">
     <%= form.label :year %>
-    <%= form.collection_select :year, ProductionVehicle.list_of_production_years, :production_year, :production_year, { prompt: "Please Select a Year" }, { id: "vehicleYear" } %>
+    <%= form.collection_select :year, ProductionVehicle.list_of_production_years, :production_year, :production_year, { prompt: "Please Select a Year" }, { class:"btn btn-default dropdown-toggle", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleYear" } %>
   </div>
 
   <div class="field" id="vehicleColorDiv" >
     <%= form.label :color %>
-    <%= form.select :color, Vehicle.colors, { prompt: "Please Select a Color" }, { id: "vehicleColor" }%>
+    <%= form.select :color, Vehicle.colors, { prompt: "Please Select a Color" }, { class:"btn btn-default dropdown-toggle", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleColor" }%>
   </div>
 
   <div class="field" id="vehicleMakeDiv" >
     <%= form.label :make %>
-    <%= form.collection_select :make, ProductionVehicle.filter_by_year_for_makes,:production_year_and_make, :make, { prompt: "Please Select a Make" }, { id: "vehicleMake" }  %>
+    <%= form.collection_select :make, ProductionVehicle.filter_by_year_for_makes,:production_year_and_make, :make, { prompt: "Please Select a Make" }, { class:"btn btn-default dropdown-toggle", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleMake" }  %>
   </div>
 
   <div class="field" id="vehicleModelDiv" >
     <%= form.label :model %>
-    <%= form.collection_select :model, ProductionVehicle.filter_by_year_and_make_for_model, :production_year_make_and_model, :model, { prompt: "Please Select a Model" }, { id: "vehicleModel" } %>
+    <%= form.collection_select :model, ProductionVehicle.filter_by_year_and_make_for_model, :production_year_make_and_model, :model, { prompt: "Please Select a Model" }, { class:"btn btn-default dropdown-toggle", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleModel" } %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit "Add Vehicle", id: "register" %>
+    <%= form.submit "Add Vehicle", {class: "btn btn-success", id: "register"} %>
   </div>
 <% end %>
 <%= javascript_pack_tag 'new_vehicle_form' %>
