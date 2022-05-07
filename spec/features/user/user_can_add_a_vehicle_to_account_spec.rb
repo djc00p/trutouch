@@ -4,18 +4,19 @@ require "rails_helper"
 
 describe "User" do
   let(:user) { create(:user) }
-  let(:production_vehicle) { create(:production_vehicle) }
+  let(:production_vehicles) { create_list(:production_vehicle, 10, production_year: :unique) }
   let(:params) do
     {
-      year: production_vehicle[:production_year],
-      color: Faker::Vehicle.color,
-      make: production_vehicle[:make],
-      model: production_vehicle[:model]
+      year: production_vehicles[3][:production_year],
+      color: "Black",
+      make: production_vehicles[3][:make],
+      model: production_vehicles[3][:model]
     }
   end
 
   before do |test|
     user
+    production_vehicles
     visit sign_in_path
     fill_in "session[email]", with: user.email
     fill_in "session[password]", with: user.password
@@ -28,21 +29,21 @@ describe "User" do
   end
 
   it "is able to add new vehicle to user by filling in form" do # rubocop:disable RSpec/ExampleLength
-    fill_in "vehicle[year]", with: params[:year]
-    fill_in "vehicle[color]", with: params[:color]
-    fill_in "vehicle[make]", with: params[:make]
-    fill_in "vehicle[model]", with: params[:model]
+    select params[:year], from: "vehicle[year]"
+    select params[:color], from: "vehicle[color]"
+    select params[:make], from: "vehicle[make]"
+    select params[:model], from: "vehicle[model]"
 
-    click_on "Add Vehicle"
+    click_button "Add Vehicle"
 
     expect(page).to have_content("Your #{params[:color]} #{params[:make]} #{params[:model]} has been add!")
   end
 
   it "is able to see the vehicle class" do # rubocop:disable RSpec/ExampleLength
-    fill_in "vehicle[year]", with: params[:year]
-    fill_in "vehicle[color]", with: params[:color]
-    fill_in "vehicle[make]", with: params[:make]
-    fill_in "vehicle[model]", with: params[:model]
+    select params[:year], from: "vehicle[year]"
+    select params[:color], from: "vehicle[color]"
+    select params[:make], from: "vehicle[make]"
+    select params[:model], from: "vehicle[model]"
 
     click_on "Add Vehicle"
 
