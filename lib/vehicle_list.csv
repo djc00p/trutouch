@@ -1,0 +1,1278 @@
+make,model,production_starting_year,production_ending_year,vehicle_size,vehicle_type,vehicle_class
+Acura,CDX,2016,-,Subcompact,Luxury,CUV
+Acura,CL,1998,2003,Mid-size,Luxury,Grand Tourer
+Acura,EL,1997,2005,Subcompact,Luxury,Car
+Acura,ILX,2012,-,Subcompact,Luxury,Car
+Acura,Integra,1995,2006,Compact,Luxury,Car
+Acura,MDX,2001,-,Mid-size,Luxury,CUV
+Acura,NSX,2001,-,Mid-size,Luxury ,Sports Car
+Acura,RDX,2006,-,Compact,Luxury,CUV
+Acura,RL,1995,2012,Full-size,Luxury,Car
+Acura,RLX,2013,-,Full-size,Luxury,Car
+Acura,RSX,2002,2006,Compact,Luxury,Coupe
+Acura,TL,1999,2014,Mid-size,Luxury,Car
+Acura,TLX,2014,-,Mid-size,Luxury,Car
+Acura,TSX,2003,2014,Compact,Luxury,Car
+Acura,ZDX,2010,2013,Mid-size,Luxury,CUV
+Alfa Romeo,146,1994,2001,Compact,,Hatchback
+Alfa Romeo,147,1998,2010,Compact,,Hatchback
+Alfa Romeo,147 GTA,2002,2010,Compact,Sport,Hot Hatchback
+Alfa Romeo,156,1997,2007,Compact,Luxury,Car
+Alfa Romeo,156 GTA,2002,2007,Compact,Luxury,Car
+Alfa Romeo,159,2005,2011,Compact,Luxury,Car
+Alfa Romeo,166,1998,2007,Full-size,Luxury,Car
+Alfa Romeo,4C,2013,-,Compact,,Sports Car
+Alfa Romeo,8C Competizione,2008,2010,Compact,,Sports Car
+Alfa Romeo,Brera,2005,2010,Mid-size,,Sports Car
+Alfa Romeo,Giulia,2016,-,Mid-size,Luxury,Car
+Alfa Romeo,Giulietta,2010,-,Subcompact,,Hatchback
+Alfa Romeo,GT,2003,-,Compact,,Sports Car
+Alfa Romeo,GTV,1995,2006,Compact,,Sports Car
+Alfa Romeo,MiTo,2008,2018,Subcompact,,Hatchback
+Alfa Romeo,Spider,1998,2010,Compact,,Sports Car
+Alfa Romeo,Stelvio,2017,-,Compact,Luxury,CUV
+Aston Martin,Cygnet,2011,2013,Subcompact,,Hatchback
+Aston Martin,DB11,2016,-,Mid-size,Luxury,Grand Tourer
+Aston Martin,DB9,2004,2016,Mid-size,Luxury,Grand Tourer
+Aston Martin,DBS,2003,2012,Mid-size,Luxury,Grand Tourer
+Aston Martin,DBS Superleggera,2018,-,Mid-size,Luxury,Grand Tourer
+Aston Martin,DBS Violante,2007,2012,Mid-size,Luxury,Grand Tourer
+Aston Martin,DBX,2020,-,Mid-size,Luxury,CUV
+Aston Martin,Rapide,2010,-,Mid-size,Luxury,Car
+Aston Martin,V12 Vanquish,2001,2008,Compact,Luxury,Supercar
+Aston Martin,V12 Vantage,2010,2018,Compact,Luxury,Supercar
+Aston Martin,V8 Vantage,2005,2007,Compact,Luxury,Supercar
+Aston Martin,Valkyrie,2019,-,Compact,Luxury,Hypercar
+Aston Martin,Vanquish,2011,2018,Mid-size,Luxury,Grand Tourer
+Aston Martin,Vantage,2018,-,Compact,Luxury,Supercar
+Aston Martin,Virage,2011,2012,Compact,Luxury,Supercar
+Aston Martin,Zagato Coupe,2016,2016,Compact,Luxury,Supercar
+Audi,A1,2010,-,Subcompact,Luxury,Hatchback
+Audi,A2,2000,2006,Subcompact,Luxury,Hatchback
+Audi,A3,1996,-,Subcompact,Luxury,Car
+Audi,A4,1995,-,Compact,Luxury,Car
+Audi,A4 Allroad Quattro,2009,-,Compact,,Wagon
+Audi,A5,2007,-,Compact,Luxury,Coupe
+Audi,A6,1998,-,Mid-size,Luxury,Car
+Audi,A7,2010,-,Mid-size,Luxury,Car
+Audi,A8,1994,-,Full-size,Luxury,Car
+Audi,Allroad,2000,2011,Mid-size,,Wagon
+Audi,e-tron,2019,-,Mid-size,Electric Luxury,SUV
+Audi,e-tron GT,2020,-,Mid-size,Electric Luxury,SUV
+Audi,e-tron Sportback,2020,-,Mid-size,Electric Luxury,SUV
+Audi,Q2,2016,-,Subcompact,Luxury,CUV
+Audi,Q3,2011,-,Subcompact,Luxury,CUV
+Audi,Q4,2021,-,Compact,Luxury,CUV
+Audi,Q5,2008,-,Compact,Luxury,CUV
+Audi,Q5 Sportback,2021,-,Compact,Luxury,CUV
+Audi,Q7,2006,2015,Full-size,Luxury,SUV
+Audi,Q7,2015,-,Mid-size,Luxury,CUV
+Audi,Q8,2018,-,Mid-size,Luxury,CUV
+Audi,R8,2006,-,Compact,Luxury,Supercar
+Audi,RS e-tron GT,2021,-,Full-size,Electric Luxury,Car
+Audi,RS Q3,2012,-,Subcompact,Luxury,CUV
+Audi,RS Q3 Sportback,2019,-,Subcompact,Luxury,CUV
+Audi,RS Q8,2019,-,Mid-size,Luxury,CUV
+Audi,RS3,2011,-,Subcompact,Luxury,Car
+Audi,RS4,2005,-,Compact,Luxury,Car
+Audi,RS5,2010,-,Compact,Luxury,Coupe
+Audi,RS6,2002,-,Mid-size,Luxury,Car
+Audi,RS7,2013,-,Mid-size,Luxury,Car
+Audi,S1,2014,2018,Subcompact,Luxury,Hatchback
+Audi,S3,2006,-,Compact,Luxury,Car
+Audi,S4,1998,-,Compact,Luxury,Car
+Audi,S5,2007,-,Compact,Luxury,Car
+Audi,S6,1999,-,Mid-size,Luxury,Car
+Audi,S7,2012,-,Mid-size,Luxury,Car
+Audi,S8,1996,-,Full-size,Luxury,Car
+Audi,SQ2,2019,-,Subcompact,Luxury,CUV
+Audi,SQ5,2012,-,Compact,Luxury,CUV
+Audi,SQ7,2016,-,Mid-size,Luxury,CUV
+Audi,SQ8,2019,-,Mid-size,Luxury,CUV
+Audi,TT,1998,-,Compact,,Sports Car
+Audi,TT RS,2008,-,Compact,,Sports Car
+Audi,TTS,2008,-,Compact,,Sports Car
+Bentley,Arnage,1999,2007,Full-size,Luxury,Car
+Bentley,Azure,1999,2009,Full-size,Luxury,Grand Tourer
+Bentley,Bentayga,2015,-,Mid-size,Luxury,CUV
+Bentley,Brooklands Coupe,2008,2011,Full-size,Luxury,Grand Tourer
+Bentley,Continental,2003,-,Full-size,Luxury,Grand Tourer
+Bentley,Continental Flying Spur,2005,2013,Mid-size,Luxury,Grand Tourer
+Bentley,Continental GT,2018,-,Mid-size,Luxury,Grand Tourer
+Bentley,Flying Spur,2013,2019,Full-size,Luxury,Car
+Bentley,Mulsanne,2010,-,Full-size,Luxury,Car
+BMW,1 series,2004,-,Subcompact,Luxury,Hatchback
+BMW,2 series,2013,-,Subcompact,Luxury,Coupe
+BMW,3 series,1982,-,Compact,Luxury,Car
+BMW,4 series,2013,-,Compact,Luxury,Car
+BMW,5 series,1988,-,Mid-size,Luxury,Car
+BMW,6 series,2004,-,Mid-size,Luxury,Grand Tourer
+BMW,7 series,1995,-,Full-size,Luxury,Car
+BMW,8 series,1990,-,Full-size,Luxury,Grand Tourer
+BMW,i3,2013,-,Subcompact,Electric Luxury,Hatchback
+BMW,i4,2021,-,Compact,Electric Luxury,Car
+BMW,i8,2014,-,Compact,Luxury,Supercar
+BMW,iX,2021,-,Mid-size,Electric Luxury,CUV
+BMW,iX3,2020,-,Mid-size,Electric Luxury,CUV
+BMW,M2,2015,-,Compact,Luxury,Supercar
+BMW,M3,1992,-,Compact,Luxury,Car
+BMW,M4,2012,-,Compact,Luxury,Supercar
+BMW,M5,1998,-,Mid-size,Luxury,Car
+BMW,M6,2005,-,Mid-size,Luxury,Grand Tourer
+BMW,M8,2019,-,Full-size,Luxury,Grand Tourer
+BMW,X1,2009,-,Subcompact,Luxury,CUV
+BMW,X2,2017,-,Subcompact,Luxury,CUV
+BMW,X3,2004,-,Compact,Luxury,CUV
+BMW,X3 M,2019,-,Compact,Luxury,CUV
+BMW,X4,2014,-,Compact,Luxury,CUV
+BMW,X4 M,2019,-,Compact,Luxury,CUV
+BMW,X5,2000,-,Mid-size,Luxury,CUV
+BMW,X5 M,2009,-,Mid-size,Luxury,CUV
+BMW,X6,2008,-,Mid-size,Luxury,CUV
+BMW,X6 M,2009,-,Mid-size,Luxury,CUV
+BMW,X7,2018,-,Full-size,Luxury,CUV
+BMW,Z3,1996,2003,Compact,,Sports Car
+BMW,Z4,2002,-,Compact,,Sports Car
+BMW,Z8,2000,2006,Compact,,Sports Car
+Brilliance,H230,2012,2019,Subcompact,,Car
+Brilliance,V3,2014,-,Subcompact,,CUV
+Brilliance,V5,2011,-,Compact,,CUV
+Bugatti,Veyron,2005,2015,Compact,Luxury,Hypercar
+Buick,Century,1997,2005,Mid-size,,Car
+Buick,Enclave,2007,-,Mid-size,,CUV
+Buick,Encore,2012,-,Subcompact,,CUV
+Buick,Envision,2014,-,Mid-size,,CUV
+Buick,LaCrosse,2004,-,Mid-size,,Car
+Buick,Le Sabre,1999,2005,Full-size,,Car
+Buick,Lucerne,2005,2011,Full-size,,Car
+Buick,Park Avenue,1996,2012,Full-size,,Car
+Buick,Rainier,2003,2007,Mid-size,,SUV
+Buick,Regal,2009,-,Mid-size,,Car
+Buick,Rendezvouz,2001,2007,Mid-size,,CUV
+Buick,Terraza,2005,2007,Full-size,,Minivan
+Buick,Verano,2012,-,Mid-size,,Car
+BYD,Qin,2014,-,Compact,,Car
+Cadillac,ATS,2012,2019,Compact,Luxury,Car
+Cadillac,ATS-V,2016,2019,Compact,Luxury,Car
+Cadillac,BLS,2006,2010,Compact,Luxury,Car
+Cadillac,CT4,2020,-,Compact,Luxury,Car
+Cadillac,CT5,2019,-,Mid-size,Luxury,Car
+Cadillac,CT6,2016,-,Full-size,Luxury,Car
+Cadillac,CTS,2002,-,Mid-size,Luxury,Car
+Cadillac,DeVille,2000,2005,Full-size,Luxury,Car
+Cadillac,DTS,2006,2011,Full-size,Luxury,Car
+Cadillac,Eldorado,1992,2002,Mid-size,Luxury,Coupe
+Cadillac,ELR,2013,2016,Compact,Luxury,Coupe
+Cadillac,Escalade,2002,-,Full-size,Luxury,SUV
+Cadillac,Seville,1998,2004,Mid-size,Luxury,Car
+Cadillac,SRX,2004,2016,Mid-size,Luxury,CUV
+Cadillac,STS,2004,2012,Mid-size,Luxury,Car
+Cadillac,XLR,2003,2009,Compact,Luxury,Coupe
+Cadillac,XT4,2018,-,Subcompact,Luxury,CUV
+Cadillac,XT5,2016,-,Mid-size,Luxury,CUV
+Cadillac,XT6,2019,-,Mid-size,Luxury,CUV
+Cadillac,XTS,2012,-,Full-size,Luxury,Car
+Changan,CS35,2012,-,Subcompact,,SUV
+Changan,CS35 Plus,2018,-,Subcompact,,CUV
+Changan,CS55,2017,-,Compact,,CUV
+Changan,CS75,2013,-,Compact,,CUV
+Changan,CS95,2017,-,Mid-size,,CUV
+Changan,Eado,2012,-,Compact,,Car
+Changan,Raeton,2013,-,Mid-size,,Car
+Chery,Amulet,2003,2010,Compact,,Car
+Chery,Arrizo 3,2015,2020,Subcompact,,Car
+Chery,Arrizo 5,2016,-,Compact,,Car
+Chery,Arrizo 5 Plus,2018,-,Compact,,Car
+Chery,Arrizo 7,2013,2018,Mid-size,,Car
+Chery,Arrizo 8,2022,-,Mid-size,,Car
+Chery,Bonus,2011,-,Compact,,Car
+Chery,Bonus 3,2013,-,Compact,,Car
+Chery,Eastar,2003,2016,Mid-size,,Car
+Chery,Eastar Cross (V5),2006,2015,Compact,,Minivan
+Chery,eQ1,2017,-,Supermini,Electric,Car
+Chery,eQ2,2018,-,Subcompact,Electric,Car
+Chery,eQ5,2021,-,Compact,Electric,CUV
+Chery,Fora,2006,2010,Compact,,Car
+Chery,IndiS,2011,-,Compact,,SUV
+Chery,Kimo,2008,2014,Compact,,Car
+Chery,M11,2008,-,Compact,,Car
+Chery,Omoda 5,2022,-,Compact,,CUV
+Chery,QQ,2003,-,Supermini,,Car
+Chery,QQ6,2006,2010,Compact,,Car
+Chery,Tiggo 3,2014,-,Compact,,CUV
+Chery,Tiggo 3x,2014,-,Subcompact,,CUV
+Chery,Tiggo 4,2017,-,Compact,,CUV
+Chery,Tiggo 5,2014,2021,Compact,,CUV
+Chery,Tiggo 5x,2014,-,Subcompact,,CUV
+Chery,Tiggo 7,2016,-,Compact,,CUV
+Chery,Tiggo 8,2018,-,Mid-size,,CUV
+Chery,Tiggo 8 Pro,2021,-,Mid-size,,CUV
+Chery,Very,2011,-,Mid-size,,SUV
+Chevrolet,Astro,1995,2005,Mid-size,,Van
+Chevrolet,Avalanche,2002,2013,Full-size,,Pickup Truck
+Chevrolet,Aveo,2004,-,Subcompact,,Car
+Chevrolet,Beat,2010,-,Subcompact,,Car
+Chevrolet,S-10 Blazer,1994,2005,Mid-size,,SUV
+Chevrolet,Blazer,2019,-,Mid-size,,SUV
+Chevrolet,Bolt,2017,-,Subcompact,Electric,Hatchback
+Chevrolet,Camaro,1966,2002,Mid-size,,Pony Car
+Chevrolet,Camaro,2010,-,Full-size,,Pony Car
+Chevrolet,Captiva,2006,-,Compact,,CUV
+Chevrolet,Cavalier,1995,2005,Compact,,Car
+Chevrolet,Cobalt,2005,-,Compact,,Car
+Chevrolet,Colorado,2004,-,Mid-size,,Pickup Truck
+Chevrolet,Corvette,2005,-,Compact,,Sports Car
+Chevrolet,Cruze,2009,-,Compact,,Car
+Chevrolet,Epica,2006,2012,Mid-size,,Car
+Chevrolet,Equinox,2005,-,Compact,,CUV
+Chevrolet,Express,2003,-,Full-Size,,Van
+Chevrolet,HHR,2006,2011,Compact,,CUV
+Chevrolet,Impala,2006,-,Full-size,,Car
+Chevrolet,Lacetti,2002,2012,Compact,,Car
+Chevrolet,Lanos,1997,2012,Subcompact,,Car
+Chevrolet,Malibu,2004,-,Mid-size,,Car
+Chevrolet,Monte Carlo,2005,2007,Mid-size,Luxury,Coupe
+Chevrolet,Niva,2002,2020,Mini,,SUV
+Chevrolet,Orlando,2011,-,Compact,,Minivan
+Chevrolet,Rezzo,2000,2012,Compact,,Minivan
+Chevrolet,Silverado,1999,-,Full-size,,Pickup Truck
+Chevrolet,Silverado 1500,1999,-,Full-size,,Pickup Truck
+Chevrolet,Silverado 2500 HD,2001,-,Heavy Duty,,Pickup Truck
+Chevrolet,Spark,2005,-,Subcompact,Electric,Car
+Chevrolet,SSR,2003,2006,Compact,,Pickup Truck
+Chevrolet,Suburban,2001,-,Full-size,,SUV
+Chevrolet,Tahoe,2000,-,Full-size,,SUV
+Chevrolet,TrailBlazer,2002,2020,Mid-size,,SUV
+Chevrolet,TrailBlazer,2021,-,Mid-size,,CUV
+Chevrolet,Traverse,2009,-,Mid-size,,CUV
+Chevrolet,Trax,2013,-,Compact,,CUV
+Chevrolet,Uplander,2005,2009,Full-size,,Minivan
+Chevrolet,Venture,1996,2005,Full-size,,Minivan
+Chrysler,200,2010,-,Mid-size,,Car
+Chrysler,300,2004,-,Full-size,Luxury,Car
+Chrysler,300M,1998,2004,Full-size,Luxury,Car
+Chrysler,Aspen,2006,2009,Full-size,,SUV
+Chrysler,Concorde,1998,2004,Full-size,,Car
+Chrysler,Crossfire,2003,2007,Compact,,Sports Car
+Chrysler,Grand Voyager,2008,2015,Full-size,,Minivan
+Chrysler,Pacifica,2004,2008,Mid-size,,CUV
+Chrysler,Pacifica,2017,-,Full-size,Luxury,Minivan
+Chrysler,PT Cruiser,2000,2010,Compact,,Car
+Chrysler,Sebring,2000,2010,Mid-size,,Car
+Chrysler,Town & Country,1980,2016,Full-size,,Minivan
+Chrysler,Voyager,1995,2016,Full-size,,Minivan
+Chrysler,Voyager,2020,-,Full-size,,Minivan
+Citroen,Berlingo,1996,-,Mid-size,,Van
+Citroen,C-Crosser,2007,2012,Compact,,CUV
+Citroen,C-Elysee,2012,-,Subcompact,,Car
+Citroen,C1,2005,-,Subcompact,,Car
+Citroen,C2,2003,2009,Subcompact,,Hatchback
+Citroen,C3,2002,-,Subcompact,,Hatchback
+Citroen,C3 Aircross,2017,-,Subcompact,,CUV
+Citroen,C3 Picasso,2009,2017,Subcompact,,Minivan
+Citroen,C3 Pluriel,2003,2010,Subcompact,,Hatchback
+Citroen,C4,2004,-,Compact,,Car
+Citroen,C4,2020,-,Compact,,CUV
+Citroen,C4 Aircross,2012,-,Subcompact,,CUV
+Citroen,C4 Cactus,2014,-,Subcompact,,CUV
+Citroen,C4 Picasso,2006,-,Compact,,Minivan
+Citroen,C5,2001,2021,Mid-size,,Car
+Citroen,C5,2021,-,Mid-size,,CUV
+Citroen,C5 Aircross,2017,-,Compact,,CUV
+Citroen,C6,2004,2012,Mid-size,Luxury,Car
+Citroen,C8,2002,2014,Full-size,,Minivan
+Citroen,DS 7 Crossback,2018,-,Compact,,CUV
+Citroen,DS3,2009,-,Subcompact,,Hatchback
+Citroen,DS4,2010,2018,Subcompact,Luxury,Car
+Citroen,DS5,2011,2018,Compact,Luxury,Hatchback
+Citroen,Grand C4 Picasso,2006,-,Compact,,Minivan
+Citroen,Jumper,2014,-,Full-Size,,Van
+Citroen,Jumpy,2007,2016,Mid-Size,,Van
+Citroen,Nemo,2008,2018,Compact,,Van
+Citroen,Saxo,1996,2004,Subcompact,,Car
+Citroen,Spacetourer,2016,-,Full-size,,Minivan
+Citroen,Xsara,1997,2006,Compact,,Hatchback
+Citroen,Xsara Picasso,1999,2012,Compact,,Minivan
+Dacia,Dokker,2012,-,Compact,,Van
+Dacia,Lodgy,2012,-,Compact,,Minivan
+Dacia,Solenza,2003,2005,Subcompact,,Hatchback
+Dacia,SupeRNova,2000,2003,Subcompact,,Hatchback
+Daewoo,Evanda,2002,2007,Mid-size,,Car
+Daewoo,Kalos,2002,2007,Subcompact,,Car
+Daewoo,Leganza,1997,2002,Mid-size,,Car
+Daewoo,Magnus,2000,2006,Mid-size,,Car
+Daewoo,Matiz,2000,2015,Subcompact,,Car
+Daewoo,Nexia,1995,2016,Compact,,Car
+Daewoo,Nubira,1997,2008,Compact,,Car
+Daihatsu,Applause,1997,2000,Compact,,Car
+Daihatsu,Cast,2015,-,Subcompact,,Hatchback
+Daihatsu,Copen,2002,-,Subcompact,,Coupe
+Daihatsu,Cuore,2003,2011,Subcompact,,Hatchback
+Daihatsu,Gran Move,1996,2002,Subcompact,,Minivan
+Daihatsu,Luxio,2009,-,Full-size,,Minivan
+Daihatsu,Materia,2006,2012,Subcompact,,Minivan
+Daihatsu,Mebius,2013,-,Compact,,Minivan
+Daihatsu,Move,2014,-,Subcompact,,Hatchback
+Daihatsu,Rocky,2019,-,Subcompact,,CUV
+Daihatsu,Sirion,1998,2004,Subcompact,,Car
+Daihatsu,Terios,1997,-,Subcompact,,SUV
+Daihatsu,Trevis,2006,2011,Subcompact,,Hatchback
+Daihatsu,YRV,2000,2005,Subcompact,,Minivan
+Datsun,mi-DO,2014,-,Subcompact,,Car
+Datsun,on-DO,2014,-,Subcompact,,Car
+Dodge,Avenger,1994,2000,Compact,,Sports Car
+Dodge,Avenger,2007,2014,Mid-size,,Car
+Dodge,Caliber,2006,2012,Compact,,Hatchback
+Dodge,Caliber SRT-4,2007,2010,Compact,,Hatchback
+Dodge,Caravan,1995,2016,Full-size,,Minivan
+Dodge,Challenger,2008,-,Full-size,,Pony Car
+Dodge,Charger,2006,-,Full-size,,Car
+Dodge,Dakota,2005,2011,Mid-size,,Pickup Truck
+Dodge,Dart,2012,2017,Compact,,Car
+Dodge,Durango,1998,-,Mid-size,,SUV
+Dodge,Intrepid,1993,2004,Full-size,,Car
+Dodge,Journey,2008,-,Mid-size,,CUV
+Dodge,Magnum,2004,2008,Full-size,,Wagon
+Dodge,Neon,2000,2005,Compact,,Car
+Dodge,Neon SRT-4,2003,2005,Compact,,Sports Car
+Dodge,Nitro,2007,2012,Compact,,SUV
+Dodge,Ram 1500,2001,-,Full-size,,Pickup Truck
+Dodge,Ram 2500,2002,-,Heavy Duty,,Pickup Truck
+Dodge,Ram 3500,2002,-,Heavy Duty,,Pickup Truck
+Dodge,Ram SRT-10,2004,2007,Full-size,Sport Pickup Truck
+Dodge,Stratus,2001,2006,Mid-size,,Car
+Dodge,Viper,1996,2017,Mid-size,Luxury,Supercar
+Dongfeng,580,2016,-,Compact,,CUV
+Dongfeng,A30,2014,-,Subcompact,,Car
+Dongfeng,AX7,2014,-,Compact,,CUV
+Dongfeng,H30 Cross,2013,-,Compact,,CUV
+FAW,Besturn B30,2016,-,Subcompact,,Car
+FAW,Besturn B50,2009,-,Compact,,Car
+FAW,Besturn X40,2017,-,Subcompact,,CUV
+FAW,Besturn X80,2014,-,Compact,,CUV
+FAW,Oley,2012,-,Subcompact,,Car
+FAW,Vita,2006,2012,Subcompact,,Car
+Ferrari,348,1993,1995,Compact,,Sports Car
+Ferrari,360,1999,2005,Compact,Luxury,Supercar
+Ferrari,456,1992,2003,Compact,,Sports Car
+Ferrari,458,2009,2016,Compact,Luxury,Supercar
+Ferrari,488,2015,-,Compact,Luxury,Supercar
+Ferrari,512,1991,2004,Compact,Luxury,Supercar
+Ferrari,550,1996,2002,Compact,,Sports Car
+Ferrari,575 M,2002,2006,Compact,,Sports Car
+Ferrari,599 GTB Fiorano,2006,2012,Compact,,Sports Car
+Ferrari,599 GTO,2010,2012,Compact,,Sports Car
+Ferrari,612,2004,2011,Compact,,Sports Car
+Ferrari,812,2017,-,Compact,,Sports Car
+Ferrari,812 GTS,2019,-,Compact,,Sports Car
+Ferrari,California,2008,2014,Compact,,Sports Car
+Ferrari,California T,2014,-,Compact,,Sports Car
+Ferrari,Challenge Stradale,2003,2003,Compact,,Sports Car
+Ferrari,Enzo,2002,2004,Compact,Luxury,Hypercar
+Ferrari,F12,2012,2017,Compact,,Sports Car
+Ferrari,F355,1994,1999,Compact,Luxury,Supercar
+Ferrari,F430,2004,2010,Compact,Luxury,Supercar
+Ferrari,F50,1995,1997,Compact,Luxury,Hypercar
+Ferrari,F512 M,1994,1996,Compact,,Sports Car
+Ferrari,F8 Spider,2019,-,Compact,,Sports Car
+Ferrari,F8 Tributo,2019,-,Compact,Luxury,Supercar
+Ferrari,FF,2011,-,Full-size,Luxury,Grand Tourer
+Ferrari,GTC4 Lusso,2016,-,Full-size,Luxury,Grand Tourer
+Ferrari,LaFerrari,2013,2015,Compact,Luxury,Hypercar
+Ferrari,Portofino,2017,-,Compact,Luxury,Grand Tourer
+Ferrari,Roma,2020,-,Compact,Luxury,Grand Tourer
+Ferrari,SF90 Stradale,2019,-,Compact,,Sports Car
+Fiat,124 Spider,2015,-,Compact,,Sports Car
+Fiat,500,2007,-,Subcompact,,Hatchback
+Fiat,500e,2013,-,Subcompact,Electric,Hatchback
+Fiat,500L,2012,-,Compact,,Minivan
+Fiat,500X,2014,-,Subcompact,,CUV
+Fiat,Albea,2002,2012,Subcompact,,Car
+Fiat,Brava,1995,2003,Compact,,Hatchback
+Fiat,Bravo,1995,2016,Compact,,Hatchback
+Fiat,Coupe,1993,2009,Compact,,Sports Car
+Fiat,Croma,2005,2011,Mid-size,,Wagon
+Fiat,Doblo,2001,-,Compact,,Van
+Fiat,Ducato,2006,-,Full-Size,,Van
+Fiat,Freemont,2011,2016,Mid-size,,CUV
+Fiat,Grande Punto,2005,2009,Subcompact,,Hatchback
+Fiat,Idea,2004,2016,Subcompact,,Minivan
+Fiat,Linea,2007,2015,Compact,,Car
+Fiat,Marea,1996,2006,Compact,,Car
+Fiat,Multipla,1998,2010,Compact,,Minivan
+Fiat,Palio,1996,2017,Subcompact,,Hatchback
+Fiat,Panda,2003,-,Subcompact,,Hatchback
+Fiat,Panda 4x4,2003,2012,Subcompact,,SUV
+Fiat,Punto,1999,2018,Subcompact,,Hatchback
+Fiat,Qubo,2008,-,Subcompact,,Minivan
+Fiat,Sedici,2005,2014,Subcompact,,CUV
+Fiat,Siena,2014,-,Subcompact,,Car
+Fiat,Stilo,2001,2010,Subcompact,,Hatchback
+Fiat,Strada,2014,-,Subcompact,,Pickup Truck
+Fiat,Tipo,2015,-,Subcompact,,Hatchback
+Fiat,Ulysse,2002,2010,Full-size,,Minivan
+Fisker,Karma,2011,2012,Full-size,Electric,Car
+Ford,B-Max,2012,2017,Subcompact,,Minivan
+Ford,Bronco,2021,-,Mid-size,,SUV
+Ford,Bronco Sport,2021,-,Compact,,CUV
+Ford,C-Max,2003,2019,Compact,,Minivan
+Ford,Cougar,1998,2004,Compact,,Coupe
+Ford,Crown Victoria,1999,2011,Full-size,,Car
+Ford,EcoSport,2003,-,Subcompact,,SUV
+Ford,Edge,2007,-,Mid-size,,CUV
+Ford,Endura,2018,-,Mid-size,,SUV
+Ford,Equator,2021,-,Mid-size,,CUV
+Ford,Escape,2001,-,Compact,,CUV
+Ford,Excursion,1999,2005,Full-size,,SUV
+Ford,Expedition,1998,-,Full-size,,SUV
+Ford,Explorer,1995,-,Mid-size,,CUV
+Ford,Explorer Sport Trac,2007,2010,Mid-size,,CUV
+Ford,E-Transit,2022,-,Full-size,Electric,Van
+Ford,F-150,1997,-,Full-size,,Pickup Truck
+Ford,F-250,2011,-,Heavy Duty,,Pickup Truck
+Ford,F-350,2017,-,Heavy Duty,,Pickup Truck
+Ford,Falcon,2005,-,Full-size,,Car
+Ford,Fiesta,2002,-,Subcompact,,Hatchback
+Ford,Five Hundred,2005,2007,Full-size,,Car
+Ford,Flex,2008,2019,Full-size,,CUV
+Ford,Focus,1998,-,Compact,,Car
+Ford,Focus Active,2018,-,Compact,,Hatchback
+Ford,Focus Electric,2012,2018,Compact,Electric,Car
+Ford,Freestar,2003,2009,Full-size,,Minivan
+Ford,Freestyle,2004,2007,Full-size,,CUV
+Ford,Fusion,2002,2012,Mid-size,,Car
+Ford,Galaxy,1995,-,Full-size,,Minivan
+Ford,GT,2004,2006,Mid-size,Luxury,Supercar
+Ford,Ka,2003,2021,Subcompact,,Car
+Ford,Kuga,2008,-,Compact,,CUV
+Ford,Lightning,2022,-,Full-size,Electric,Pickup Truck
+Ford,Maverick,1992,2009,Mid-size,,Pickup Truck
+Ford,Mondeo,2000,-,Full-size,,Wagon
+Ford,Mustang,1995,-,Mid-size,,Pony Car
+Ford,Mustang Mach-E,2020,-,Mid-size,Electric,CUV
+Ford,Mustang Shelby GT350,2016,-,Mid-size,Luxury,Supercar
+Ford,Mustang Shelby GT500,2020,-,Mid-size,Luxury,Supercar
+Ford,Puma,1997,-,Subcompact,,CUV
+Ford,Ranger,2006,-,Mid-size,,Pickup Truck
+Ford,S-Max,2006,-,Compact,,Car
+Ford,Taurus,2000,-,Full-size,,Car
+Ford,Taurus X,2007,2009,Full-size,,Car
+Ford,Thunderbird,2000,2006,Compact,,Sports Car
+Ford,Tourneo Connect,2002,-,Compact,,Van
+Ford,Transit,2001,-,Full-Size,,Van
+Ford,Transit Connect,2002,-,Compact,,Van
+Foton,Sauvana,2015,-,Mid-size,,SUV
+GAC,GS5,2011,-,Compact,,CUV
+GAC,Trumpchi GM8,2018,-,Full-size,,Minivan
+GAC,Trumpchi GS8,2017,-,Mid-size,,CUV
+GAZ,Volga 3102,1997,2009,Compact,,Car
+GAZ,Volga 31105,1997,2009,Compact,,Car
+GAZ,Volga Siber,2008,2010,Mid-size,,Car
+GAZ,Sobol,2002,-,Full-Size,,Van
+Geely,Atlas,2017,-,Compact,,CUV
+Geely,Coolray,2018,-,Compact,,CUV
+Geely,Emgrand 7,2016,-,Compact,,Car
+Geely,Emgrand EC7,2009,2017,Compact,,Car
+Geely,Emgrand GS,2016,-,Compact,,CUV
+Geely,Emgrand X7,2011,-,Compact,,CUV
+Geely,GC9,2015,2019,Mid-size,,Car
+Geely,GС6,2014,2016,Compact,,Car
+Geely,MK,2008,2019,Compact,,Car
+Geely,Otaka,2006,2009,Compact,,Car
+Geely,Tugella,2019,-,Compact,,CUV
+Geely,Vision,2006,2013,Compact,,CUV
+Genesis,G70,2018,-,Compact,Luxury,Car
+Genesis,G80,2017,-,Mid-size,Luxury,Car
+Genesis,G90,2016,-,Full-size,Luxury,Car
+Genesis,GV70,2020,-,Mid-size,Luxury,SUV
+Genesis,GV80,2020,-,Mid-size,Luxury,SUV
+GMC,Acadia,2007,-,Mid-size,,CUV
+GMC,Canyon,2004,-,Mid-size,,Pickup Truck
+GMC,Envoy,2001,2009,Mid-size,,SUV
+GMC,Hummer EV,2022,-,Full-size,Electric,SUV
+GMC,Hummer EV,2022,-,Full-size,Electric,Pickup Truck
+GMC,Sierra 1500,1999,-,Full-size,,Pickup Truck
+GMC,Sierra 2500,1999,-,Heavy Duty,,Pickup Truck
+GMC,Sierra 3500,2020,-,Heavy Duty,,Pickup Truck
+GMC,Terrain,2010,-,Mid-size,,CUV
+GMC,Yukon,2000,-,Full-size,,SUV
+GMC,Yukon XL,2000,-,Full-size,,SUV
+Great Wall,Cowry,2007,2014,Full-size,,Minivan
+Great Wall,Deer,2003,2013,Heavy Duty,,Pickup Truck
+Great Wall,Hover,2005,-,Mid-size,,CUV
+Great Wall,Hover M2,2010,2014,Mid-size,,CUV
+Great Wall,Pegasus,2005,2007,Full-size,,SUV
+Great Wall,Peri,2007,2015,Subcompact,,Hatchback
+Great Wall,Safe,2002,2010,Mid-size,,SUV
+Great Wall,Sailor,2004,2012,Full-size,,Pickup Truck
+Great Wall,Sing,2004,2012,Full-size,,SUV
+Great Wall,Socool,2004,2012,Full-size,,Pickup Truck
+Great Wall,Wingle,2008,-,Full-size,,Pickup Truck
+Haval,F7,2018,-,Compact,,SUV
+Haval,F7x,2019,-,Compact,,SUV
+Haval,H4,2018,-,Compact,,CUV
+Haval,H6,2017,-,Compact,,CUV
+Haval,H9,2015,-,Full-size,,SUV
+Holden,Commodore,2004,2017,Full-size,,Car
+Holden,Corvette C8,2020,-,Mid-size,,Sports Car
+Honda,Accord,1998,-,Mid-size,,Car
+Honda,Amaze,2011,-,Subcompact,,Car
+Honda,City,2014,-,Subcompact,,Car
+Honda,Civic,2001,-,Compact,,Car
+Honda,Civic Type R,2017,-,Compact,,Car
+Honda,CR-V,1995,-,Mid-size,,CUV
+Honda,CR-Z,2010,2016,Compact,,Coupe
+Honda,Crosstour,2010,2015,Full-size,,Car
+Honda,Element,2003,2011,Compact,,CUV
+Honda,Fit,2001,-,Subcompact,,Hatchback
+Honda,FR-V,2004,2009,Compact,,Minivan
+Honda,HR-V,1998,2006,Subcompact,,CUV
+Honda,HR-V II (GJ),2014,-,Subcompact,,CUV
+Honda,Insight,1999,2014,Compact,,Car
+Honda,Jade,2013,-,Compact,,Minivan
+Honda,Jazz,2001,-,Subcompact,,Hatchback
+Honda,Legend,2006,-,Mid-size,Luxury,Car
+Honda,NSX,1991,2005,Compact,Luxury,Supercar
+Honda,NSX MKII,2016,-,Compact,Luxury,Supercar
+Honda,Odyssey,1999,-,Full-size,,Minivan
+Honda,Pilot,2002,-,Mid-size,,CUV
+Honda,Prelude,1996,2001,Compact,,Sports Car
+Honda,Ridgeline,2005,2014,Mid-size,,Pickup Truck
+Honda,Ridgeline,2017,-,Mid-size,,Pickup Truck
+Honda,S2000,1999,2009,Compact,,Sports Car
+Honda,Shuttle,1994,2002,Subcompact,,Wagon
+Honda,Fit Shuttle hybrid,2011,2015,Subcompact,,Wagon
+Honda,Stream,2001,2015,Compact,,Minivan
+Honda,Vezel,2013,-,Subcompact,,CUV
+Hummer,H1,1992,2006,Full-size,,Pickup Truck
+Hummer,H2,2003,2010,Mid-size,,Pickup Truck
+Hummer,H3,2005,2010,Mid-size,,Pickup Truck
+Hyundai,Accent,2000,-,Subcompact,,Car
+Hyundai,Atos Prime,1999,2014,Subcompact,,Hatchback
+Hyundai,Azera,2006,2011,Mid-size,,Car
+Hyundai,Bayon,2021,-,Subcompact,,CUV
+Hyundai,Centennial,1999,2008,Full-size,Luxury,Car
+Hyundai,Creta,2015,-,Subcompact,,CUV
+Hyundai,Elantra,2000,-,Compact,,Car
+Hyundai,Entourage,2007,2007,Full-size,,Minivan
+Hyundai,Eon,2011,-,Subcompact,,Hatchback
+Hyundai,Equus,2009,2016,Full-size,Luxury,Car
+Hyundai,Galloper,1998,2003,Full-size,,SUV
+Hyundai,Genesis,2008,2016,Full-size,Luxury,Car
+Hyundai,Genesis Coupe,2008,2016,Mid-size,,Sports Car
+Hyundai,Getz,2002,2011,Subcompact,,Hatchback
+Hyundai,Grandeur,2005,-,Full-size,Luxury,Car
+Hyundai,H-1,1998,-,Full-Size,,Van
+Hyundai,i10,2008,-,Subcompact,,Hatchback
+Hyundai,i20,2008,-,Subcompact,,Hatchback
+Hyundai,i30,2007,-,Compact,,Hatchback
+Hyundai,i30 N,2017,-,Compact,,Hatchback
+Hyundai,i40,2011,-,Mid-size,,Car
+Hyundai,Ioniq,2016,-,Compact,Electric,Car
+Hyundai,Ioniq 5,2021,-,Compact,Electric,CUV
+Hyundai,ix20,2010,-,Subcompact,,Minivan
+Hyundai,ix35,2010,-,Compact,,CUV
+Hyundai,Kona,2017,-,Subcompact,,CUV
+Hyundai,Kona Electric,2019,-,Subcompact,Electric,CUV
+Hyundai,Matrix,2001,2014,Compact,,Minivan
+Hyundai,Palisade,2018,-,Full-size,,SUV
+Hyundai,Porter,1996,-,Heavy Duty,,Pickup Truck
+Hyundai,Santa Fe,2001,-,Mid-size,,CUV
+Hyundai,Solaris,2010,-,Compact,,Car
+Hyundai,Sonata,1998,-,Mid-size,,Car
+Hyundai,Terracan,2001,2007,Mid-size,,SUV
+Hyundai,Trajet,2000,2008,Full-size,,Minivan
+Hyundai,Tucson,2004,-,Compact,,CUV
+Hyundai,Veloster,2011,-,Compact,,Coupe
+Hyundai,Venue,2019,-,Subcompact,,CUV
+Hyundai,Veracruz,2007,2015,Mid-size,,CUV
+Hyundai,Verna,2005,2011,Subcompact,,Car
+Hyundai,Xcent,2014,-,Subcompact,,Car
+Hyundai,XG,1998,2005,Mid-size,Luxury,Car
+Infiniti,EX,2008,2014,Compact,Luxury,CUV
+Infiniti,FX,2003,2013,Mid-size,Luxury,CUV
+Infiniti,G35,2003,2014,Compact,Luxury,Coupe
+Infiniti,G35,2003,2014,Mid-size,Luxury,Car
+Infiniti,G37,2009,2014,Compact,Luxury,Coupe
+Infiniti,G37,2009,2014,Mid-size,Luxury,Car
+Infiniti,I35,2002,2004,Mid-size,Luxury,Car
+Infiniti,JX,2012,2013,Mid-size,Luxury,CUV
+Infiniti,M,2001,2013,Mid-size,Luxury,Car
+Infiniti,Q30,2016,-,Subcompact,Luxury,CUV
+Infiniti,Q40,2014,2015,Mid-size,Luxury,Car
+Infiniti,Q45,2002,2007,Full-size,Luxury,Car
+Infiniti,Q50,2013,-,Compact,Luxury,Car
+Infiniti,Q60,2013,-,Compact,Luxury,Coupe
+Infiniti,Q70,2013,-,Mid-size,Luxury,Car
+Infiniti,QX30,2016,-,Subcompact,Luxury,CUV
+Infiniti,QX4,1997,2003,Mid-size,Luxury,SUV
+Infiniti,QX50,2013,-,Compact,Luxury,CUV
+Infiniti,QX55,2021,-,Compact,Luxury,SUV
+Infiniti,QX56,2004,2013,Full-size,Luxury,SUV
+Infiniti,QX60,2013,-,Mid-size,Luxury,CUV
+Infiniti,QX70,2013,2017,Mid-size,Luxury,CUV
+Infiniti,QX80,2013,-,Full-size,Luxury,SUV
+Isuzu,Ascender,2002,2008,Mid-size,,SUV
+Isuzu,Axiom,2002,2004,Mid-size,,SUV
+Isuzu,D-Max,2011,-,Compact,,Pickup Truck
+Isuzu,D-Max Rodeo,2007,2007,Compact,,Pickup Truck
+Isuzu,I280,2005,2006,Mid-size,,Pickup Truck
+Isuzu,I290,2007,2007,Mid-size,,Pickup Truck
+Isuzu,I350,2005,2006,Mid-size,,Pickup Truck
+Isuzu,I370,2007,2007,Mid-size,,Pickup Truck
+Isuzu,Rodeo,1998,2004,Mid-size,,SUV
+Isuzu,Trooper,1992,2002,Mid-size,,SUV
+Isuzu,VehiCross,1997,2001,Subcompact,,SUV
+Iveco,Daily,2006,-,Full-Size,,Van
+Jac,iEV7S,2017,-,Subcompact,Electric,CUV
+Jac,T6,2015,-,Mid-size,,Pickup Truck
+Jaguar,E-Pace,2017,-,Subcompact,Luxury,CUV
+Jaguar,F-Pace,2015,-,Compact,Luxury,CUV
+Jaguar,F-Type,2013,-,Compact,Luxury,Supercar
+Jaguar,I-Pace,2018,-,Compact,Electric Luxury,CUV
+Jaguar,S-Type,1998,2008,Mid-size,Luxury,Car
+Jaguar,X-Type,2001,2009,Compact,Luxury,Car
+Jaguar,XE,2015,-,Compact,Luxury,Car
+Jaguar,XF,2007,-,Mid-size,Luxury,Car
+Jaguar,XJ,1997,-,Full-size,Luxury,Car
+Jaguar,XK/XKR,2002,2015,Compact,Luxury,Grand Tourer
+Jeep,Cherokee,1984,2012,Compact,,SUV
+Jeep,Cherokee,2013,-,Compact,,CUV
+Jeep,Commander,2006,2010,Mid-size,,SUV
+Jeep,Compass,2007,-,Compact,,CUV
+Jeep,Gladiator,2019,-,Mid-size,,Pickup Truck
+Jeep,Grand Cherokee,1999,-,Mid-size,,SUV
+Jeep,Liberty,2006,2013,Compact,,SUV
+Jeep,Patriot,2006,2016,Compact,,CUV
+Jeep,Renegade,2014,-,Subcompact,,CUV
+Jeep,Wrangler (2 door),1997,-,Compact,,SUV
+Jeep,Wrangler (4 door),1997,-,Mid-size,,SUV
+Kia,Carens,2002,2018,Compact,,Minivan
+Kia,Carnival,1999,-,Full-size,,Minivan
+Kia,Ceed,2006,-,Compact,,Hatchback
+Kia,Cerato,2004,-,Compact,,Car
+Kia,Clarus,1998,2001,Mid-size,,Car
+Kia,Forte,2008,-,Compact,,Car
+Kia,EV6,2022,-,Compact,,CUV
+Kia,K5,2020,-,Mid-size,,Car
+Kia,K8,2021,-,Full-size,,Car
+Kia,K900,2019,-,Full-size,,Car
+Kia,Magentis,2001,2010,Mid-size,,Car
+Kia,Mohave,2008,-,Mid-size,,SUV
+Kia,Niro,2016,-,Compact,,CUV
+Kia,Niro EV,2019,-,Compact,Electric,CUV
+Kia,Opirus,2003,2010,Full-size,Luxury,Car
+Kia,Optima,2010,2020,Mid-size,,Car
+Kia,Picanto,2004,-,Subcompact,,Hatchback
+Kia,ProCeed,2019,-,Compact,,Wagon
+Kia,Quoris,2012,2018,Full-size,Luxury,Car
+Kia,Ray,2011,-,Subcompact,,Hatchback
+Kia,Rio,2000,-,Subcompact,,Car
+Kia,Rio X-Line,2017,-,Compact,,CUV
+Kia,Seltos,2019,-,Subcompact,,CUV
+Kia,Shuma,1997,2005,Compact,,Car
+Kia,Sonet,2020,-,Subcompact,,CUV
+Kia,Sorento,2002,-,Mid-size,,CUV
+Kia,Sorento Prime,2015,-,Mid-size,,CUV
+Kia,Soul,2009,-,Subcompact,,CUV
+Kia,Soul EV,2015,-,Subcompact,Electric,CUV
+Kia,Spectra,2005,2009,Compact,,Car
+Kia,Sportage,1993,-,Compact,,CUV
+Kia,Stinger,2017,-,Mid-size,,Car
+Kia,Stonic,2017,-,Subcompact,,CUV
+Kia,Telluride,2019,-,Mid-size,,CUV
+Kia,Venga,2009,2019,Subcompact,,Minivan
+Lamborghini,Aventador,2011,-,Compact,Luxury,Supercar
+Lamborghini,Centenario,2016,2017,Compact,Luxury,Hypercar
+Lamborghini,Diablo,1991,2001,Compact,Luxury,Supercar
+Lamborghini,Gallardo,2003,2014,Compact,Luxury,Supercar
+Lamborghini,Huracan,2014,-,Compact,Luxury,Supercar
+Lamborghini,Murcielago,2003,2010,Compact,Luxury,Supercar
+Lamborghini,Reventon,2008,2008,Compact,Luxury,Hypercar
+Lamborghini,Urus,2018,-,Compact,,SUV
+Lancia,Delta,2008,-,Compact,,Hatchback
+Lancia,Lybra,1999,2007,Compact,Luxury,Car
+Lancia,Musa,2004,2012,Subcompact,,Minivan
+Lancia,Phedra,2002,2010,Full-size,,Minivan
+Lancia,Thema,2011,-,Mid-size,Luxury,Car
+Lancia,Thesis,2001,2009,Full-size,Luxury,Car
+Lancia,Ypsilon,2003,-,Subcompact,,Hatchback
+Land Rover,Defender,2007,-,Mid-size,Luxury,SUV
+Land Rover,Discovery,1998,-,Mid-size,Luxury,CUV
+Land Rover,Discovery Sport,2014,-,Mid-size,Luxury,CUV
+Land Rover,Evoque,2011,-,Compact,Luxury,SUV
+Land Rover,Freelander,1998,2014,Compact,Luxury,CUV
+Land Rover,Range Rover,1994,-,Mid-size,Luxury,SUV
+Land Rover,Range Rover Sport,2004,-,Mid-size,Luxury,CUV
+Land Rover,Range Rover Velar,2017,-,Compact,Luxury,CUV
+Lexus,CT,2010,-,Subcompact,Luxury,Car
+Lexus,ES,2001,-,Mid-size,Luxury,Car
+Lexus,GS,1997,-,Mid-size,Luxury,Car
+Lexus,GX,2002,-,Full-size,Luxury,SUV
+Lexus,HS,2009,2014,Compact,Luxury,Car
+Lexus,IS,1998,-,Compact,Luxury,Car
+Lexus,LC,2017,-,Compact,Luxury,Grand Tourer
+Lexus,LFA,2010,2012,Compact,Luxury,Supercar
+Lexus,LM,2019,-,Full-size,Luxury,Minivan
+Lexus,LS,1995,-,Full-size,Luxury,Car
+Lexus,LX,1998,-,Full-size,Luxury,SUV
+Lexus,NX,2014,-,Compact,Luxury,CUV
+Lexus,RC,2014,-,Compact,Luxury,Coupe
+Lexus,RX,1997,-,Mid-size,Luxury,CUV
+Lexus,SC,1999,2010,Compact,Luxury,Grand Tourer
+Lexus,UX,2018,-,Subcompact,Luxury,CUV
+Lifan,Breez,2007,2012,Compact,,Car
+Lifan,Cebrium,2013,2017,Mid-size,,Car
+Lifan,Celliya,2013,2016,Mid-size,,Car
+Lifan,Smily,2008,-,Subcompact,,Car
+Lifan,Solano,2008,-,Compact,,Car
+Lifan,X50,2014,-,Subcompact,,CUV
+Lifan,X60,2011,-,Compact,,CUV
+Lincoln,Aviator,2003,-,Mid-size,Luxury,SUV
+Lincoln,Corsair,2019,-,Compact,Luxury,SUV
+Lincoln,Mark LT,2006,2007,Full-size,Luxury,Pickup Truck
+Lincoln,MKC,2014,-,Compact,Luxury,CUV
+Lincoln,MKS,2008,2016,Full-size,Luxury,Car
+Lincoln,MKT,2009,-,Mid-size,Luxury,CUV
+Lincoln,MKX,2006,-,Mid-size,Luxury,CUV
+Lincoln,MKZ,2006,-,Mid-size,Luxury,Car
+Lincoln,Nautilus,2019,-,Mid-size,Luxury,SUV
+Lincoln,Navigator,1997,-,Full-size,Luxury,SUV
+Lincoln,Town Car,1998,2011,Full-size,Luxury,Car
+Lincoln,Zephyr,2006,2006,Mid-size,Luxury,Car
+Lotus,Elise,2001,-,Compact,,Sports Car
+Lotus,Europa S,2005,2010,Compact,,Sports Car
+Lotus,Evora,2009,-,Compact,,Sports Car
+Lotus,Exige,2001,-,Compact,,Sports Car
+Marussia,B1,2008,2014,Compact,,Sports Car
+Marussia,B2,2010,2014,Compact,,Sports Car
+Maserati,3200 GT,1998,2002,Compact,Luxury,Grand Tourer
+Maserati,Ghibli,2013,-,Mid-size,Luxury,Supercar
+Maserati,Gran Cabrio,2010,-,Compact,Luxury,Grand Tourer
+Maserati,Gran Turismo ,2007,-,Compact,Luxury,Grand Tourer
+Maserati,Gran Turismo S,2008,2012,Compact,Luxury,Grand Tourer
+Maserati,Levante,2016,-,Mid-size,Luxury,SUV
+Maserati,Quattroporte,2003,-,Full-size,Luxury,Car
+Maserati,Quattroporte S,2007,2012,Full-size,Luxury,Car
+Maybach,57,2002,2012,Full-size,Luxury,Car
+Maybach,57 S,2007,2012,Full-size,Luxury,Car
+Maybach,62,2002,2012,Full-size,Luxury,Car
+Maybach,62 S,2007,2012,Full-size,Luxury,Car
+Maybach,Landaulet,2003,2012,Full-size,Luxury,Car
+Mazda,2,2003,-,Subcompact,,Hatchback
+Mazda,3,2003,-,Compact,,Car
+Mazda,323,1998,2003,Compact,,Car
+Mazda,5,2005,2015,Compact,,Minivan
+Mazda,6,2002,-,Mid-size,,Car
+Mazda,626,1997,2001,Mid-size,,Car
+Mazda,B-Series,1999,2006,Compact,,Pickup Truck
+Mazda,BT-50,2011,-,Compact,,Pickup Truck
+Mazda,CX-3,2015,-,Subcompact,,CUV
+Mazda,CX-30,2019,-,Subcompact,,CUV
+Mazda,CX-5,2012,-,Compact,,CUV
+Mazda,CX-7,2006,2012,Mid-size,,CUV
+Mazda,CX-8,2017,-,Mid-size,,CUV
+Mazda,CX-9,2007,-,Mid-size,,CUV
+Mazda,Minivan,1999,2016,Full-size,,Minivan
+Mazda,MX-30,2020,-,Subcompact,,CUV
+Mazda,MX-30 EV,2020,-,Subcompact,Electric,CUV
+Mazda,MX-5,1998,-,Compact,,Sports Car
+Mazda,Premacy,1999,2006,Compact,,Minivan
+Mazda,RX-7,1992,2002,Compact,,Sports Car
+Mazda,RX-8,2003,2012,Compact,,Sports Car
+Mazda,Tribute,2000,2011,Compact,,CUV
+McLaren,540C,2015,-,Compact,Luxury,Supercar
+McLaren,570S,2015,-,Compact,Luxury,Supercar
+McLaren,600LT,2018,-,Compact,,Sports Car
+McLaren,650S,2014,2017,Compact,,Sports Car
+McLaren,675LT,2015,2017,Compact,,Sports Car
+McLaren,720S,2017,-,Compact,Luxury,Supercar
+McLaren,765LT,2020,-,Compact,,Sports Car
+McLaren,MP4-12C,2011,2014,Compact,,Sports Car
+McLaren,P1,2013,2016,Compact,Luxury,Hypercar
+Mercedes,A-class,1997,-,Compact,Luxury,Car
+Mercedes,AMG GT,2014,-,Compact,,Sports Car
+Mercedes,AMG GT 4-Door,2018,-,Mid-size,Luxury,Car
+Mercedes,B-class,2005,-,Compact,Luxury,Minivan
+Mercedes,B-class EV,2005,-,Compact,Electric Luxury,Minivan
+Mercedes,C-class,1997,-,Mid-size,Luxury,Car
+Mercedes,C-class Sport Coupe,2001,2007,
+Mercedes,Citan,2012,-,Mid-size,Luxury,Minivan
+Mercedes,CL-class,1992,2014,Mid-size,Luxury,Car
+Mercedes,CLA-class,2013,-,Compact,Luxury,Car
+Mercedes,CLC-class ,2008,2011,Compact,Luxury,Car
+Mercedes,CLK-class,1997,2010,Mid-size,Luxury,Coupe
+Mercedes,CLS-class,2004,-,Full-size,Luxury,Car
+Mercedes,E-class,1995,-,Mid-size,Luxury,Car
+Mercedes,E-class Coupe,2017,-,Mid-size,Luxury,Coupe
+Mercedes,EQA,2021,-,Compact,Electric Luxury,CUV
+Mercedes,EQC,2019,-,Compact,Electric Luxury,CUV
+Mercedes,EQS,2021,-,Mid-size,Electric Luxury,Car
+Mercedes,EQV,2021,-,Full-size,Electric Luxury,Minivan
+Mercedes,G-class,1996,-,Mid-size,Luxury Off-road,SUV
+Mercedes,GL-class,2006,2015,Full-size,Luxury,CUV
+Mercedes,GLA-class,2013,-,Subcompact,Luxury,CUV
+Mercedes,GLB-class,2019,-,Compact,Luxury,CUV
+Mercedes,GLC-class,2015,-,Compact,Luxury,CUV
+Mercedes,GLC-class Coupe,2016,-,Compact,Luxury,CUV
+Mercedes,GLE-class,2015,-,Mid-size,Luxury,CUV
+Mercedes,GLE-class Coupe,2015,-,Compact,Luxury,CUV
+Mercedes,GLK-class,2008,2015,Compact,Luxury,CUV
+Mercedes,GLS-class,2015,-,Full-size,Luxury,CUV
+Mercedes,M-class,1997,-,Mid-size,Luxury,SUV
+Mercedes,R-class,2005,2012,Full-size,Luxury,Minivan
+Mercedes,S-class,1990,-,Full-size,Luxury,Car
+Mercedes,S-class Cabrio,2015,-,Mid-size,Luxury,Grand Tourer
+Mercedes,S-class Coupe,2015,-,Mid-size,Luxury,Grand Tourer
+Mercedes,SL-class,2001,-,Mid-size,Luxury,Grand Tourer
+Mercedes,SLC-class,2018,-,Compact,Luxury,Coupe
+Mercedes,SLK-class,1996,-,Compact,,Sports Car
+Mercedes,SLR-class,2003,2010,Compact,Luxury,Grand Tourer
+Mercedes,SLS AMG,2010,2014,Compact,Luxury,Supercar
+Mercedes,Sprinter,2000,-,Full-size,,Van
+Mercedes,Vaneo,2001,2006,Compact,Luxury,Minivan
+Mercedes,Viano,2003,-,Mid-size,,Van
+Mercedes,Vito,1999,2003,Mid-size,,Van
+Mercedes,X-class,2018,-,Mid-size,Luxury,Pickup Truck
+Mercury,Grand Marquis,2003,2011,Full-size,,Car
+Mercury,Mariner,2005,2007,Compact,,CUV
+Mercury,Milan,2006,2011,Mid-size,,Car
+Mercury,Montego,2004,2007,Mid-size,,Car
+Mercury,Monterey,1991,2007,Full-size,,Minivan
+Mercury,Mountaineer,2003,2010,Mid-size,Luxury,SUV
+Mercury,Sable,1995,2005,Mid-size,,Car
+MG,TF,2002,2011,Compact,,Roadster
+MG,XPower SV,2003,2008,Compact,,Sports Car
+MG,ZR,2001,2005,Compact,Sport,Hot Hatchback
+MG,ZS,2001,2005,Compact,,Car
+MG,ZS11,2017,-,Subcompact,,CUV
+MG,ZT,2001,2005,Mid-size,,Car
+MG,ZT-T,2001,2005,Mid-size,,Car
+Mini,Clubman,2007,-,Subcompact,,Car
+Mini,Clubman S,2007,-,Subcompact,,Car
+Mini,Clubvan,2012,2014,Compact,,Van
+Mini,Cooper,2001,-,Subcompact,,Car
+Mini,Cooper Cabrio,2001,-,Subcompact,,Car
+Mini,Cooper S,2001,-,Subcompact,,Car
+Mini,Cooper SE,2020,-,Subcompact,Electric,Car
+Mini,Cooper S Cabrio,2001,-,Subcompact,,Car
+Mini,Cooper S Countryman All4,2010,-,Subcompact,,CUV
+Mini,Countryman,2010,-,Subcompact,,CUV
+Mini,One,2001,-,Subcompact,,Car
+Mitsubishi,3000 GT,1992,2001,Compact,,Sports Car
+Mitsubishi,ASX,2010,-,Compact,,CUV
+Mitsubishi,Carisma,1995,2004,Mid-size,,Car
+Mitsubishi,Colt,1995,2012,Subcompact,,Minivan
+Mitsubishi,Dignity,2012,2017,Full-size,Luxury,Car
+Mitsubishi,Eclipse,1995,2007,Compact,,Sports Car
+Mitsubishi,Eclipse Cross,2017,-,Compact,,CUV
+Mitsubishi,Endeavor,2004,2011,Mid-size,,CUV
+Mitsubishi,Galant,1996,2012,Mid-size,,Car
+Mitsubishi,Grandis,2003,2011,Full-size,,Minivan
+Mitsubishi,i-MiEV,2009,-,Compact,Electric,Car
+Mitsubishi,L200,1996,-,Mid-size,,Pickup Truck
+Mitsubishi,Lancer,1996,-,Compact,,Car
+Mitsubishi,Lancer Evo,2001,2016,Compact,,Car
+Mitsubishi,Mirage,2012,-,Subcompact,,Hatchback
+Mitsubishi,Outlander,2003,-,Compact,,CUV
+Mitsubishi,Outlander Sport,2010,-,Compact,,CUV
+Mitsubishi,Outlander XL,2006,2012,Compact,,CUV
+Mitsubishi,Pajero,1990,-,Full-size,,SUV
+Mitsubishi,Pajero Pinin,1999,2007,Full-size,,SUV
+Mitsubishi,Pajero Sport,1998,-,Full-size,,SUV
+Mitsubishi,Raider,2006,2007,Mid-size,,Pickup Truck
+Mitsubishi,Space Gear,1995,2007,Full-size,,Van
+Mitsubishi,Space Runner,1999,2004,Mid-size,,Van
+Mitsubishi,Space Star,1998,2004,Mid-size,,Van
+Mitsubishi,Xpander,2017,-,Compact,,Minivan
+Nissan,350Z,2002,2009,Compact,,Sports Car
+Nissan,370Z,2009,-,Compact,,Sports Car
+Nissan,Almera,2000,-,Subcompact,,Car
+Nissan,Almera Classic,2005,2012,Subcompact,,Car
+Nissan,Almera Tino,2000,2005,Subcompact,,Car
+Nissan,Altima,2002,-,Mid-size,,Car
+Nissan,Ariya,2020,-,Mid-size,Electric,CUV
+Nissan,Armada,2003,-,Full-size,,SUV
+Nissan,Bluebird Sylphy,2000,2012,Compact,,Car
+Nissan,Frontier,1998,-,Mid-size,,Pickup Truck
+Nissan,GT-R,2007,-,Compact,Luxury,Supercar
+Nissan,Juke,2011,-,Subcompact,,CUV
+Nissan,Leaf,2010,-,Compact,Electric,Hatchback
+Nissan,Maxima,2000,-,Full-size,,Car
+Nissan,Micra,2003,-,Subcompact,,Hatchback
+Nissan,Murano,2002,-,Mid-size,,SUV
+Nissan,Navara,2005,-,Mid-size,,Pickup Truck
+Nissan,Note,2005,-,Compact,,Car
+Nissan,NP300,2008,2013,Mid-size,,Pickup Truck
+Nissan,Pathfinder,1997,-,Mid-size,,CUV
+Nissan,Patrol,1997,-,Full-size,,SUV
+Nissan,Primera,1996,2008,Mid-size,,Car
+Nissan,Qashqai,2007,-,Compact,,CUV
+Nissan,Qashqai+2,2008,2013,Compact,,CUV
+Nissan,Quest,2003,2017,Full-size,,Minivan
+Nissan,Rogue,2008,-,Compact,,CUV
+Nissan,Sentra,1999,-,Compact,,Car
+Nissan,Skyline,2001,2005,Mid-size,,Sports Car
+Nissan,Sylphy,2012,2020,Compact,,Car
+Nissan,Teana,2005,-,Mid-size,,Car
+Nissan,Terrano,1993,-,Mid-size,,SUV
+Nissan,Tiida,2007,-,Compact,,Car
+Nissan,Titan,2003,-,Full-size,,Pickup Truck
+Nissan,Titan XD,2016,-,Heavy Duty,,Pickup Truck
+Nissan,X-Trail,2001,-,Mid-size,,CUV
+Nissan,XTerra,2001,2015,Compact,,SUV
+Nissan,Z,2003,-,Compact,,Grand Tourer
+Noble,M600,2010,-,Compact,Luxury,Supercar
+Opel,Adam,2013,-,Subcompact,,Hatchback
+Opel,Agila,2000,2014,Subcompact,,Hatchback
+Opel,Ampera-e,2017,-,Subcompact,Electric,Car
+Opel,Antara,2006,2015,Compact,,CUV
+Opel,Astra,1998,-,Compact,,Car
+Opel,Astra GTC,2011,2018,Compact,,Coupe
+Opel,Astra OPC,2011,2018,Compact,,Coupe
+Opel,Cascada,2013,-,Subcompact,,Convertible
+Opel,Combo,2001,-,Mid-size,,Van
+Opel,Corsa,2000,-,Subcompact,,Hatchback
+Opel,Corsa OPC,2007,-,Subcompact,,Hatchback
+Opel,Crossland,2020,-,Subcompact,,CUV
+Opel,Crossland X,2017,-,Subcompact,,CUV
+Opel,Frontera,1998,2004,Mid-size,,SUV
+Opel,Grandland X,2017,-,Compact,,SUV
+Opel,Insignia,2008,-,Mid-size,,Car
+Opel,Insignia OPC,2009,2017,Mid-size,,Car
+Opel,Karl,2014,2019,Subcompact,,Hatchback
+Opel,Meriva,2003,2017,Subcompact,,Minivan
+Opel,Mokka,2012,-,Subcompact,,CUV
+Opel,Omega,1994,2004,Full-Size,Luxury,Car
+Opel,Signum,2003,2008,Mid-size,,Car
+Opel,Speedster,2000,2007,Subcompact,,Sports Car
+Opel,Tigra,1994,2009,Subcompact,,Sports Car
+Opel,Vectra,1995,2008,Mid-size,,Car
+Opel,Vivaro,2014,-,Mid-size,,Van
+Opel,Zafira,1999,2014,Compact,,Minivan
+Opel,Zafira Life,2019,-,Mid-size,,Van
+Opel,Zafira Tourer,2012,2020,Compact,,Minivan
+Peugeot,1007,2004,2009,Subcompact,,Minivan
+Peugeot,107,2005,2014,Subcompact,,Hatchback
+Peugeot,108,2014,-,Subcompact,,Hatchback
+Peugeot,2008,2013,-,Subcompact,,CUV
+Peugeot,206,1998,2012,Subcompact,,Hatchback
+Peugeot,207,2006,2014,Subcompact,,Hatchback
+Peugeot,208,2012,-,Subcompact,,Hatchback
+Peugeot,3008,2009,-,Compact,,CUV
+Peugeot,301,2012,-,Subcompact,,Car
+Peugeot,307,2000,2011,Compact,,Car
+Peugeot,308,2007,-,Compact,,Car
+Peugeot,4007,2007,2012,Compact,,CUV
+Peugeot,4008,2012,-,Subcompact,,CUV
+Peugeot,406,1995,2004,Mid-size,,Car
+Peugeot,407,2004,2010,Mid-size,,Car
+Peugeot,408,2010,-,Compact,,Car
+Peugeot,5008,2009,-,Compact,,CUV
+Peugeot,508,2011,-,Mid-size,,Car
+Peugeot,607,2000,2010,Mid-size,Luxury,Car
+Peugeot,807,2002,2014,Full-size,,Minivan
+Peugeot,Boxer,2008,-,Full-size,,Van
+Peugeot,Expert,2016,-,Mid-size,,Van
+Peugeot,Landtrek,2020,-,Mid-size,,Pickup Truck
+Peugeot,Partner,1996,-,Compact,,Van
+Peugeot,RCZ Sport,2010,2015,Compact,,Sports Car
+Peugeot,Rifter,2018,-,Compact,,Minivan
+Peugeot,Traveller,2016,-,Mid-size,,Van
+Plymouth,Road Runner,1968,1970,Mid-size,,Pony Car
+Polestar,2,2022,-,Mid-size,Electric,CUV
+Pontiac,Aztec,2001,2005,Mid-size,,CUV
+Pontiac,Bonneville,1999,2005,Full-size,,Car
+Pontiac,Firebird,1993,2002,Mid-size,,Pony Car
+Pontiac,G5 Pursuit,2004,2010,Compact,,Car
+Pontiac,G6,2004,2010,Mid-size,,Car
+Pontiac,G8,2008,2009,Full-size,,Car
+Pontiac,Grand AM,1998,2005,Mid-size,,Car
+Pontiac,Grand Prix,1996,2008,Full-size,,Car
+Pontiac,GTO,2004,2006,Mid-size,,Coupe
+Pontiac,Montana,1997,2009,Full-size,,Minivan
+Pontiac,Solstice,2005,2010,Compact,,Sports Car
+Pontiac,Sunfire,1995,2005,Compact,,Sports Car
+Pontiac,Torrent,2005,2009,Mid-size,,CUV
+Pontiac,Vibe,2002,2009,Compact,,Car
+Porsche,718 Boxster,2016,-,Compact,Luxury,Sports Car
+Porsche,718 Cayman,2016,-,Compact,Luxury,Sports Car
+Porsche,911,1997,-,Compact,Luxury,Sports Car
+Porsche,911 GT2,1995,2010,Compact,Luxury,Supercar
+Porsche,911 GT3,2001,2012,Compact,Luxury,Supercar
+Porsche,911 Turbo,1975,-,Compact,Luxury,Supercar
+Porsche,Boxster,1996,2016,Compact,Luxury,Sports Car
+Porsche,Cayenne,2002,-,Mid-size,Luxury,SUV
+Porsche,Cayman,2005,2016,Compact,Luxury,Sports Car
+Porsche,Macan,2014,-,Compact,Luxury,SUV
+Porsche,Panamera,2009,-,Mid-size,Luxury,Car
+Porsche,Taycan,2020,-,Mid-size,Electric Luxury,Car
+Ravon,Gentra,2015,-,Subcompact,,Hatchback
+Renault,Alaskan,2016,-,Mid-size,,Pickup Truck
+Renault,Arkana,2019,-,Compact,,CUV
+Renault,Avantime,2001,2004,Compact,,Minivan Grand Tourer
+Renault,Captur,2013,-,Subcompact,,CUV
+Renault,Clio,1998,-,Subcompact,,Hatchback
+Renault,Duster,2010,-,Compact,,SUV
+Renault,Duster Oroch,2015,-,Mid-size,,Pickup Truck
+Renault,Espace,1996,-,Full-size,,Minivan
+Renault,Fluence,2010,2019,Compact,,Car
+Renault,Grand Scenic,2009,-,Full-size,,Minivan
+Renault,Kadjar,2015,-,Compact,,CUV
+Renault,Kangoo,1998,-,Compact,,Van
+Renault,Kaptur,2016,-,Subcompact,,CUV
+Renault,Koleos,2008,-,Compact,,CUV
+Renault,Laguna,1993,2015,Mid-size,,Coupe
+Renault,Latitude,2010,2018,Full-size,Luxury,Car
+Renault,Logan,2004,-,Compact,,Car
+Renault,Master,2011,-,Full-size,,Van
+Renault,Megane,1996,-,Compact,,Car
+Renault,Modus,2004,2012,Subcompact,,Minivan
+Renault,Sandero,2007,-,Subcompact,,Hatchback
+Renault,Sandero Stepway,2008,-,Subcompact,,CUV
+Renault,Scenic,1996,-,Compact,,Minivan
+Renault,Symbol,2002,-,Subcompact,,Car
+Renault,Taliant,2021,-,Subcompact,,Car
+Renault,Talisman,2015,-,Mid-size,,Car
+Renault,Trafic,2001,-,Mid-size,,Van
+Renault,Triber,2019,-,Compact,,Minivan
+Renault,Twingo,1993,-,Subcompact,,Hatchback
+Renault,Twizy,2012,-,Compact,Electric,Microcar
+Renault,Vel Satis,2002,2009,Full-size,Luxury,Car
+Renault,Wind,2010,2013,Compact,,Roadster
+Renault,Zoe,2012,-,Subcompact,,Hatchback
+Rivian,R1S,2021,-,Mid-size,Electric,SUV
+Rivian,R1T,2022,-,Full-size,Electric,Pickup Truck
+Rolls-Royce,Cullinan,2018,-,Mid-size,Luxury,SUV
+Rolls-Royce,Dawn,2015,-,Full-size,Luxury,Grand Tourer
+Rolls-Royce,Ghost,2009,-,Full-size,Luxury,Car
+Rolls-Royce,Phantom,2003,-,Full-size,Luxury,Car
+Rolls-Royce,Wraith,2013,-,Full-size,Luxury,Car
+Rover,25,1999,2008,Compact,Luxury,Car
+Rover,400,1996,2000,Compact,Luxury,Car
+Rover,45,2000,2008,Compact,Luxury,Car
+Rover,600,1993,1999,Mid-size,Luxury,Car
+Rover,75,1999,2005,Full-size,Luxury,Car
+Rover,Streetwise,2003,2005,Subcompact,,Hatchback
+Saab,9-2x,2004,2007,Compact,Luxury,Car
+Saab,9-3,2003,2014,Compact,Luxury,Car
+Saab,9-4x,2011,2012,Mid-size,Luxury,CUV
+Saab,9-5,1997,2012,Full-size,Luxury,Car
+Saab,9-7x,2005,2009,Mid-size,Luxury,SUV
+Saturn,Aura,2007,2007,Mid-size,,Car
+Saturn,Ion,2003,2007,Compact,,Car
+Saturn,LW,1998,2004,Mid-size,,Car
+Saturn,Outlook,2006,2010,Full-size,,CUV
+Saturn,Sky,2007,2007,Compact,,Sports Car
+Saturn,Vue,2002,2007,Compact,,SUV
+Scion,FR-S,2012,2016,Compact,,Sports Car
+Scion,tC,2004,2016,Compact,,Car
+Scion,xA,2003,2007,Subcompact,,Hatchback
+Scion,xB,2003,2015,Compact,,Car
+Scion,xD,2007,2014,Subcompact,,CUV
+Seat,Alhambra,1998,-,Full-size,,Minivan
+Seat,Altea,2004,2015,Compact,,Minivan
+Seat,Altea Freetrack,2007,2015,Compact,,SUV
+Seat,Altea XL,2007,2015,Compact,,Minivan
+Seat,Arona,2017,-,Subcompact,,CUV
+Seat,Arosa,1997,2006,Subcompact,,Hatchback
+Seat,Ateca,2016,-,Compact,,CUV
+Seat,Cordoba,1999,2009,Subcompact,,Hatchback
+Seat,Exeo,2008,2013,Mid-size,,Car
+Seat,Ibiza,2002,-,Subcompact,,Hatchback
+Seat,Leon,1999,-,Compact,,Car
+Seat,Mii,2012,-,Subcompact,,Hatchback
+Seat,Tarraco,2018,-,Mid-size,,CUV
+Seat,Toledo,2004,2018,Compact,,Car
+Skoda,Citigo,2011,-,Subcompact,,Hatchback
+Skoda,Enyaq iV,2020,-,Compact,Electric,CUV
+Skoda,Fabia,1999,-,Subcompact,,Hatchback
+Skoda,Felicia,1995,2000,Compact,,Car
+Skoda,Kamiq,2019,-,Subcompact,,CUV
+Skoda,Karoq,2017,-,Compact,,CUV
+Skoda,Kodiaq,2016,-,Mid-size,,CUV
+Skoda,Octavia,1995,-,Compact,,Car
+Skoda,Octavia Scout,2007,2013,Compact,,Wagon
+Skoda,Octavia Tour,2006,2013,Compact,,Wagon
+Skoda,Praktik,2007,2015,Compact,,Van
+Skoda,Rapid,2012,-,Compact,,Car
+Skoda,Rapid Spaceback (NH1),2013,2020,Compact,,Car
+Skoda,Roomster,2006,2015,Compact,,Van
+Skoda,Scala,2019,-,Compact,,Car
+Skoda,Superb,2002,-,Mid-size,,Car
+Skoda,Yeti,2009,-,Compact,,CUV
+Smart,Forfour,2004,-,Subcompact,,Hatchback
+Smart,Fortwo,1997,-,Subcompact,,Microcar
+Smart,Fortwo,2013,-,Subcompact,Electric,Microcar
+Smart,Roadster,2003,2012,Subcompact,,Roadster
+Ssang Yong,Actyon,2005,-,Compact,,SUV
+Ssang Yong,Actyon Sports,2006,-,Compact,,Pickup Truck
+Ssang Yong,Chairman,1997,-,Full-size,Luxury,Car
+Ssang Yong,Korando,2002,-,Compact,,CUV
+Ssang Yong,Kyron,2005,2016,Mid-size,,SUV
+Ssang Yong,Musso,1993,-,Mid-size,,SUV
+Ssang Yong,Musso Sport,2004,2007,Mid-size,,Pickup Truck
+Ssang Yong,Rexton,2001,-,Mid-size,,SUV
+Ssang Yong,Rodius,2004,-,Full-size,,Minivan
+Ssang Yong,Stavic,2013,-,Full-size,,Minivan
+Ssang Yong,Tivoli,2015,-,Subcompact,,CUV
+Ssang Yong,Tivoli XLV,2016,-,Mid-size,,SUV
+Subaru,Ascent,2018,-,Mid-size,,CUV
+Subaru,Baja,2002,2007,Compact,,Pickup Truck
+Subaru,BRZ,2012,-,Compact,,Sports Car
+Subaru,Crosstrek,2018,-,Subcompact,,CUV
+Subaru,Exiga,2008,-,Mid-size,,Minivan
+Subaru,Forester,1997,-,Compact,,CUV
+Subaru,Impreza,1992,-,Compact,,Car
+Subaru,Justy,1995,2006,Subcompact,,Hatchback
+Subaru,Legacy,1994,-,Mid-size,,Car
+Subaru,Levorg,2014,-,Mid-size,,Car
+Subaru,Outback,1997,-,Mid-size,,CUV
+Subaru,Traviq,2001,2006,Compact,,Minivan
+Subaru,Tribeca,2005,2014,Mid-size,,CUV
+Subaru,WRX,2014,-,Compact,,Car
+Subaru,XV,2012,-,Subcompact,,CUV
+Suzuki,Alto,2002,-,Subcompact,,Hatchback
+Suzuki,Baleno,1995,2003,Subcompact,,Car
+Suzuki,Celerio,2014,-,Subcompact,,Hatchback
+Suzuki,Ciaz,2014,-,Subcompact,,Car
+Suzuki,Grand Vitara,1998,2017,Compact,,SUV
+Suzuki,Ignis,2000,-,Subcompact,,Hatchback
+Suzuki,Jimny,1998,-,Subcompact,Off-road,SUV
+Suzuki,Kizashi,2009,2015,Mid-size,,Car
+Suzuki,Liana,2002,2007,Compact,,Car
+Suzuki,Splash,2008,2016,Subcompact,,Hatchback
+Suzuki,Swift,2005,-,Subcompact,,Hatchback
+Suzuki,SX4,2006,-,Subcompact,,Hatchback
+Suzuki,Vitara,2015,-,Compact,,CUV
+Suzuki,Wagon R,2012,-,Subcompact,,Microcar
+Suzuki,Wagon R+,2000,2006,Compact,,Hatchback
+Suzuki,XL-7,1998,2006,Mid-size,,SUV
+Suzuki,XL7,2006,2009,Mid-size,,CUV
+Tesla,Model 3,2017,-,Compact,Electric Luxury,Car
+Tesla,Model S,2012,-,Full-size,Electric Luxury,Car
+Tesla,Model X,2015,-,Mid-size,Electric Luxury,CUV
+Tesla,Model Y,2019,-,Compact,Electric Luxury,CUV
+Toyota,4Runner,1995,-,Mid-size,,SUV
+Toyota,Alphard,2002,-,Full-size,,Minivan
+Toyota,Auris,2007,-,Compact,,Car
+Toyota,Avalon,2000,-,Full-size,,Car
+Toyota,Avensis,1997,2018,Mid-size,,Car
+Toyota,Avensis Verso,2001,2010,Mid-size,,Minivan
+Toyota,Aygo,2005,-,Subcompact,,Hatchback
+Toyota,C-HR,2016,-,Subcompact,,CUV
+Toyota,Caldina,2002,2007,Compact,,Car
+Toyota,Camry,1996,-,Mid-size,,Car
+Toyota,Celica,1999,2006,Compact,,Sports Car
+Toyota,Corolla,1995,-,Subcompact,,Car
+Toyota,Corolla Verso,2002,2009,Subcompact,,Minivan
+Toyota,FJ Cruiser,2007,2016,Mid-size,,SUV
+Toyota,Fortuner,2004,-,Mid-size,,SUV
+Toyota,GT 86,2012,-,Compact,,Sports Car
+Toyota,Hiace,2006,-,Full-size,,Van
+Toyota,Highlander,2000,-,Mid-size,,CUV
+Toyota,Hilux,2005,-,Mid-size,,Pickup Truck
+Toyota,iQ,2008,2016,Subcompact,,Hatchback
+Toyota,ist,2002,2016,Subcompact,,Hatchback
+Toyota,Land Cruiser,1990,-,Full-size,,SUV
+Toyota,Land Cruiser Prado,2002,-,Full-size,,SUV
+Toyota,Mark II,2000,2004,Mid-size,,Car
+Toyota,Mirai,2014,-,Mid-size,Luxury,Car
+Toyota,MR2,1999,2007,Compact,,Sports Car
+Toyota,Picnic,1995,2001,Mid-size,,Minivan
+Toyota,Previa,2000,-,Full-size,,Minivan
+Toyota,Prius,2003,-,Compact,,Car
+Toyota,RAV4,1994,-,Compact,,CUV
+Toyota,Sequoia,2001,-,Full-size,,SUV
+Toyota,Sienna,2002,-,Full-size,,Minivan
+Toyota,Supra,2019,-,Compact,,Sports Car
+Toyota,Tacoma,2005,-,Mid-size,,Pickup Truck
+Toyota,Tundra,1999,-,Full-size,,Pickup Truck
+Toyota,Venza,2008,2016,Mid-size,,CUV
+Toyota,Verso,2009,-,Full-Size,,Minivan
+Toyota,Vitz,2005,-,Subcompact,,Car
+Toyota,Yaris,1999,-,Subcompact,,Car
+Toyota,Yaris Verso,1999,2005,Compact,,Minivan
+UAZ,Pickup,2008,-,Mid-size,,Pickup Truck
+UAZ,Патриот,2005,-,Mid-size,,SUV
+UAZ,Хантер,2003,-,Mid-size,,SUV
+VAZ,2101-2107,1976,2012,Compact,,Car
+VAZ,2108,1984,2004,Mid-size,,Car
+VAZ,2109,1984,2004,Mid-size,,Car
+VAZ,21099,1984,2004,Mid-size,,Car
+VAZ,2110,1996,2014,Compact,,Car
+VAZ,2111,1996,2014,Compact,,Car
+VAZ,2112,1996,2014,Compact,,Car
+VAZ,2113,1997,2015,Compact,,Car
+VAZ,2114,1997,2015,Compact,,Car
+VAZ,2115,1997,2015,Compact,,Car
+VAZ,4x4 Urban,2014,-,Mid-size,,SUV
+VAZ,Granta,2011,-,Subcompact,,Car
+VAZ,Lada Kalina (Калина),2004,2013,Subcompact,,Car
+VAZ,Lada Niva 4X4 (Нива),1977,-,Compact,,SUV
+VAZ,Lada Oka (Ока),1988,2008,Compact,,Car
+VAZ,Lada Priora (Приора),2007,2018,Compact,,Car
+VAZ,Lada Vesta (Веста),2015,-,Compact,,Car
+VAZ,Largus,2012,-,Compact,,Minivan
+VAZ,Largus Cross,2015,-,Compact,,Minivan
+VAZ,Vesta Cross,2018,-,Compact,,Car
+VAZ,Vesta Sport,2018,-,Compact,,Car
+VAZ,Vesta SW,2017,-,Compact,,Wagon
+VAZ,XRay,2016,-,Compact,,CUV
+VAZ,XRay Cross,2018,-,Compact,,CUV
+Volkswagen,Amarok,2010,-,Mid-size,,Pickup Truck
+Volkswagen,Arteon,2017,-,Compact,Luxury,Car
+Volkswagen,Beetle,2011,2019,Compact,,Car
+Volkswagen,Bora,1998,2005,Compact,,Car
+Volkswagen,Caddy,2004,-,Compact,,Minivan
+Volkswagen,CC,2012,2017,Compact,Luxury,Car
+Volkswagen,Crafter,2008,-,Full-Size,,Van
+Volkswagen,CrossGolf,2007,2009,Compact,,Minivan
+Volkswagen,CrossPolo,2006,2009,Subcompact,,CUV
+Volkswagen,CrossTouran,2007,2015,Compact,,Minivan
+Volkswagen,Eos,2006,2015,Compact,Luxury,Coupe
+Volkswagen,E-Golf,2016,-,Compact,Electric,Car
+Volkswagen,Fox,2005,-,Subcompact,,Car
+Volkswagen,Golf,1997,-,Compact,,Hatchback
+Volkswagen,ID.4,2020,-,Compact,Electric,CUV
+Volkswagen,Jetta,2005,-,Compact,,Car
+Volkswagen,Lupo,1998,2005,Subcompact,,Hatchback
+Volkswagen,Multivan,2003,-,Mid-size,,Van
+Volkswagen,New Beetle,1998,2007,Compact,,Car
+Volkswagen,Passat,2000,-,Mid-size,,Car
+Volkswagen,Passat CC,2008,2012,Compact,Luxury,Car
+Volkswagen,Phaeton,2002,2016,Full-size,Luxury,Car
+Volkswagen,Pointer,1993,1997,Compact,,Car
+Volkswagen,Polo,2001,-,Subcompact,,Hatchback
+Volkswagen,Routan,2008,2014,Full-size,,Minivan
+Volkswagen,Scirocco,2008,2017,Compact,Sport,Hot Hatchback
+Volkswagen,Sharan,1995,-,Mid-size,,Minivan
+Volkswagen,T-Roc,2017,-,Compact,,SUV
+Volkswagen,Taos,2020,-,Subcompact,,SUV
+Volkswagen,Teramont,2017,-,Mid-size,,CUV
+Volkswagen,Tiguan,2007,-,Compact,,CUV
+Volkswagen,Touareg,2002,-,Mid-size,Luxury,CUV
+Volkswagen,Touran,2003,-,Compact,,Minivan
+Volkswagen,Transporter,1990,-,Full-size,,Van
+Volkswagen,Up,2011,-,Subcompact,,Hatchback
+Volvo,C30,2007,2013,Compact,Luxury,Hatchback
+Volvo,C40,2021,-,Compact,Luxury,CUV
+Volvo,C40 Recharge,2022,-,Compact,Electric Luxury,CUV
+Volvo,C70,2006,2013,Mid-size,Luxury,Car
+Volvo,C70 Convertible,1997,2006,Mid-size,Luxury,Coupe
+Volvo,C70 Coupe,1996,2007,Mid-size,Luxury,Coupe
+Volvo,S40,1995,2012,Compact,Luxury,Car
+Volvo,S60,2000,-,Compact,Luxury,Car
+Volvo,S70,1996,2000,Mid-size,Luxury,Car
+Volvo,S80,1998,2016,Mid-size,Luxury,Car
+Volvo,S90,1997,-,Mid-size,Luxury,Car
+Volvo,V40,1995,-,Compact,Luxury,Wagon
+Volvo,V50,2004,2012,Mid-size,Luxury,Wagon
+Volvo,V60,2011,-,Mid-size,Luxury,Wagon
+Volvo,V70,1996,-,Mid-size,Luxury,Wagon
+Volvo,V90,1997,-,Full-size,Luxury,Wagon
+Volvo,XC40,2017,-,Subcompact,Luxury,SUV
+Volvo,XC40 Recharge,2021,-,Subcompact,Electric Luxury,SUV
+Volvo,XC60,2008,-,Compact,Luxury,SUV
+Volvo,XC70,2001,-,Mid-size,Luxury,CUV
+Volvo,XC90,2002,-,Mid-size,Luxury,SUV

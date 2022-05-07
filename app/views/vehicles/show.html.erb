@@ -1,0 +1,19 @@
+<%= render @vehicle %>
+<div class="btn-group" role="group">
+  <div class="">
+    <%=
+    button_to "Back To My Vehicles",
+    profile_my_vehicles_path(@vehicle.user_id),
+    method: :get,
+    class: "btn btn-primary"
+    %>
+  </div>
+  <div class="">
+    <%=
+    button_to "Delete Vehicle",
+    my_vehicle_path(@vehicle),
+    method: :delete,
+    class: "btn btn-danger"
+    %>
+  </div>
+</div>

@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   root 'home#index'
 
   # Users
-  resources :users, except: [:index, :new], path: '/profile', as: 'profile'
+  resources :users, except: [:index, :new], path: '/profile', as: 'profile' do
+    resources :vehicles, except: [:new, :edit, :update], path: 'my_vehicles', as: 'my_vehicles', shallow: true
+    get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
+  end
   get '/sign_up', to: 'users#new', as: 'sign_up'
 
   # User Activation

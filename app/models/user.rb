@@ -3,6 +3,8 @@
 class User < ApplicationRecord
   before_save :normalize_phone_number
 
+  has_many :vehicles, dependent: :destroy
+  validates :vehicles, length: { maximum: 10 }
   validates :first_name, :last_name, :phone_number, :email, :prefered_method_of_contact, presence: true
   validates :phone_number, :email, uniqueness: true
   # phone: true refers to the PhoneValidator for Phonelib gem
