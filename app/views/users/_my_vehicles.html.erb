@@ -1,10 +1,10 @@
-<div class="">
+<div class="container">
 <% if @user.vehicles.length > 0 %>
   <h2>My Vehicles</h2>
     <% @user.vehicles.limit(5).each do |vehicle|%>
     <ul>
-      <li>Year: <%= vehicle.year %></li>
       <li>Color: <%= vehicle.color %></li>
+      <li>Year: <%= vehicle.year %></li>
       <li>Make: <%= vehicle.make %></li>
       <li>Model: <%= vehicle.model %></li>
       <li>Vehicle Class: <%= vehicle.classification %></li>
