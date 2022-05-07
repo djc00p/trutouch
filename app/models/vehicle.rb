@@ -6,7 +6,7 @@ class Vehicle < ApplicationRecord
 
   # Instance Methods
   def production_vehicle
-    ProductionVehicle.find_by(make: make, model: model, production_year: year)
+    ProductionVehicle.find_by(make_model_split, production_year: year)
   end
 
   def production_vehicle_classification(production_vehicle)
@@ -16,7 +16,7 @@ class Vehicle < ApplicationRecord
   end
 
   def assign_classification
-    update_vehicle_classification
+    update_vehicle_make_model_and_classification
   end
 
   # Class Methods
@@ -27,9 +27,13 @@ class Vehicle < ApplicationRecord
 
   private
 
-  def update_vehicle_classification
+  def make_model_split
+    { make: make.split(", ").pop, model: model.split(", ").pop }
+  end
+
+  def update_vehicle_make_model_and_classification
     assigned_classification = production_vehicle_classification(production_vehicle)
 
-    update(classification: assigned_classification)
+    update(**make_model_split, classification: assigned_classification)
   end
 end
