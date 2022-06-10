@@ -34,9 +34,10 @@ gem 'bootstrap', '~> 5.0.2'
 
 # Twilio texting
 gem 'twilio-ruby'
-gem "phonelib"
+gem 'phonelib'
 
-gem "brakeman"
+gem 'brakeman'
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +54,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rails-controller-testing'
   gem 'rails_real_favicon'
-  gem 'figaro'
   gem 'sms-spec', '~> 0.2.0' # testing Twilio sms
 end
 
