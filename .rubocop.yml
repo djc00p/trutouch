@@ -10,6 +10,7 @@ AllCops:
     - config.ru
     - app/controllers/**
     - app/models/**
+    - app/services/**
     - spec/**/**
   Exclude:
     - app/assets/**
