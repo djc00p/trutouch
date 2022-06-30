@@ -18,12 +18,12 @@ RSpec.describe "/addresses", type: :request do
     context "with valid parameters" do
       it "creates a new Address" do
         expect do
-          post profile_addresses_url(user), { address: text_address }
+          post profile_addresses_url(user), params: { address: text_address }
         end.to change(Address, :count).by(1)
       end
 
       it "redirects to the user profile" do
-        post profile_addresses_url(user), { address: text_address }
+        post profile_addresses_url(user), params: { address: text_address }
         expect(response).to redirect_to(profile_url(user))
       end
     end
@@ -31,12 +31,12 @@ RSpec.describe "/addresses", type: :request do
     context "with invalid parameters" do
       it "does not create a new Address" do
         expect do
-          post profile_my_addresses_url(user), { address: text_address }
+          post profile_my_addresses_url(user), params: { address: text_address }
         end.to change(Address, :count).by(0)
       end
 
       it "renders a unsuccessful response (i.e. to display the 'new' template)" do
-        post profile_my_addresses_url(user), { address: text_address }
+        post profile_my_addresses_url(user), params: { address: text_address }
         expect(response).not_to be_successful
       end
     end
