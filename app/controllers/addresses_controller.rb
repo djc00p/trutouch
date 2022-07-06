@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class AddressesController < ApplicationController
+  before_action :find_user, only: %i[new create]
+
   def new
     @address = @user.addresses.build
   end
@@ -23,6 +25,10 @@ class AddressesController < ApplicationController
 
   def address_params
     params.require(:address).permit(:address_line1, :city, :state, :zip_code)
+  end
+
+  def find_user
+    @user = User.find(params[:profile_id])
   end
 
   def address_search
