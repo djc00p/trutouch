@@ -6,7 +6,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    address_results = address_search(params[:address_line1])
+    address_results = address_search
     address = @user.addresses.build(address_results)
     if address.save
       flash[:success] = "Your address has been add!"
@@ -21,7 +21,11 @@ class AddressesController < ApplicationController
 
   private
 
-  def address_search(address)
-    
+  def address_params
+    params.require(:address).permit(:address_line1, :city, :state, :zip_code)
+  end
+
+  def address_search
+
   end
 end
