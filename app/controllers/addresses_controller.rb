@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class AddressesController < ApplicationController
-  def new; end
+  def new
+    @address = @user.addresses.build
+  end
 
   def create; end
 
