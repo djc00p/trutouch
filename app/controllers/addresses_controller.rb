@@ -32,6 +32,8 @@ class AddressesController < ApplicationController
   end
 
   def address_search
+    search_results = Address.search_results(address_params.values.join(", "))
 
+    address_validation(search_results)
   end
 end
