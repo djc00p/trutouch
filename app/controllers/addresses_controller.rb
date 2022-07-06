@@ -18,4 +18,10 @@ class AddressesController < ApplicationController
   end
 
   def destroy; end
+
+  private
+
+  def address_search(address)
+    
+  end
 end
