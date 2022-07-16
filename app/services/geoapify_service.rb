@@ -24,4 +24,37 @@ class GeoapifyService
     response = conn.get(address)
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  # Geoapify recommended check for confidenece_level
+
+  def confidenece_level(results)
+    accept_level = 0.95
+    decline_level = 0.2
+
+    validation_result = {}
+
+    if results.length.zero?
+      validation_result[:validation] = "NOT_CONFIRMED"
+      return validation_result
+    end
+
+    address = results[0]
+
+    if address[:rank][:confidence] >= accept_level
+      validation_result[:validation] = "CONFIRMED"
+    elsif address[:rank][:confidence] < decline_level
+      validation_result[:validation] = "NOT_CONFIRMED"
+    else
+      validation_result[:validation] = "PARTIALLY_CONFIRMED"
+      validation_result[:validation_details] = if address[:rank][:confidence_street_level] >= accept_level
+                                                 "BUILDING_NOT_FOUND"
+                                               elsif address[:rank][:confidence_city_level] >= accept_level
+                                                 "STREET_LEVEL_DOUBTS"
+                                               else
+                                                 "CITY_LEVEL_DOUBTS"
+                                               end
+    end
+
+    validation_result
+  end
 end
