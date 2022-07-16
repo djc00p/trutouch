@@ -11,15 +11,9 @@ class GeoapifyService
 
   def confirm_address(address)
     address_results = geocode_search(address)[:results]
-    address_confidence_levels = confidence_level(address_results)
-    return unless address_confidence_levels[:validation] == ("CONFIRMED" || "PARTIALLY_CONFIRMED")
+    address_confidence_level = confirm_confidence_level(address_results, address)
 
-    confirmed_address(address_results[0]).merge!(address_confidence_levels)
-  end
-
-  def confirmed_address(address)
-    { address_line1: address[:address_line1], city: address[:city], state: address[:state_code],
-      zip_code: address[:postcode] }
+    confirmed_address?(address, address_results, address_confidence_level)
   end
 
   def geocode_search(address)
@@ -48,9 +42,27 @@ class GeoapifyService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  # Geoapify recommended check for confidenece_level
+  def confirmed_address?(address, results, confidence_level)
+    case confidence_level[:validation]
+    when "NOT_CONFIRMED"
+      { address_line1: address }.merge!(confidence_level)
+    when "PARTIALLY_CONFIRMED"
+      partially_confirmed_address(results[confidence_level.delete(:index)]).merge!(confidence_level)
+    when "CONFIRMED"
+      confirmed_address(results[0]).merge!(confidence_level)
+    end
+  end
 
-  def confidence_level(results)
+  def confirmed_address(address)
+    { address_line1: address[:address_line1], city: address[:city], state: address[:state_code],
+      zip_code: address[:postcode] }
+  end
+
+  def partially_confirmed_address(address)
+    confirmed_address(address)
+  end
+
+  def confirm_confidence_level(results, submitted_address)
     accept_level = 0.95
     decline_level = 0.2
 
@@ -68,16 +80,40 @@ class GeoapifyService
     elsif address[:rank][:confidence] < decline_level
       validation_result[:validation] = "NOT_CONFIRMED"
     else
-      validation_result[:validation] = "PARTIALLY_CONFIRMED"
-      validation_result[:validation_details] = if address[:rank][:confidence_street_level] >= accept_level
-                                                 "BUILDING_NOT_FOUND"
-                                               elsif address[:rank][:confidence_city_level] >= accept_level
-                                                 "STREET_LEVEL_DOUBTS"
-                                               else
-                                                 "CITY_LEVEL_DOUBTS"
-                                               end
+      validation_result.merge!(partially_confirmed(submitted_address, results, accept_level))
     end
 
     validation_result
+  end
+
+  def address_attributes_included?(result, address)
+    address = address.strip.titleize
+
+    (result.key?(:housenumber) && result[:housenumber] == address.to_i.to_s) &&
+      (address.include?(result[:city]) || address.include?(result[:postcode]))
+  end
+
+  def partially_confirmed(address, results, accept_level, validation_result = {})
+    results.each_with_index do |result, index|
+      next unless address_attributes_included?(result, address)
+
+      validation_result[:index] = index
+      validation_result[:validation] = "PARTIALLY_CONFIRMED"
+      validation_result[:validation_details] = validation_details(result, accept_level)
+    end
+
+    validation_result[:validation] = "NOT_CONFIRMED" unless validation_result.key?(:validation)
+
+    validation_result
+  end
+
+  def validation_details(address, accept_level)
+    if address[:rank].key?(:confidence_street_level) && address[:rank][:confidence_street_level] >= accept_level
+      "BUILDING_NOT_FOUND"
+    elsif address[:rank][:confidence_city_level] >= accept_level
+      "STREET_LEVEL_DOUBTS"
+    else
+      "CITY_LEVEL_DOUBTS"
+    end
   end
 end
