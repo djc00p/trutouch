@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class GeoapifyService
+  def address_look_up(address)
+    get_json(address)
+  end
+
   private
 
   def conn
