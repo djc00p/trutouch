@@ -10,7 +10,7 @@ class GeoapifyService
   end
 
   def confirm_address(address)
-    address_results = address_look_up(address)[:results]
+    address_results = geocode_search(address)[:results]
     address_confidence_levels = confidence_level(address_results)
     return unless address_confidence_levels[:validation] == ("CONFIRMED" || "PARTIALLY_CONFIRMED")
 
@@ -22,24 +22,29 @@ class GeoapifyService
       zip_code: address[:postcode] }
   end
 
-  def address_look_up(address)
-    get_json(address)
+  def geocode_search(address)
+    url = "/v1/geocode/search"
+    params = { apiKey: ENV["GEOAPIFY_API_KEY"],
+               format: "json",
+               filter: "circle:#{@trutouch_lon},#{@trutouch_lat},#{@radius_meters}|countrycode:us",
+               limit: 3,
+               text: address }
+
+    get_json(url, params)
   end
 
   private
 
   def conn
-    Faraday.new(url: "https://api.geoapify.com/v1/geocode/search",
+    Faraday.new(url: "https://api.geoapify.com",
                 headers: { "Accept" => "application/json" }) do |f|
-      f.params[:limit] = 3
-      f.params[:filter] = "circle:#{@trutouch_lat}#{@trutouch_lon},#{@radius_meters}|countrycode:us"
-      f.params[:apiKey] = ENV["GEOAPIFY_API_KEY"]
       f.adapter Faraday.default_adapter
     end
   end
 
-  def get_json(address)
-    response = conn.get(address)
+  def get_json(url, params)
+    response = conn.get(url, params)
+
     JSON.parse(response.body, symbolize_names: true)
   end
 
