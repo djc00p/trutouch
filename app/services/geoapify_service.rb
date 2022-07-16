@@ -15,4 +15,9 @@ class GeoapifyService
       f.adapter Faraday.default_adapter
     end
   end
+
+  def get_json(address)
+    response = conn.get(address)
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
