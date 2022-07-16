@@ -1,6 +1,19 @@
 # frozen_string_literal: true
 
 class GeoapifyService
+  def confirm_address(address)
+    address_results = address_look_up(address)[:results]
+    address_confidence_levels = confidence_level(address_results)
+    return unless address_confidence_levels[:validation] == ("CONFIRMED" || "PARTIALLY_CONFIRMED")
+
+    confirmed_address(address_results[0]).merge!(address_confidence_levels)
+  end
+
+  def confirmed_address(address)
+    { address_line1: address[:address_line1], city: address[:city], state: address[:state_code],
+      zip_code: address[:postcode] }
+  end
+
   def address_look_up(address)
     get_json(address)
   end
@@ -27,7 +40,7 @@ class GeoapifyService
 
   # Geoapify recommended check for confidenece_level
 
-  def confidenece_level(results)
+  def confidence_level(results)
     accept_level = 0.95
     decline_level = 0.2
 
