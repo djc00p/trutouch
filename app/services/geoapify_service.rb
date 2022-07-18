@@ -86,13 +86,6 @@ class GeoapifyService
     validation_result
   end
 
-  def address_attributes_included?(result, address)
-    address = address.strip.titleize
-
-    (result.key?(:housenumber) && result[:housenumber] == address.to_i.to_s) &&
-      (address.include?(result[:city]) || address.include?(result[:postcode]))
-  end
-
   def partially_confirmed(address, results, accept_level, validation_result = {})
     results.each_with_index do |result, index|
       next unless address_attributes_included?(result, address)
@@ -105,6 +98,13 @@ class GeoapifyService
     validation_result[:validation] = "NOT_CONFIRMED" unless validation_result.key?(:validation)
 
     validation_result
+  end
+
+  def address_attributes_included?(result, address)
+    address = address.strip.titleize
+
+    (result.key?(:housenumber) && result[:housenumber] == address.to_i.to_s) &&
+      (address.include?(result[:city]) || address.include?(result[:postcode]))
   end
 
   def validation_details(address, accept_level)
