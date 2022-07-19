@@ -23,7 +23,12 @@ class AddressesController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @user = User.find(@address.user_id)
+    @address.destroy
+    flash[:success] = "Your address has been deleted!"
+    redirect_to profile_url(@user)
+  end
 
   private
 
