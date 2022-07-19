@@ -2,7 +2,7 @@
 
 class AddressesController < ApplicationController
   before_action :find_user, only: %i[new create]
-  before_action :set_address, only: %i[destroy]
+  before_action :set_address, only: %i[destroy confirm]
 
   def new
     @address = @user.addresses.build
@@ -28,6 +28,13 @@ class AddressesController < ApplicationController
     @address.destroy
     flash[:success] = "Your address has been deleted!"
     redirect_to profile_url(@user)
+  end
+
+
+  def confirm
+    @address.update(validation: "confirmed")
+    flash[:success] = "Your address has been confirmed!"
+    redirect_to profile_url(@address.user_id)
   end
 
   private
