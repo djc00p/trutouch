@@ -9,10 +9,10 @@ class AddressesController < ApplicationController
   end
 
   def create
-    address = @user.addresses.build
-    address_search(address)
+    @address = @user.addresses.build
+    address_search(@address)
 
-    if address.save
+    if @address.save
       flash[:success] = "Your address has been add!"
       redirect_to profile_url(@user)
     else
