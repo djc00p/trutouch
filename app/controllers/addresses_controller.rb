@@ -30,7 +30,6 @@ class AddressesController < ApplicationController
     redirect_to profile_url(@user)
   end
 
-
   def confirm
     @address.update(validation: "confirmed")
     flash[:success] = "Your address has been confirmed!"
