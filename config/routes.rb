@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
     resources :addresses, except: [:index, :show, :edit, :update], shallow: true
   end
+  patch '/addresses/:id/confirm', to: 'addresses#confirm', as: 'confirm_address'
+
   get '/sign_up', to: 'users#new', as: 'sign_up'
 
   # User Activation
