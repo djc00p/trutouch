@@ -3,7 +3,7 @@
     <h2><strong>My Addresses</strong></h2>
       <% @user.addresses.each do |address|%>
       <ul>
-        <div class="">
+        <div class="" id="<%= address.id %>">
           <li> <%= address.formatted_address %></li>
           <div class="btn-group" role="group">
             <% if address.validation == "Partially Confirmed" %>
