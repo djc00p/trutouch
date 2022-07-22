@@ -18,7 +18,7 @@ class AddressesController < ApplicationController
     else
       flash[:danger] =
         "#{address_params.values.join(', ')} could not be found or is outside of our pickup/dropoff radius.
-        Please check the  provided address is correct."
+        Please check the provided address is correct."
       render :new, status: :unprocessable_entity
     end
   end
@@ -63,7 +63,7 @@ class AddressesController < ApplicationController
         "Your address has been partially confirmed. Potential cause is
       \"#{results.delete(:validation_details).titleize}\". Please confirm the found address is correct."
     when "CONFIRMED"
-      flash[:success] = "Your address has been confirmed!"
+      flash[:info] = "Your address has been confirmed!"
     end
   end
 end
