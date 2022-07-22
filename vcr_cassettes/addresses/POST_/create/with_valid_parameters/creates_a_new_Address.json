@@ -1,0 +1,97 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=7350%20E%20Colfax%20Ave,%20Denver,%20CO%2080220",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.3.0"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Fri, 22 Jul 2022 04:06:26 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Content-Disposition": [
+            "inline; filename=response.json"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Expect-Ct": [
+            "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=l077oJolT3CSFkpLoAt6Gy5NCsgyjXJsdXz%2FsXY6JPeFM5V01%2FxN3d%2FYEEqTY3sn32ah%2FbsuAdgedczMJn0D1RoLeQSOWnEh4DcUP7xu1OWqa%2F89GSjZ1OIh%2FNgP7ou%2BJognGkq3KGb8NEiaHYY%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "72e94dbb7cbb86ae-ORD"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"results\":[{\"country_code\":\"us\",\"housenumber\":\"7350\",\"street\":\"East Colfax Avenue\",\"country\":\"United States\",\"county\":\"Denver County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80220\",\"state\":\"Colorado\",\"city\":\"Denver\",\"suburb\":\"East Colfax\",\"lon\":-104.902808,\"lat\":39.739846,\"state_code\":\"CO\",\"formatted\":\"7350 East Colfax Avenue, Denver, CO 80220, United States of America\",\"address_line1\":\"7350 East Colfax Avenue\",\"address_line2\":\"Denver, CO 80220, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":4.8846102860706555,\"confidence\":1,\"confidence_city_level\":1,\"confidence_street_level\":1,\"match_type\":\"full_match\"},\"place_id\":\"514ca4349bc7395ac059c8091346b3de4340c00203\"}],\"query\":{\"text\":\"7350 E Colfax Ave, Denver, CO 80220\",\"parsed\":{\"housenumber\":\"7350\",\"street\":\"e colfax ave\",\"postcode\":\"80220\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
+        }
+      },
+      "recorded_at": "Fri, 22 Jul 2022 04:06:26 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}

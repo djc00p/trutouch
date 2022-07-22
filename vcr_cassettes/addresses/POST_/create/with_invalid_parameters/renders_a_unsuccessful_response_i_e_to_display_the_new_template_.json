@@ -1,0 +1,97 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=7582%20E%20Tecnology%20Way,%20Denver,%20CO%2080237",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.3.0"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Fri, 22 Jul 2022 04:13:20 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Content-Disposition": [
+            "inline; filename=response.json"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Expect-Ct": [
+            "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=2f9qhiH3WXfpZSfGf%2BoRmZjyDSJBZexlGc423FOmwsC3sLYmBwHut2POLnPp7FyfP%2B%2FFweNaWf7hjrvvFnhoHUOQRoS62%2BbSpgkdjR03%2BZxRX7cNbuWcxxl66Jrpm9gUY%2ByG5lMwN8t0D4a2KSg%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "72e957d2ab2f635a-ORD"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"name\":\"Denver\",\"city\":\"Denver\",\"state\":\"Colorado\",\"postcode\":\"80237\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.9003813186581,\"lat\":39.640515180282065,\"state_code\":\"CO\",\"distance\":0,\"formatted\":\"Denver, CO 80237, United States of America\",\"address_line1\":\"Denver\",\"address_line2\":\"Denver, CO 80237, United States of America\",\"result_type\":\"postcode\",\"rank\":{\"importance\":0.435,\"popularity\":4.657577875574995,\"confidence\":0.25,\"confidence_city_level\":1,\"match_type\":\"match_by_postcode\"},\"place_id\":\"513864f7d89f395ac05996f3c366fcd14340c0020792030644656e766572\",\"bbox\":{\"lon1\":-105.06038131866,\"lat1\":39.480515180282,\"lon2\":-104.74038131866,\"lat2\":39.800515180282}},{\"country_code\":\"us\",\"country\":\"United States\",\"county\":\"Denver County\",\"datasource\":{\"sourcename\":\"whosonfirst\",\"url\":\"https://www.whosonfirst.org/docs/licenses/\"},\"state\":\"Colorado\",\"city\":\"Denver\",\"lon\":-104.985798,\"lat\":39.740959,\"state_code\":\"CO\",\"formatted\":\"Denver, CO, United States of America\",\"address_line1\":\"Denver, CO\",\"address_line2\":\"United States of America\",\"result_type\":\"city\",\"rank\":{\"popularity\":7.869565382548606,\"confidence\":0.25,\"confidence_city_level\":1,\"match_type\":\"match_by_city_or_disrict\"},\"place_id\":\"51959d7e50173f5ac059a35698bed7de4340c00208\",\"bbox\":{\"lon1\":-105.109967,\"lat1\":39.614311,\"lon2\":-104.599581,\"lat2\":39.914209}}],\"query\":{\"text\":\"7582 E Tecnology Way, Denver, CO 80237\",\"parsed\":{\"housenumber\":\"7582\",\"street\":\"e tecnology way\",\"postcode\":\"80237\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
+        }
+      },
+      "recorded_at": "Fri, 22 Jul 2022 04:13:21 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}

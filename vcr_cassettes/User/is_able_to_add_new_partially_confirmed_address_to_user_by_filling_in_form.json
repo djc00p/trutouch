@@ -1,0 +1,97 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=16639%20E%20Atlantic%20Pl,%20Aurora,%20CO",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.3.0"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Fri, 22 Jul 2022 04:06:12 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Content-Disposition": [
+            "inline; filename=response.json"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Expect-Ct": [
+            "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=0jWF3PiCIAmSD4hypV0zeKTA6MrJ5rFAOZjv3qWilIK0JLW1csL8I1zJVQSWOJLpBZR8mwTOAzLno4y5yP8O2LnICoTyb7OztnDjGrh07ytdIPi5p51ElN3dInnPQKzi4sPc5LFUGtAyrFQa16A%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "72e94d604cf18737-ORD"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"city\":\"Aurora\",\"county\":\"Arapahoe County\",\"state\":\"Colorado\",\"postcode\":\"80013\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.7958865510204,\"lat\":39.68145116326531,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora, CO 80013, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora, CO 80013, United States of America\",\"result_type\":\"building\",\"rank\":{\"importance\":0.621,\"popularity\":4.010270691317906,\"confidence\":0,\"confidence_city_level\":1,\"match_type\":\"full_match\"},\"place_id\":\"515efd24ceef325ac059d805aeca39d74340f00102f9015f4b030100000000c00203\",\"bbox\":{\"lon1\":-104.79593655102,\"lat1\":39.681401163265,\"lon2\":-104.79583655102,\"lat2\":39.681501163265}},{\"country_code\":\"us\",\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"country\":\"United States\",\"county\":\"Arapahoe County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80013-1209\",\"state\":\"Colorado\",\"city\":\"Aurora District\",\"lon\":-104.79558,\"lat\":39.681927,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora District, CO 80013-1209, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora District, CO 80013-1209, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":3.994154224327459,\"confidence\":0,\"confidence_city_level\":0.95,\"match_type\":\"full_match\"},\"place_id\":\"51825660c8ea325ac05934a1496249d74340c00203\"},{\"country_code\":\"us\",\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"country\":\"United States\",\"county\":\"Arapahoe County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80013\",\"state\":\"Colorado\",\"city\":\"Aurora District\",\"lon\":-104.795598,\"lat\":39.68194,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora District, CO 80013, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora District, CO 80013, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":3.994154224327459,\"confidence\":0,\"confidence_city_level\":0.95,\"match_type\":\"full_match\"},\"place_id\":\"51d5b0df13eb325ac059c8ea56cf49d74340c00203\"}],\"query\":{\"text\":\"16639 E Atlantic Pl, Aurora, CO\"}}"
+        }
+      },
+      "recorded_at": "Fri, 22 Jul 2022 04:06:12 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}
