@@ -22,8 +22,15 @@ describe "User" do
 
     click_button "Create Address"
 
-    expect(page).to have_content("Your address has been partially confirmed.")
     expect(page).to have_content("Your address has been add!")
+  end
+
+  it "is able to partially confirmed an address", :vcr do
+    fill_in "address[address_line1]", with: partially_valid_address
+
+    click_button "Create Address"
+
+    expect(page).to have_content("Your address has been partially confirmed.")
   end
 
   it "is able to see partially confirmed address has a Confirm Address button", :vcr do

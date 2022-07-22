@@ -20,12 +20,19 @@ describe "User" do
     expect(page).to have_button("Add Address")
   end
 
-  it "is able to add new address to user by filling in form", :vcr do
+  it "is able to confirm new address to user by filling in form", :vcr do
     fill_in "address[address_line1]", with: valid_address
 
     click_button "Create Address"
 
     expect(page).to have_content("Your address has been confirmed!")
+  end
+
+  it "is able to add new address to user by filling in form", :vcr do
+    fill_in "address[address_line1]", with: valid_address
+
+    click_button "Create Address"
+
     expect(page).to have_content("Your address has been add!")
   end
 
