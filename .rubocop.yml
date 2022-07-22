@@ -21,6 +21,7 @@ AllCops:
     - tmp/**
     - vender/**
     - spec/test_results.txt
+    - vcr_cassettes/**
 
 Layout/LineLength:
   Max: 120
