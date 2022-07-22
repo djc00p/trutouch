@@ -11,6 +11,8 @@ require "rspec/rails"
 require "capybara/rails"
 require "support/factory_bot"
 require "simplecov"
+require "vcr_setup"
+
 SimpleCov.start
 SmsSpec.driver = :"twilio-ruby"
 # Requires supporting ruby files with custom matchers and macros, etc, in
