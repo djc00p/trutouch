@@ -4,8 +4,10 @@ require "rails_helper"
 
 RSpec.describe "/addresses", type: :request do
   let(:user) { create(:user) }
-  let(:text_address) { "7350 E Colfax Ave, Denver, CO 80220" }
-  let(:addresses) { create_list(:address, 2, user_id: user.id) }
+  let(:valid_address) { {address_line1: "7350 E Colfax Ave, Denver, CO 80220"} }
+  let(:partially_valid_address) { {address_line1: "16639 E Atlantic Pl, Aurora, CO"} }
+  let(:invalid_address) { {address_line1: "7582 E Tecnology Way, Denver, CO 80237"} }
+  let(:addresses) { create_list(:address, 2, validation: "Confirmed",user_id: user.id) }
 
   describe "GET /new" do
     it "renders a successful response" do
@@ -16,27 +18,27 @@ RSpec.describe "/addresses", type: :request do
 
   describe "POST /create" do
     context "with valid parameters" do
-      it "creates a new Address" do
+      it "creates a new Address", :vcr do
         expect do
-          post profile_addresses_url(user), params: { address: text_address }
+          post profile_addresses_url(user), params: { address: valid_address }
         end.to change(Address, :count).by(1)
       end
 
-      it "redirects to the user profile" do
-        post profile_addresses_url(user), params: { address: text_address }
+      it "redirects to the user profile", :vcr do
+        post profile_addresses_url(user), params: { address: valid_address }
         expect(response).to redirect_to(profile_url(user))
       end
     end
 
     context "with invalid parameters" do
-      it "does not create a new Address" do
+      it "does not create a new Address", :vcr do
         expect do
-          post profile_my_addresses_url(user), params: { address: text_address }
+          post profile_addresses_url(user), params: { address: invalid_address }
         end.to change(Address, :count).by(0)
       end
 
-      it "renders a unsuccessful response (i.e. to display the 'new' template)" do
-        post profile_my_addresses_url(user), params: { address: text_address }
+      it "renders a unsuccessful response (i.e. to display the 'new' template)", :vcr do
+        post profile_addresses_url(user), params: { address: invalid_address }
         expect(response).not_to be_successful
       end
     end
