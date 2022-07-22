@@ -56,6 +56,8 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rails_real_favicon'
   gem 'sms-spec', '~> 0.2.0' # testing Twilio sms
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
