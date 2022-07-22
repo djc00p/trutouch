@@ -1,0 +1,97 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=19202",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.3.0"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Fri, 22 Jul 2022 04:40:04 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Content-Disposition": [
+            "inline; filename=response.json"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Expect-Ct": [
+            "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=r5fL6eZWEvNDf%2FyT5SV4za1LSDTB9JYS8baXpS6UcBi0bwqN5DMFHlTb6pdYCMZpu%2FqryIYU6%2F0PlMGRarRbsQRZsceOuSZ7b0MKQRbyFUQ7M7dZ6JS93%2B29loZTk3rLcdLWB5B8BGxPXf%2FQFMk%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "72e97f004f6b2bb7-ORD"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"results\":[],\"query\":{\"text\":\"19202\",\"parsed\":{\"postcode\":\"19202\",\"expected_type\":\"unknown\"}}}"
+        }
+      },
+      "recorded_at": "Fri, 22 Jul 2022 04:40:04 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}

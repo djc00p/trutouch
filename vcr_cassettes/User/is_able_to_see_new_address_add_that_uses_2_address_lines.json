@@ -1,0 +1,97 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=1750%20Welton%20Street,%20Denver,%20CO%2080202",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.3.0"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Fri, 22 Jul 2022 04:31:23 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Content-Disposition": [
+            "inline; filename=response.json"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Expect-Ct": [
+            "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=DA295ntFAAZXYrf2mkX6IULBWX8xnvETbYkR9Gml8V06iNn%2Br6SjMmSj%2BuU%2BB2k0LUMyOWS03UhdAM40LyMUWJaiABEGigKNjMBpn1lnjvN%2FQsLK1kSsZEqM7V8Ka872YB%2B0NqbDuHxHDldsZHw%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "72e9724b3f48811a-ORD"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"name\":\"Grand Hyatt Denver\",\"housenumber\":\"1750\",\"street\":\"Welton Street\",\"suburb\":\"Central Business District\",\"city\":\"Denver\",\"state\":\"Colorado\",\"postcode\":\"80202\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.98882900462186,\"lat\":39.7457646,\"state_code\":\"CO\",\"formatted\":\"Grand Hyatt Denver, 1750 Welton Street, Denver, CO 80202, United States of America\",\"address_line1\":\"Grand Hyatt Denver\",\"address_line2\":\"1750 Welton Street, Denver, CO 80202, United States of America\",\"category\":\"building.accommodation\",\"result_type\":\"amenity\",\"rank\":{\"importance\":0.31100000000000005,\"popularity\":8.195277376671587,\"confidence\":1,\"confidence_city_level\":1,\"confidence_street_level\":1,\"match_type\":\"inner_part\"},\"place_id\":\"51fa0b73f9483f5ac059dcc1e33675df4340f00102f9011e4b2e1200000000c002019203124772616e642048796174742044656e766572\",\"bbox\":{\"lon1\":-104.9894206,\"lat1\":39.7453103,\"lon2\":-104.9882383,\"lat2\":39.74622}}],\"query\":{\"text\":\"1750 Welton Street, Denver, CO 80202\",\"parsed\":{\"housenumber\":\"1750\",\"street\":\"welton street\",\"postcode\":\"80202\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
+        }
+      },
+      "recorded_at": "Fri, 22 Jul 2022 04:31:25 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.1.0"
+}
