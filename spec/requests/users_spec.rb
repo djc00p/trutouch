@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "/users", type: :request do # rubocop:disable Metrics/BlockLength
+RSpec.describe "/users", type: :request do
   let(:valid_attributes) do
     {
       first_name: "Luke",

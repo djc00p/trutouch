@@ -5,7 +5,7 @@ TintService.destroy_all
 ClearBraService.destroy_all
 ProductionVehicle.destroy_all
 
-create(:user, ENV["CREATE_USER"])
+User.create(ENV["CREATE_USER"])
 puts "user created"
 
 DetailService.create([
@@ -334,13 +334,13 @@ ClearBraService.create([
 puts "Added #{ClearBraService.all.count} Clear Bra Services"
 
 CSV.foreach("./lib/vehicle_list.csv", headers: true) do |row|
-  stating_year = row.to_h["production_starting_year"].to_i
+  stating_year = row.to_h["production_starting_year"]
   ending_year = row.to_h["production_ending_year"]
   if ending_year == "-"
     ending_year = Time.now.year
     ending_year
   end
-  (stating_year..ending_year.to_i).each do |year|
+  (stating_year.to_i..ending_year.to_i).each do |year|
     ProductionVehicle.create(
       make: row.to_h["make"],
       model: row.to_h["model"],

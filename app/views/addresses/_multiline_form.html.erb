@@ -1,0 +1,31 @@
+<%= form_with(model: addresses, url: profile_addresses_path) do |form| %>
+
+  <div class="field">
+    <%= form.label :address_line1 %>
+    <%= form.text_field :address_line1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address_line2 %>
+    <%= form.text_field :address_line2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.select :state, Address.us_states, selected: "CO" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

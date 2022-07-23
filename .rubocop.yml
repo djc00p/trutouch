@@ -10,6 +10,7 @@ AllCops:
     - config.ru
     - app/controllers/**
     - app/models/**
+    - app/services/**
     - spec/**/**
   Exclude:
     - app/assets/**
@@ -20,6 +21,7 @@ AllCops:
     - tmp/**
     - vender/**
     - spec/test_results.txt
+    - vcr_cassettes/**
 
 Layout/LineLength:
   Max: 120
