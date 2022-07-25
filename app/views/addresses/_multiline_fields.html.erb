@@ -1,0 +1,46 @@
+<div class="" id="multiline">
+  <div class="fields">
+    <div class="field">
+      <div class="address_labels">
+        <%= form.label :housenumber %>
+        <div class="" style="margin:10px"></div>
+        <i>ex. 7350</i>
+      </div>
+      <%= form.text_field :housenumber %>
+    </div>
+    <div class="field">
+      <div class="address_labels">
+        <%= form.label :street %>
+        <div class="" style="margin:10px"></div>
+        <i>ex. E Colfax Ave</i>
+      </div>
+      <%= form.text_field :street %>
+    </div>
+  </div>
+  <div class="fields">
+    <div class="field">
+      <div class="address_labels">
+        <%= form.label :city %>
+        <div class="" style="margin:10px"></div>
+        <i>ex. Denver</i>
+      </div>
+      <%= form.text_field :city %>
+    </div>
+    <div class="field">
+      <div class="">
+        <%= form.label :state %>
+      </div>
+      <%= form.select :state, Address.us_states, selected: "CO" %>
+    </div>
+  </div>
+  <div class="fields">
+    <div class="field">
+      <div class="address_labels">
+        <%= form.label :zip_code %>
+        <div class="" style="margin:10px"></div>
+        <i>ex. 80220</i>
+      </div>
+      <%= form.text_field :zip_code %>
+    </div>
+  </div>
+</div>
