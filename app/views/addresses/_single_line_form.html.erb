@@ -1,13 +1,5 @@
 <%= form_with(model: address, url: profile_addresses_path) do |form| %>
-  <div class="search-container" id="search-container">
-    <div class="field-container">
-      <span>Address</span>
-      <address class="">ex. 7350 E Colfax Ave, Denver, CO 80220</address>
-    </div>
-    <div class="input-container">
-      <%= form.text_field :address_line1, placeholder: "Enter an address here" %>
-    </div>
-  </div>
+  <%= render "single_line_field", form: form %>
   <div class="actions">
     <%= form.submit %>
   </div>
