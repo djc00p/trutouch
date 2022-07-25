@@ -1,0 +1,35 @@
+<%= form_with(model: address, url: profile_addresses_path) do |form| %>
+<div class="">
+  <h3 style="text-align:center">Form Style</h3>
+  <div class="form_select">
+    <div class="">
+      <input type="radio" id="text" name="text" onclick="unclickOtherOtherFormOption(this)" checked="checked">
+      <label for="text">Text</label>
+    </div>
+    <div class="">
+      <input type="radio" id="structured" name="structured" onclick="unclickOtherOtherFormOption(this)">
+      <label for="structured">Structured</label>
+    </div>
+  </div>
+</div>
+  <%= render "single_line_field", form: form %>
+  <%= render "multiline_fields", form: form %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<script type="text/javascript">
+  function unclickOtherOtherFormOption(obj)
+          {
+              if (obj.checked == true && obj.id == "structured") {
+                document.getElementById("text").checked = false;
+                document.getElementById("single_line").style.display = "none";
+                document.getElementById("multiline").style.display = "block";
+              }
+              else {
+                document.getElementById("structured").checked = false;
+                document.getElementById("multiline").style.display = "none";
+                document.getElementById("single_line").style.display = "block";
+              }
+          }
+</script>
