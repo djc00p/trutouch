@@ -1,4 +1,5 @@
-.search-container {
+.search-container,
+#multiline {
   margin-bottom: 20px;
 }
 
@@ -10,15 +11,26 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .fields {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
 }
 .fields .field {
   flex-direction: column;
+}
+
+.field {
+  width: 35%;
 }
 
 .form_select {
