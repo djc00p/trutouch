@@ -1,18 +1,22 @@
 
 <div class="userSignIn">
-  <section>
+  <section class="fields" style="margin-top: 20px">
     <%= form_for :session, url: sign_in_path do |f| %>
-      <div>
-        <%= f.label :email %>
+    <div class="">
+      <div class="field">
+        <%= f.label :email, style: "margin: 5px; text-align: center;" %>
         <%= f.email_field :email %>
       </div>
-      <div>
-        <%= f.label :password %>
+      <div class="field">
+        <%= f.label :password, style: "margin: 5px; text-align: center;" %>
         <%= f.password_field :password %>
       </div>
+    </div>
+    <div class="actions" style="margin-top: 20px">
       <%= f.submit 'Sign In' %>
+    </div>
     <% end %>
   </section>
 
-  <p>Don't have an account? <%= link_to 'Sign up now.', sign_up_path %></p>
+  <p style="margin-top: 20px; text-align: center;">Don't have an account? <%= link_to 'Sign up now.', sign_up_path %></p>
 </div>
