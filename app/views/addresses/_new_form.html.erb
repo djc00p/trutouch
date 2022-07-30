@@ -3,33 +3,38 @@
   <h3 style="text-align:center">Form Style</h3>
   <div class="form-select">
     <div class="">
-      <input type="radio" id="text" name="text" onclick="unclickOtherOtherFormOption(this)" checked="checked">
-      <label for="text">Text</label>
+      <input type="radio" id="single-line-form" name="single-line-form" onclick="unclickOtherOtherFormOption(this)" checked="checked">
+      <label for="single-line-form">Single Line Form</label>
     </div>
     <div class="">
-      <input type="radio" id="structured" name="structured" onclick="unclickOtherOtherFormOption(this)">
-      <label for="structured">Structured</label>
+      <input type="radio" id="structured-form" name="structured-form" onclick="unclickOtherOtherFormOption(this)">
+      <label for="structured-form">Structured Form</label>
     </div>
   </div>
 </div>
   <%= render "single_line_field", form: form %>
-  <%= render "multiline_fields", form: form %>
+  <%= render "structured_fields", form: form %>
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
 <script type="text/javascript">
+  const single_line_form = document.getElementById("single-line-form")
+  const single_line_field = document.getElementById("single-line-field")
+  const structured_fields = document.getElementById("structured-fields")
+  const structured_form = document.getElementById("structured-form")
+
   function unclickOtherOtherFormOption(obj)
           {
-              if (obj.checked == true && obj.id == "structured") {
-                document.getElementById("text").checked = false;
-                document.getElementById("single_line").style.display = "none";
-                document.getElementById("multiline").style.display = "block";
+              if (obj.checked == true && obj.id == "structured-form") {
+                single_line_form.checked = false;
+                single_line_field.style.display = "none";
+                structured_fields.style.display = "block";
               }
               else {
-                document.getElementById("structured").checked = false;
-                document.getElementById("multiline").style.display = "none";
-                document.getElementById("single_line").style.display = "block";
+                structured_form.checked = false;
+                structured_fields.style.display = "none";
+                single_line_field.style.display = "block";
               }
           }
 </script>
