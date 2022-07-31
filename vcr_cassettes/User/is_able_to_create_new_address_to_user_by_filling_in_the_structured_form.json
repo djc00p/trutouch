@@ -3,7 +3,7 @@
     {
       "request": {
         "method": "get",
-        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=19202",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=9551,%20S%20University%20Blvd,%20Highlands%20Ranch,%20CO,%2080126",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Fri, 22 Jul 2022 04:40:04 GMT"
+            "Sun, 31 Jul 2022 04:04:21 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -70,7 +70,7 @@
             "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=r5fL6eZWEvNDf%2FyT5SV4za1LSDTB9JYS8baXpS6UcBi0bwqN5DMFHlTb6pdYCMZpu%2FqryIYU6%2F0PlMGRarRbsQRZsceOuSZ7b0MKQRbyFUQ7M7dZ6JS93%2B29loZTk3rLcdLWB5B8BGxPXf%2FQFMk%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=bEa95vFvNANJcmeNyudnQMroFmVRQnulSb6CMY5PQkjLn2Lk5p6F8Lds56CwnvdUeLr9lTESRb7fteGerVW1HRO%2BnlHsTUEAKCV5ZyUm%2By%2F1tpeui7zmo9xpof0ITZXZ97d%2BMScKVmg%2BbeN1mXY%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Nel": [
             "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
@@ -79,7 +79,7 @@
             "cloudflare"
           ],
           "Cf-Ray": [
-            "72e97f004f6b2bb7-ORD"
+            "7333730c6fea8102-ORD"
           ],
           "Alt-Svc": [
             "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
@@ -87,10 +87,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"results\":[],\"query\":{\"text\":\"19202\",\"parsed\":{\"postcode\":\"19202\",\"expected_type\":\"unknown\"}}}"
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"name\":\"King Soopers\",\"housenumber\":\"9551\",\"street\":\"South University Boulevard\",\"county\":\"Douglas County\",\"state\":\"Colorado\",\"postcode\":\"80126\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.9443021,\"lat\":39.5423024,\"state_code\":\"CO\",\"formatted\":\"King Soopers, 9551 South University Boulevard, Douglas County, CO 80126, United States of America\",\"address_line1\":\"King Soopers\",\"address_line2\":\"9551 South University Boulevard, Douglas County, CO 80126, United States of America\",\"category\":\"commercial.supermarket\",\"result_type\":\"amenity\",\"rank\":{\"importance\":0.42099999999999993,\"popularity\":3.9011373488968917,\"confidence\":1,\"confidence_city_level\":1,\"confidence_street_level\":1,\"match_type\":\"inner_part\"},\"place_id\":\"51d34213726f3c5ac0596a45402a6ac54340f00103f901045ba31c00000000c0020192030c4b696e6720536f6f70657273\",\"bbox\":{\"lon1\":-104.9443521,\"lat1\":39.5422524,\"lon2\":-104.9442521,\"lat2\":39.5423524}}],\"query\":{\"text\":\"9551, S University Blvd, Highlands Ranch, CO, 80126\",\"parsed\":{\"housenumber\":\"9551\",\"street\":\"s university blvd\",\"postcode\":\"80126\",\"city\":\"highlands ranch\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
         }
       },
-      "recorded_at": "Fri, 22 Jul 2022 04:40:04 GMT"
+      "recorded_at": "Sun, 31 Jul 2022 04:04:21 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

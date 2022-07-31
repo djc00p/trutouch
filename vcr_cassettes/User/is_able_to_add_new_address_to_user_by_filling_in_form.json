@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Fri, 22 Jul 2022 04:06:16 GMT"
+            "Sun, 31 Jul 2022 04:00:20 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -70,7 +70,7 @@
             "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=05s2IWhSXY36ye%2Fcpa9Y2QwjNhKqsAVS3J0bxZT8v0S8VMDqtulFZFy4%2BwVD%2Bv3%2Bc73bodS1DsCKoMpFVfTDTqkQWb7GnZbC%2Fg3a%2FKliTG1%2FRKOmzDEVOAhYVrQlnVZm26tc8sWnClUzdmQhU1g%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=c8MHYQfWn3xGQUCXMnSH8HKX5u1OvCFZP05DmftsbJJMp5lzlOeMl9VS6Vn2xP1kYFNllM20Ofs0tuz%2FGzB9ggEOEnxkWq%2BdjNMQ92CCC6q2l5UI36OJI8BcCYfgzzcUNKLjxNy1BHlqg7McCzM%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Nel": [
             "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
@@ -79,7 +79,7 @@
             "cloudflare"
           ],
           "Cf-Ray": [
-            "72e94d7d6b102ac6-ORD"
+            "73336d2a0df4873f-ORD"
           ],
           "Alt-Svc": [
             "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
@@ -87,10 +87,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"results\":[{\"country_code\":\"us\",\"housenumber\":\"7350\",\"street\":\"East Colfax Avenue\",\"country\":\"United States\",\"county\":\"Denver County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80220\",\"state\":\"Colorado\",\"city\":\"Denver\",\"suburb\":\"East Colfax\",\"lon\":-104.902808,\"lat\":39.739846,\"state_code\":\"CO\",\"formatted\":\"7350 East Colfax Avenue, Denver, CO 80220, United States of America\",\"address_line1\":\"7350 East Colfax Avenue\",\"address_line2\":\"Denver, CO 80220, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":4.8846102860706555,\"confidence\":1,\"confidence_city_level\":1,\"confidence_street_level\":1,\"match_type\":\"full_match\"},\"place_id\":\"514ca4349bc7395ac059c8091346b3de4340c00203\"}],\"query\":{\"text\":\"7350 E Colfax Ave, Denver, CO 80220\",\"parsed\":{\"housenumber\":\"7350\",\"street\":\"e colfax ave\",\"postcode\":\"80220\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
+          "string": "{\"results\":[{\"country_code\":\"us\",\"housenumber\":\"7350\",\"street\":\"East Colfax Avenue\",\"country\":\"United States\",\"county\":\"Denver County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80220\",\"state\":\"Colorado\",\"city\":\"Denver\",\"suburb\":\"East Colfax\",\"lon\":-104.902808,\"lat\":39.739846,\"state_code\":\"CO\",\"formatted\":\"7350 East Colfax Avenue, Denver, CO 80220, United States of America\",\"address_line1\":\"7350 East Colfax Avenue\",\"address_line2\":\"Denver, CO 80220, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":4.8846102860706555,\"confidence\":1,\"confidence_city_level\":1,\"confidence_street_level\":1,\"match_type\":\"full_match\"},\"place_id\":\"514ca4349bc7395ac059c8091346b3de4340c00203e203366f70656e6164647265737365733a616464726573733a75732f636f2f7374617465776964653a31633361303065613437616530363865\"}],\"query\":{\"text\":\"7350 E Colfax Ave, Denver, CO 80220\",\"parsed\":{\"housenumber\":\"7350\",\"street\":\"e colfax ave\",\"postcode\":\"80220\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
         }
       },
-      "recorded_at": "Fri, 22 Jul 2022 04:06:17 GMT"
+      "recorded_at": "Sun, 31 Jul 2022 04:00:20 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"
