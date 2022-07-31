@@ -47,7 +47,7 @@ class AddressesController < ApplicationController
   end
 
   def address_params
-    if params.key?("structured_form") && params[:structured_form] == "on"
+    if params.key?("structured-form") && params["structured-form"] == "on"
       params.require(:address).permit(:housenumber, :street, :city, :state, :zip_code)
     else
       params.require(:address).permit(:address_line1)
