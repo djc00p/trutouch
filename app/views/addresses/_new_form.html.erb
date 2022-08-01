@@ -3,11 +3,11 @@
   <h3 style="text-align:center">Form Style</h3>
   <div class="form-select">
     <div class="">
-      <input type="radio" id="single-line-form" name="single-line-form" onclick="unclickOtherOtherFormOption(this)" checked="checked">
+      <input type="radio" id="single-line-form" name="single-line-form" checked="checked">
       <label for="single-line-form">Single Line Form</label>
     </div>
     <div class="">
-      <input type="radio" id="structured-form" name="structured-form" onclick="unclickOtherOtherFormOption(this)">
+      <input type="radio" id="structured-form" name="structured-form">
       <label for="structured-form">Structured Form</label>
     </div>
   </div>
@@ -18,23 +18,4 @@
     <%= form.submit %>
   </div>
 <% end %>
-<script type="text/javascript">
-  const single_line_form = document.getElementById("single-line-form")
-  const single_line_field = document.getElementById("single-line-field")
-  const structured_fields = document.getElementById("structured-fields")
-  const structured_form = document.getElementById("structured-form")
-
-  function unclickOtherOtherFormOption(obj)
-          {
-              if (obj.checked == true && obj.id == "structured-form") {
-                single_line_form.checked = false;
-                single_line_field.style.display = "none";
-                structured_fields.style.display = "block";
-              }
-              else {
-                structured_form.checked = false;
-                structured_fields.style.display = "none";
-                single_line_field.style.display = "block";
-              }
-          }
-</script>
+<%= javascript_pack_tag "address_form_select" %>
