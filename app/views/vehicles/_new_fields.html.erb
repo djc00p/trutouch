@@ -1,0 +1,23 @@
+<div class="fields">
+  <div class="">
+    <div class="field">
+      <%= form.label :year, style: "margin: 5px; text-align: center;" %>
+      <%= form.collection_select :year, ProductionVehicle.list_of_production_years, :production_year, :production_year, { prompt: "Please Select a Year" }, { class:"form-select form-select-sm", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleYear" } %>
+    </div>
+
+    <div class="field" id="vehicleColorDiv" >
+      <%= form.label :color, style: "margin: 5px; text-align: center;" %>
+      <%= form.select :color, Vehicle.colors, { prompt: "Please Select a Color" }, { class:"form-select form-select-sm", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleColor" }%>
+    </div>
+
+    <div class="field" id="vehicleMakeDiv" >
+      <%= form.label :make, style: "margin: 5px; text-align: center;" %>
+      <%= form.collection_select :make, ProductionVehicle.filter_by_year_for_makes,:production_year_and_make, :make, { prompt: "Please Select a Make" }, { class:"form-select form-select-sm", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleMake" }  %>
+    </div>
+
+    <div class="field" id="vehicleModelDiv" >
+      <%= form.label :model, style: "margin: 5px; text-align: center;" %>
+      <%= form.collection_select :model, ProductionVehicle.filter_by_year_and_make_for_model, :production_year_make_and_model, :model, { prompt: "Please Select a Model" }, { class:"form-select form-select-sm", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false", id: "vehicleModel" } %>
+    </div>
+  </div>
+</div>

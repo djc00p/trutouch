@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Fri, 22 Jul 2022 04:13:20 GMT"
+            "Sun, 31 Jul 2022 04:05:38 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -70,7 +70,7 @@
             "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=2f9qhiH3WXfpZSfGf%2BoRmZjyDSJBZexlGc423FOmwsC3sLYmBwHut2POLnPp7FyfP%2B%2FFweNaWf7hjrvvFnhoHUOQRoS62%2BbSpgkdjR03%2BZxRX7cNbuWcxxl66Jrpm9gUY%2ByG5lMwN8t0D4a2KSg%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=fCk%2FzAQfPA839C%2FW09NmK%2FRn0xVvmmI18yualj0YCGdr5txseZmxpm%2BPOzcQMczbp1EepToMTo9%2BY7gSweUquMwWKJkBsp4xV%2BhzHFRHmYfX7Nx3wlFTeO8f6SvWnJXbjWA%2Fk9kc%2FnklrYhZ96g%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Nel": [
             "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
@@ -79,7 +79,7 @@
             "cloudflare"
           ],
           "Cf-Ray": [
-            "72e957d2ab2f635a-ORD"
+            "733374e8ce8c62ab-ORD"
           ],
           "Alt-Svc": [
             "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
@@ -87,10 +87,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"name\":\"Denver\",\"city\":\"Denver\",\"state\":\"Colorado\",\"postcode\":\"80237\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.9003813186581,\"lat\":39.640515180282065,\"state_code\":\"CO\",\"distance\":0,\"formatted\":\"Denver, CO 80237, United States of America\",\"address_line1\":\"Denver\",\"address_line2\":\"Denver, CO 80237, United States of America\",\"result_type\":\"postcode\",\"rank\":{\"importance\":0.435,\"popularity\":4.657577875574995,\"confidence\":0.25,\"confidence_city_level\":1,\"match_type\":\"match_by_postcode\"},\"place_id\":\"513864f7d89f395ac05996f3c366fcd14340c0020792030644656e766572\",\"bbox\":{\"lon1\":-105.06038131866,\"lat1\":39.480515180282,\"lon2\":-104.74038131866,\"lat2\":39.800515180282}},{\"country_code\":\"us\",\"country\":\"United States\",\"county\":\"Denver County\",\"datasource\":{\"sourcename\":\"whosonfirst\",\"url\":\"https://www.whosonfirst.org/docs/licenses/\"},\"state\":\"Colorado\",\"city\":\"Denver\",\"lon\":-104.985798,\"lat\":39.740959,\"state_code\":\"CO\",\"formatted\":\"Denver, CO, United States of America\",\"address_line1\":\"Denver, CO\",\"address_line2\":\"United States of America\",\"result_type\":\"city\",\"rank\":{\"popularity\":7.869565382548606,\"confidence\":0.25,\"confidence_city_level\":1,\"match_type\":\"match_by_city_or_disrict\"},\"place_id\":\"51959d7e50173f5ac059a35698bed7de4340c00208\",\"bbox\":{\"lon1\":-105.109967,\"lat1\":39.614311,\"lon2\":-104.599581,\"lat2\":39.914209}}],\"query\":{\"text\":\"7582 E Tecnology Way, Denver, CO 80237\",\"parsed\":{\"housenumber\":\"7582\",\"street\":\"e tecnology way\",\"postcode\":\"80237\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"name\":\"Denver\",\"city\":\"Denver\",\"state\":\"Colorado\",\"postcode\":\"80237\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.9003813186581,\"lat\":39.640515180282065,\"state_code\":\"CO\",\"distance\":0,\"formatted\":\"Denver, CO 80237, United States of America\",\"address_line1\":\"Denver\",\"address_line2\":\"Denver, CO 80237, United States of America\",\"result_type\":\"postcode\",\"rank\":{\"importance\":0.435,\"popularity\":4.657577875574995,\"confidence\":0.25,\"confidence_city_level\":1,\"match_type\":\"match_by_postcode\"},\"place_id\":\"513864f7d89f395ac05996f3c366fcd14340c0020792030644656e766572\",\"bbox\":{\"lon1\":-105.06038131866,\"lat1\":39.480515180282,\"lon2\":-104.74038131866,\"lat2\":39.800515180282}},{\"country_code\":\"us\",\"country\":\"United States\",\"county\":\"Denver County\",\"datasource\":{\"sourcename\":\"whosonfirst\",\"url\":\"https://www.whosonfirst.org/docs/licenses/\"},\"state\":\"Colorado\",\"city\":\"Denver\",\"lon\":-104.985798,\"lat\":39.740959,\"state_code\":\"CO\",\"formatted\":\"Denver, CO, United States of America\",\"address_line1\":\"Denver, CO\",\"address_line2\":\"United States of America\",\"result_type\":\"city\",\"rank\":{\"popularity\":7.869565382548606,\"confidence\":0.25,\"confidence_city_level\":1,\"match_type\":\"match_by_city_or_disrict\"},\"place_id\":\"51959d7e50173f5ac059a35698bed7de4340c00208e2031d77686f736f6e66697273743a6c6f63616c6974793a3835393238383739\",\"bbox\":{\"lon1\":-105.109967,\"lat1\":39.614311,\"lon2\":-104.599581,\"lat2\":39.914209}}],\"query\":{\"text\":\"7582 E Tecnology Way, Denver, CO 80237\",\"parsed\":{\"housenumber\":\"7582\",\"street\":\"e tecnology way\",\"postcode\":\"80237\",\"city\":\"denver\",\"state\":\"co\",\"expected_type\":\"building\"}}}"
         }
       },
-      "recorded_at": "Fri, 22 Jul 2022 04:13:21 GMT"
+      "recorded_at": "Sun, 31 Jul 2022 04:05:38 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

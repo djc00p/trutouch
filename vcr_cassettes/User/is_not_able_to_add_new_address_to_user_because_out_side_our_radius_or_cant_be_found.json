@@ -3,7 +3,7 @@
     {
       "request": {
         "method": "get",
-        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=19202",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=241addbcc66143a9a74e1ac8d5477c7d&filter=circle:-104.9027739090717,39.739812576697716,24150%7Ccountrycode:us&format=json&limit=3&text=650%20S%20R%20L%20Thornton%20Fwy,%20Dallas,%20TX%2075203",
         "body": {
           "encoding": "US-ASCII",
           "string": ""
@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Fri, 22 Jul 2022 04:48:07 GMT"
+            "Sun, 31 Jul 2022 04:00:27 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -70,7 +70,7 @@
             "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=GKjY%2Fm8sM0qYE3zWTV3vKshSj1KvMC6IYnewR9l3UykGmVaf5T1B63KDqWi3KX5Y0dMZeTf3dZmG6MGiDdQhBjDyPsU%2BkgFzZLqTnzjlvIs4Trlzr%2BhuGAnCMlvL2qPGYJbRNBMiogIsPAs00Ak%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=EVaBtoA9jGtBCWGu3EXr7GjebS6uiUfHPdg9RJGtjPijbdgfkxzuAwkyB4Gyw%2Fj0o7qkVYCzpXgPr6J%2Br9TPquogs0I%2BnuhNcMTjAn959EA0bXFDaEytsgd8gOlN1Gbq61GdBfsojZ0vmb1Org0%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Nel": [
             "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
@@ -79,7 +79,7 @@
             "cloudflare"
           ],
           "Cf-Ray": [
-            "72e98acc9b9a2bfb-ORD"
+            "73336d549e622a30-ORD"
           ],
           "Alt-Svc": [
             "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
@@ -87,10 +87,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"results\":[],\"query\":{\"text\":\"19202\",\"parsed\":{\"postcode\":\"19202\",\"expected_type\":\"unknown\"}}}"
+          "string": "{\"results\":[],\"query\":{\"text\":\"650 S R L Thornton Fwy, Dallas, TX 75203\",\"parsed\":{\"housenumber\":\"650\",\"street\":\"s l thornton fwy\",\"postcode\":\"75203\",\"city\":\"dallas\",\"state\":\"tx\",\"expected_type\":\"building\"}}}"
         }
       },
-      "recorded_at": "Fri, 22 Jul 2022 04:48:08 GMT"
+      "recorded_at": "Sun, 31 Jul 2022 04:00:27 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

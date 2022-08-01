@@ -27,7 +27,7 @@
         },
         "headers": {
           "Date": [
-            "Fri, 22 Jul 2022 04:06:13 GMT"
+            "Sun, 31 Jul 2022 04:00:16 GMT"
           ],
           "Content-Type": [
             "application/json; charset=utf-8"
@@ -70,7 +70,7 @@
             "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
           ],
           "Report-To": [
-            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=pQIliKgQ9yk3kj13WPGvzPjFExgKhnO3CunV8pabqKFrJTLewLmFnI2nVMSX8YZdir30mCXsVs2DwwUzOiljsp2gh4V1mm8dW2FIXSIqqlUephJ33bqYglCz5AP8Ll6noX6TpfFFtThC9LvPzOs%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=EfAgRURJY086zKnv2E%2BkZdnD82Ckg%2F%2B1uBTdduafLFyWlG0Po0hem5MVunfTlqlE92uckQEi7xlu%2F2hDoc6%2BfahcFy31idy2OMSg0uDfqawoIcuy7PlwwllSqX4OUxCXRO2Qy%2FOuvFGlDtc4OLI%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
           ],
           "Nel": [
             "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
@@ -79,7 +79,7 @@
             "cloudflare"
           ],
           "Cf-Ray": [
-            "72e94d6a5b886332-ORD"
+            "73336d1448b2c570-ORD"
           ],
           "Alt-Svc": [
             "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
@@ -87,10 +87,10 @@
         },
         "body": {
           "encoding": "ASCII-8BIT",
-          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"city\":\"Aurora\",\"county\":\"Arapahoe County\",\"state\":\"Colorado\",\"postcode\":\"80013\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.7958865510204,\"lat\":39.68145116326531,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora, CO 80013, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora, CO 80013, United States of America\",\"result_type\":\"building\",\"rank\":{\"importance\":0.621,\"popularity\":4.010270691317906,\"confidence\":0,\"confidence_city_level\":1,\"match_type\":\"full_match\"},\"place_id\":\"515efd24ceef325ac059d805aeca39d74340f00102f9015f4b030100000000c00203\",\"bbox\":{\"lon1\":-104.79593655102,\"lat1\":39.681401163265,\"lon2\":-104.79583655102,\"lat2\":39.681501163265}},{\"country_code\":\"us\",\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"country\":\"United States\",\"county\":\"Arapahoe County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80013-1209\",\"state\":\"Colorado\",\"city\":\"Aurora District\",\"lon\":-104.79558,\"lat\":39.681927,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora District, CO 80013-1209, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora District, CO 80013-1209, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":3.994154224327459,\"confidence\":0,\"confidence_city_level\":0.95,\"match_type\":\"full_match\"},\"place_id\":\"51825660c8ea325ac05934a1496249d74340c00203\"},{\"country_code\":\"us\",\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"country\":\"United States\",\"county\":\"Arapahoe County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80013\",\"state\":\"Colorado\",\"city\":\"Aurora District\",\"lon\":-104.795598,\"lat\":39.68194,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora District, CO 80013, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora District, CO 80013, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":3.994154224327459,\"confidence\":0,\"confidence_city_level\":0.95,\"match_type\":\"full_match\"},\"place_id\":\"51d5b0df13eb325ac059c8ea56cf49d74340c00203\"}],\"query\":{\"text\":\"16639 E Atlantic Pl, Aurora, CO\"}}"
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"city\":\"Aurora\",\"county\":\"Arapahoe County\",\"state\":\"Colorado\",\"postcode\":\"80013\",\"country\":\"United States\",\"country_code\":\"us\",\"lon\":-104.7958865510204,\"lat\":39.68145116326531,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora, CO 80013, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora, CO 80013, United States of America\",\"result_type\":\"building\",\"rank\":{\"importance\":0.621,\"popularity\":4.010270691317906,\"confidence\":0,\"confidence_city_level\":1,\"match_type\":\"full_match\"},\"place_id\":\"515efd24ceef325ac059d805aeca39d74340f00102f9015f4b030100000000c00203\",\"bbox\":{\"lon1\":-104.79593655102,\"lat1\":39.681401163265,\"lon2\":-104.79583655102,\"lat2\":39.681501163265}},{\"country_code\":\"us\",\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"country\":\"United States\",\"county\":\"Arapahoe County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80013-1209\",\"state\":\"Colorado\",\"city\":\"Aurora District\",\"lon\":-104.79558,\"lat\":39.681927,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora District, CO 80013-1209, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora District, CO 80013-1209, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":3.994154224327459,\"confidence\":0,\"confidence_city_level\":0.95,\"match_type\":\"full_match\"},\"place_id\":\"51825660c8ea325ac05934a1496249d74340c00203e203356f70656e6164647265737365733a616464726573733a75732f636f2f6172617061686f653a37646265373061333732303430333462\"},{\"country_code\":\"us\",\"housenumber\":\"16639\",\"street\":\"East Atlantic Place\",\"country\":\"United States\",\"county\":\"Arapahoe County\",\"datasource\":{\"sourcename\":\"openaddresses\",\"attribution\":\"© OpenAddresses contributors\",\"license\":\"BSD-3-Clause License\"},\"postcode\":\"80013\",\"state\":\"Colorado\",\"city\":\"Aurora District\",\"lon\":-104.795598,\"lat\":39.68194,\"state_code\":\"CO\",\"formatted\":\"16639 East Atlantic Place, Aurora District, CO 80013, United States of America\",\"address_line1\":\"16639 East Atlantic Place\",\"address_line2\":\"Aurora District, CO 80013, United States of America\",\"result_type\":\"building\",\"rank\":{\"popularity\":3.994154224327459,\"confidence\":0,\"confidence_city_level\":0.95,\"match_type\":\"full_match\"},\"place_id\":\"51d5b0df13eb325ac059c8ea56cf49d74340c00203e203366f70656e6164647265737365733a616464726573733a75732f636f2f7374617465776964653a61643564386438303838383065323265\"}],\"query\":{\"text\":\"16639 E Atlantic Pl, Aurora, CO\"}}"
         }
       },
-      "recorded_at": "Fri, 22 Jul 2022 04:06:14 GMT"
+      "recorded_at": "Sun, 31 Jul 2022 04:00:17 GMT"
     }
   ],
   "recorded_with": "VCR 6.1.0"

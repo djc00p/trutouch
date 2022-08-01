@@ -4,9 +4,9 @@ require "rails_helper"
 
 describe "User" do
   let(:user) { create(:user) }
-  let(:invalid_address) { "19202" }
+  let(:invalid_address) { "650 S R L Thornton Fwy, Dallas, TX 75203" }
 
-  before do |_test|
+  before do
     user
     visit sign_in_path
     fill_in "session[email]", with: user.email

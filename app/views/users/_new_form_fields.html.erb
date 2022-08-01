@@ -1,0 +1,49 @@
+<div class="fields">
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+</div>
+<div class="fields">
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+</div>
+<div class="fields">
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confirm_password %>
+    <%= form.password_field :confirm_password %>
+  </div>
+</div>
+  <div class="fields" style="margin-top: 10px">
+    <div class="" style=""></div>
+    <%= form.label "Prefered Method of Contact:", style: "font-size: 20px" %>
+    <div class="" style=""></div>
+    <div class="" style=""></div>
+    <ul>
+      <li>
+        <%= check_box_tag :email, "email", true, :name=> "user[prefered_method_of_contact]", onclick: "uncheckOtherPreferedMethodOfContact(this)" %> Email
+      </li>
+      <li>
+        <%= check_box_tag :text, "text", false, :name=> "user[prefered_method_of_contact]", onclick: "uncheckOtherPreferedMethodOfContact(this)" %> Text
+      </li>
+    </ul>
+    <div class="" style=""></div>
+    <div class="" style=""></div>
+  </div>

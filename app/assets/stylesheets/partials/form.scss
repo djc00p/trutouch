@@ -1,0 +1,62 @@
+.search-container,
+#structured-fields {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.address-labels {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.fields .field {
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.form-select {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ccc;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#structured-fields {
+  display: none;
+}

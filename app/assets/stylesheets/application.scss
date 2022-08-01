@@ -14,10 +14,16 @@
 @import "bootstrap";
 @import "our_services";
 @import "partials/covid_19";
+@import "partials/form";
 
 body,
 html {
   height: 100%;
   margin: 0;
   font-family: Arial;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
 }
