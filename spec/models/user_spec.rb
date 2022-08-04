@@ -4,6 +4,7 @@ require "rails_helper"
 
 RSpec.describe User, type: :model do
   describe "Validations" do
+    it { is_expected.to belong_to :customer }
     it { is_expected.to have_many :vehicles }
     it { is_expected.to have_many :addresses }
     it { is_expected.to validate_length_of :vehicles }
