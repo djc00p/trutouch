@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class Vehicle < ApplicationRecord
-  belongs_to :user
+  # Associations
+  belongs_to :owner, polymorphic: true
+
+  # Validations
   validates :year, :color, :make, :model, :classification, presence: true
 
   # Instance Methods

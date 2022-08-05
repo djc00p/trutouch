@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe "vehicles/index", type: :view do
   let(:user) { create(:user) }
-  let(:vehicles) { create_list(:vehicle, 5, user_id: user.id) }
+  let(:vehicles) { create_list(:vehicle, 5, owner: user) }
 
   before do
     user.vehicles << vehicles

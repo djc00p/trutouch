@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe Vehicle, type: :model do
   describe "Validations" do
-    it { is_expected.to belong_to :user }
+    it { is_expected.to belong_to :owner }
     it { is_expected.to validate_presence_of :year }
     it { is_expected.to validate_presence_of :color }
     it { is_expected.to validate_presence_of :make }
@@ -26,7 +26,7 @@ RSpec.describe Vehicle, type: :model do
             make: production_vehicle[:make],
             model: production_vehicle[:model],
             classification: nil,
-            user_id: user.id)
+            owner: user)
     end
 
     it "can find the production vehicle to get classification info" do
