@@ -5,6 +5,7 @@ require "rails_helper"
 RSpec.describe Customer, type: :model do
   describe "Model Associations" do
     it { is_expected.to have_one :user }
+    it { is_expected.to have_many :vehicles }
   end
   
   describe "Validations" do

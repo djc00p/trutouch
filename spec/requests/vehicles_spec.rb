@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe "/vehicles", type: :request do
   let(:user) { create(:user) }
   let(:production_vehicle) { create(:production_vehicle) }
-  let(:vehicles) { create_list(:vehicle, 2, user_id: user.id) }
+  let(:vehicles) { create_list(:vehicle, 2, owner: user) }
   let(:valid_attributes) do
     {
       year: production_vehicle[:production_year],

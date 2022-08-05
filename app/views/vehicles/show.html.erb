@@ -3,7 +3,7 @@
   <div class="">
     <%=
     button_to "Back To My Vehicles",
-    profile_my_vehicles_path(@vehicle.user_id),
+    profile_my_vehicles_path(@vehicle.owner_id),
     method: :get,
     class: "btn btn-primary"
     %>

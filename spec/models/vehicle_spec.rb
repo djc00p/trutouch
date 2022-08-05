@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe Vehicle, type: :model do
   describe "Model Associations" do
-    it { is_expected.to belong_to :user }
+    it { is_expected.to belong_to :owner }
   end
 
   describe "Validations" do
@@ -29,7 +29,7 @@ RSpec.describe Vehicle, type: :model do
             make: production_vehicle[:make],
             model: production_vehicle[:model],
             classification: nil,
-            user_id: user.id)
+            owner: user)
     end
 
     it "can find the production vehicle to get classification info" do
