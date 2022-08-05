@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class Address < ApplicationRecord
+  # Associations
   belongs_to :user
+
+  # Validations
   validates :address_line1, :city, :state, :zip_code, :validation, presence: true
   include AddressConfirmation
 
