@@ -4,7 +4,7 @@ require "rails_helper"
 
 RSpec.describe "vehicles/show", type: :view do
   let(:user) { create(:user) }
-  let(:vehicle) { create(:vehicle, user_id: user.id) }
+  let(:vehicle) { create(:vehicle, owner: user) }
 
   before do
     assign(:vehicle, vehicle)
