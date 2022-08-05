@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_07_02_143141) do
+ActiveRecord::Schema[7.1].define(version: 2022_08_03_234936) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,18 @@ ActiveRecord::Schema[7.1].define(version: 2022_07_02_143141) do
     t.index ["name"], name: "index_clear_bra_services_on_name", unique: true
   end
 
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_number"
+    t.string "prefered_method_of_contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_customers_email_uniqueness", unique: true
+    t.index ["phone_number"], name: "index_customers_phone_number_uniqueness", unique: true
+  end
+
   create_table "detail_services", force: :cascade do |t|
     t.string "name"
     t.integer "base_price"
@@ -107,6 +119,8 @@ ActiveRecord::Schema[7.1].define(version: 2022_07_02_143141) do
     t.datetime "updated_at", null: false
     t.integer "verification_code"
     t.string "prefered_method_of_contact"
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_users_on_customer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["phone_number"], name: "index_users_on_phone_number", unique: true
   end
@@ -126,5 +140,6 @@ ActiveRecord::Schema[7.1].define(version: 2022_07_02_143141) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "users"
+  add_foreign_key "users", "customers"
   add_foreign_key "vehicles", "users"
 end

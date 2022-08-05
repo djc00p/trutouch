@@ -20,7 +20,7 @@ describe "User" do
     fill_in "address[street]", with: "S University Blvd"
     fill_in "address[city]", with: "Highlands Ranch"
     fill_in "address[zip_code]", with: "80126"
-    
+
     click_button "Create Address"
 
     expect(page).to have_content("Your address has been confirmed!")
