@@ -3,9 +3,12 @@
 class User < ApplicationRecord
   before_save :normalize_phone_number
 
+  # Associations
   belongs_to :customer, optional: true
-  has_many :vehicles, dependent: :destroy
+  has_many :vehicles, as: :owner, dependent: :destroy
   has_many :addresses, dependent: :destroy
+
+  # Validations
   validates :vehicles, length: { maximum: 10 }
   validates :first_name, :last_name, :phone_number, :email, :prefered_method_of_contact, presence: true
   validates :phone_number, :email, uniqueness: true
