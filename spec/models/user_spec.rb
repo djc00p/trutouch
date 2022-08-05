@@ -3,10 +3,13 @@
 require "rails_helper"
 
 RSpec.describe User, type: :model do
-  describe "Validations" do
+  describe "Model Associations" do
     it { is_expected.to belong_to :customer }
     it { is_expected.to have_many :vehicles }
     it { is_expected.to have_many :addresses }
+  end
+  
+  describe "Validations" do
     it { is_expected.to validate_length_of :vehicles }
     it { is_expected.to validate_presence_of :first_name }
     it { is_expected.to validate_presence_of :last_name }
