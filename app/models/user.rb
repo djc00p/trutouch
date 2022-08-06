@@ -6,7 +6,7 @@ class User < ApplicationRecord
   # Associations
   belongs_to :customer, optional: true
   has_many :vehicles, as: :owner, dependent: :destroy
-  has_many :addresses, dependent: :destroy
+  has_many :addresses, as: :addressable, dependent: :destroy
 
   # Validations
   validates :vehicles, length: { maximum: 10 }
