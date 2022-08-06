@@ -6,8 +6,9 @@ RSpec.describe Customer, type: :model do
   describe "Model Associations" do
     it { is_expected.to have_one :user }
     it { is_expected.to have_many :vehicles }
+    it { is_expected.to have_many :addresses }
   end
-  
+
   describe "Validations" do
     it { is_expected.to validate_presence_of :first_name }
     it { is_expected.to validate_presence_of :last_name }

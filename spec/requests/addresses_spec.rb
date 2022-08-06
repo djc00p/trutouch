@@ -7,7 +7,7 @@ RSpec.describe "/addresses", type: :request do
   let(:valid_address) { { address_line1: "7350 E Colfax Ave, Denver, CO 80220" } }
   let(:partially_valid_address) { { address_line1: "16639 E Atlantic Pl, Aurora, CO" } }
   let(:invalid_address) { { address_line1: "7582 E Tecnology Way, Denver, CO 80237" } }
-  let(:addresses) { create_list(:address, 2, validation: "Confirmed", user_id: user.id) }
+  let(:addresses) { create_list(:address, 2, validation: "Confirmed", addressable: user) }
 
   describe "GET /new" do
     it "renders a successful response" do

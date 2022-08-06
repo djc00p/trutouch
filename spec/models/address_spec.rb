@@ -11,7 +11,7 @@ RSpec.describe Address, type: :model do
   end
 
   describe "Model Associations" do
-    it { is_expected.to belong_to :user }
+    it { is_expected.to belong_to :addressable }
   end
 
   describe "Class Methods" do

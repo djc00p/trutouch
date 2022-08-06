@@ -5,7 +5,7 @@ require "rails_helper"
 describe "User" do
   let(:user) { create(:user) }
   let(:partially_valid_address) { "16639 E Atlantic Pl, Aurora, CO" }
-  let(:partially_confirmed_address) { create(:address,  validation: "Partially Confirmed", user_id: user.id) }
+  let(:partially_confirmed_address) { create(:address,  validation: "Partially Confirmed", addressable: user) }
 
   before do |test|
     user
