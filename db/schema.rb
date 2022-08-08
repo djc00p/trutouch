@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_08_06_055404) do
+ActiveRecord::Schema[7.1].define(version: 2022_08_08_132612) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,26 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_06_055404) do
     t.string "addressable_type"
     t.bigint "addressable_id"
     t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable"
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "began_at"
+    t.datetime "finished_at"
+    t.string "estimated_total_cost"
+    t.time "estimated_total_time"
+    t.boolean "pickup_drop_off"
+    t.datetime "scheduled_for"
+    t.datetime "scheduled_on"
+    t.integer "services_count"
+    t.string "status", default: "Pending"
+    t.string "total_cost"
+    t.time "total_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "customer_id"
+    t.bigint "vehicle_id"
+    t.index ["customer_id"], name: "index_appointments_on_customer_id"
+    t.index ["vehicle_id"], name: "index_appointments_on_vehicle_id"
   end
 
   create_table "clear_bra_services", force: :cascade do |t|
@@ -141,5 +161,7 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_06_055404) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "appointments", "customers"
+  add_foreign_key "appointments", "vehicles"
   add_foreign_key "users", "customers"
 end
