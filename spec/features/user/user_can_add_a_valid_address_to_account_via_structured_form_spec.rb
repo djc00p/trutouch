@@ -15,7 +15,7 @@ describe "User" do
     choose("structured-form")
   end
 
-  it "is able to create new address to user by filling in the structured form", :vcr do
+  it "is able to create new address to user by filling in the structured form", :vcr do # rubocop:disable RSpec/ExampleLength
     fill_in "address[housenumber]", with: "9551"
     fill_in "address[street]", with: "S University Blvd"
     fill_in "address[city]", with: "Highlands Ranch"
