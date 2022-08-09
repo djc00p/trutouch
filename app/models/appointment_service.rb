@@ -7,6 +7,5 @@ class AppointmentService < ApplicationRecord
   counter_culture :appointment, column_name: "services_count"
 
   # Validations
-  validates :started_at, :estimated_cost, :estimated_time_to_complete, :special_instructions,
-            presence: true
+  validates :started_at, :estimated_cost, :estimated_time_to_complete, presence: true
 end

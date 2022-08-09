@@ -12,6 +12,5 @@ RSpec.describe AppointmentService, type: :model do
     it { is_expected.to validate_presence_of :started_at }
     it { is_expected.to validate_presence_of :estimated_cost }
     it { is_expected.to validate_presence_of :estimated_time_to_complete }
-    it { is_expected.to validate_presence_of :special_instructions }
   end
 end
