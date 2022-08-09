@@ -9,5 +9,8 @@ RSpec.describe AppointmentAddress, type: :model do
   end
 
   describe "Validations" do
+    it { is_expected.to validate_presence_of :pickup }
+    it { is_expected.to validate_presence_of :drop_off }
+    it { is_expected.to validate_presence_of :distance_units }
   end
 end
