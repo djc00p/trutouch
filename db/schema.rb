@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_08_08_132612) do
+ActiveRecord::Schema[7.1].define(version: 2022_08_09_045752) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,6 +56,23 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_08_132612) do
     t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable"
   end
 
+  create_table "appointment_services", force: :cascade do |t|
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.string "estimated_cost"
+    t.time "estimated_time_to_complete"
+    t.string "actual_cost"
+    t.time "time_to_completion"
+    t.string "special_instructions"
+    t.bigint "appointment_id"
+    t.string "service_type"
+    t.bigint "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appointment_id"], name: "index_appointment_services_on_appointment_id"
+    t.index ["service_type", "service_id"], name: "index_appointment_services_on_service"
+  end
+
   create_table "appointments", force: :cascade do |t|
     t.datetime "began_at"
     t.datetime "finished_at"
@@ -64,7 +81,7 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_08_132612) do
     t.boolean "pickup_drop_off"
     t.datetime "scheduled_for"
     t.datetime "scheduled_on"
-    t.integer "services_count"
+    t.integer "services_count", default: 0, null: false
     t.string "status", default: "Pending"
     t.string "total_cost"
     t.time "total_time"
