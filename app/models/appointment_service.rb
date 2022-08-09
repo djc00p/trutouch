@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AppointmentServices < ApplicationRecord
+class AppointmentService < ApplicationRecord
   # Model Associations
   belongs_to :appointment
   belongs_to :service, polymorphic: true
