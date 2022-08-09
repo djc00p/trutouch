@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe AppointmentServices, type: :model do
+RSpec.describe AppointmentService, type: :model do
   describe "Model Associations" do
     it { is_expected.to belong_to :appointment }
     it { is_expected.to belong_to :service }
