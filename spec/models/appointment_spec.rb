@@ -6,10 +6,11 @@ RSpec.describe Appointment, type: :model do
   describe "Model Associations" do
     it { is_expected.to belong_to :customer }
     it { is_expected.to belong_to :vehicle }
-    it { is_expected.to have_many :detail_services, through: :appointment_services }
-    it { is_expected.to have_many :tint_services, through: :appointment_services }
-    it { is_expected.to have_many :clear_bra_services, through: :appointment_services }
-    it { is_expected.to have_many :addresses, through: :appointment_addresses }
+    it { is_expected.to have_many :appointment_services }
+    it { is_expected.to have_many :detail_services }
+    it { is_expected.to have_many :tint_services }
+    it { is_expected.to have_many :clear_bra_services }
+    it { is_expected.to have_many :addresses }
   end
 
   describe "Validations" do
