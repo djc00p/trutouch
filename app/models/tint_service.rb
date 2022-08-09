@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class TintService < ApplicationRecord
+  # Model Associations
+  has_many :appointment_services, as: :service, dependent: :nullify
+  has_many :appointments, through: :appointment_services
+
+  # Validations
   validates :name, presence: true
   validates :tint_manufacturer, presence: true
   validates :vehicle_type, presence: true
