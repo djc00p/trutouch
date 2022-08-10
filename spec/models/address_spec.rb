@@ -12,6 +12,7 @@ RSpec.describe Address, type: :model do
 
   describe "Model Associations" do
     it { is_expected.to belong_to :addressable }
+    it { is_expected.to have_many :appointments }
   end
 
   describe "Class Methods" do
