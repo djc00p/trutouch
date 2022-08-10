@@ -3,6 +3,8 @@
 class Address < ApplicationRecord
   # Associations
   belongs_to :addressable, polymorphic: true
+  has_many :appointment_addresses, dependent: :destroy
+  has_many :appointments, through: :appointment_addresses
 
   # Validations
   validates :address_line1, :city, :state, :zip_code, :validation, presence: true
