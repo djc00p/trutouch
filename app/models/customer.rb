@@ -4,6 +4,7 @@ class Customer < ApplicationRecord
   # Associations
   has_one :user, dependent: :destroy
   has_many :vehicles, as: :owner, dependent: :destroy
+  has_many :addresses, as: :addressable, dependent: :destroy
 
   # Validations
   validates :first_name, :last_name, :email, :phone_number, :prefered_method_of_contact, presence: true

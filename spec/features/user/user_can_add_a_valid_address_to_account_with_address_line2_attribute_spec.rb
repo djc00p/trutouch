@@ -5,7 +5,7 @@ require "rails_helper"
 describe "User" do
   let(:user) { create(:user) }
   let(:valid_address) { "1750 Welton Street, Denver, CO 80202" }
-  let(:addresses) { create_list(:address, 2, user_id: user.id) }
+  let(:addresses) { create_list(:address, 2, addressable: user) }
 
   before do |test|
     user

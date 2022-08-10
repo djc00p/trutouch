@@ -24,7 +24,7 @@ class AddressesController < ApplicationController
   end
 
   def destroy
-    @user = User.find(@address.user_id)
+    @user = User.find(@address.addressable_id)
     @address.destroy
     flash[:success] = "Your address has been deleted!"
     redirect_to profile_url(@user)
@@ -33,7 +33,7 @@ class AddressesController < ApplicationController
   def confirm
     @address.update(validation: "confirmed")
     flash[:success] = "Your address has been confirmed!"
-    redirect_to profile_url(@address.user_id)
+    redirect_to profile_url(@address.addressable_id)
   end
 
   private

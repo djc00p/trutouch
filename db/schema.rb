@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_08_05_150242) do
+ActiveRecord::Schema[7.1].define(version: 2022_08_09_134024) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,9 +50,63 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_05_150242) do
     t.string "zip_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
     t.string "validation"
-    t.index ["user_id"], name: "index_addresses_on_user_id"
+    t.string "addressable_type"
+    t.bigint "addressable_id"
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable"
+  end
+
+  create_table "appointment_addresses", force: :cascade do |t|
+    t.boolean "pickup", null: false
+    t.boolean "drop_off", null: false
+    t.string "distance"
+    t.string "distance_units", default: "miles"
+    t.string "excess_distance_upcharge"
+    t.time "estimated_drive_time"
+    t.string "special_instructions"
+    t.bigint "address_id"
+    t.bigint "appointment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_appointment_addresses_on_address_id"
+    t.index ["appointment_id"], name: "index_appointment_addresses_on_appointment_id"
+  end
+
+  create_table "appointment_services", force: :cascade do |t|
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.string "estimated_cost"
+    t.time "estimated_time_to_complete"
+    t.string "actual_cost"
+    t.time "time_to_completion"
+    t.string "special_instructions"
+    t.bigint "appointment_id"
+    t.string "service_type"
+    t.bigint "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["appointment_id"], name: "index_appointment_services_on_appointment_id"
+    t.index ["service_type", "service_id"], name: "index_appointment_services_on_service"
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "began_at"
+    t.datetime "finished_at"
+    t.string "estimated_total_cost"
+    t.time "estimated_total_time"
+    t.boolean "pickup_drop_off"
+    t.datetime "scheduled_for"
+    t.datetime "scheduled_on"
+    t.integer "services_count", default: 0, null: false
+    t.string "status", default: "Pending"
+    t.string "total_cost"
+    t.time "total_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "customer_id"
+    t.bigint "vehicle_id"
+    t.index ["customer_id"], name: "index_appointments_on_customer_id"
+    t.index ["vehicle_id"], name: "index_appointments_on_vehicle_id"
   end
 
   create_table "clear_bra_services", force: :cascade do |t|
@@ -140,6 +194,7 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_05_150242) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "addresses", "users"
+  add_foreign_key "appointments", "customers"
+  add_foreign_key "appointments", "vehicles"
   add_foreign_key "users", "customers"
 end

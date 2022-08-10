@@ -10,8 +10,9 @@ RSpec.describe Address, type: :model do
     it { is_expected.to validate_presence_of :zip_code }
   end
 
-  describe "Relationships" do
-    it { is_expected.to belong_to :user }
+  describe "Model Associations" do
+    it { is_expected.to belong_to :addressable }
+    it { is_expected.to have_many :appointments }
   end
 
   describe "Class Methods" do

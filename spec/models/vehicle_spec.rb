@@ -3,8 +3,11 @@
 require "rails_helper"
 
 RSpec.describe Vehicle, type: :model do
-  describe "Validations" do
+  describe "Model Associations" do
     it { is_expected.to belong_to :owner }
+  end
+
+  describe "Validations" do
     it { is_expected.to validate_presence_of :year }
     it { is_expected.to validate_presence_of :color }
     it { is_expected.to validate_presence_of :make }

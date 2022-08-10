@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe AddressesController, type: :routing do
   describe "routing" do
     let(:user) { create(:user) }
-    let(:address) { create(:address, validation: "Confirmed", user_id: user.id) }
+    let(:address) { create(:address, validation: "Confirmed", addressable: user) }
 
     it "routes to #create" do
       expect(post: "/profile/#{user.id}/addresses").to route_to(controller: "addresses", action: "create",
