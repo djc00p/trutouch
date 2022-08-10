@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2022_08_09_045752) do
+ActiveRecord::Schema[7.1].define(version: 2022_08_09_134024) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +54,22 @@ ActiveRecord::Schema[7.1].define(version: 2022_08_09_045752) do
     t.string "addressable_type"
     t.bigint "addressable_id"
     t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable"
+  end
+
+  create_table "appointment_addresses", force: :cascade do |t|
+    t.boolean "pickup", null: false
+    t.boolean "drop_off", null: false
+    t.string "distance"
+    t.string "distance_units", default: "miles"
+    t.string "excess_distance_upcharge"
+    t.time "estimated_drive_time"
+    t.string "special_instructions"
+    t.bigint "address_id"
+    t.bigint "appointment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_appointment_addresses_on_address_id"
+    t.index ["appointment_id"], name: "index_appointment_addresses_on_appointment_id"
   end
 
   create_table "appointment_services", force: :cascade do |t|
