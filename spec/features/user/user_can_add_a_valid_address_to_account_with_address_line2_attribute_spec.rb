@@ -9,10 +9,7 @@ describe "User" do
 
   before do |test|
     user
-    visit sign_in_path
-    fill_in "session[email]", with: user.email
-    fill_in "session[password]", with: user.password
-    click_button "Sign In"
+    sign_in_as user
     click_on "Add Address" unless test.metadata[:dont_click_on]
   end
 
