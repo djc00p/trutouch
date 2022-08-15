@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :vehicles, except: [:new, :edit, :update], path: 'my_vehicles', as: 'my_vehicles', shallow: true
     get '/add_my_vehicle', to: 'vehicles#new', as: 'add_my_vehicle'
     resources :addresses, except: [:index, :show, :edit, :update], shallow: true
+    resources :appointments, except: [:edit, :update, :destroy]
   end
   patch '/addresses/:id/confirm', to: 'addresses#confirm', as: 'confirm_address'
 
