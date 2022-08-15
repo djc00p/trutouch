@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
 class AddressesController < ApplicationController
-  before_action :find_user, only: %i[new create]
+  before_action :authorized
   before_action :set_address, only: %i[destroy confirm]
 
   def new
-    @address = @user.addresses.build
+    @address = current_user.addresses.build
   end
 
   def create
-    @address = @user.addresses.build
+    @address = current_user.addresses.build
     address_search(@address)
 
     if @address.save
       flash[:success] = "Your address has been add!"
-      redirect_to profile_url(@user)
+      redirect_to profile_url(current_user)
     else
       flash[:danger] =
         "#{address_params.values.join(', ')} could not be found or is outside of our pickup/dropoff radius.
@@ -37,10 +37,6 @@ class AddressesController < ApplicationController
   end
 
   private
-
-  def find_user
-    @user = User.includes(:addresses).find(params[:profile_id])
-  end
 
   def set_address
     @address = Address.find(params[:id])
