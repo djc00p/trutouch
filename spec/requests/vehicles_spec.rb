@@ -24,6 +24,10 @@ RSpec.describe "/vehicles", type: :request do
     }
   end
 
+  before do
+    post_sign_in_as user
+  end
+
   describe "GET /index" do
     it "renders a successful response" do
       user.vehicles << [vehicles[0], vehicles[1]]

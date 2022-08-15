@@ -10,7 +10,7 @@ RSpec.describe "vehicles/index", type: :view do
     user.vehicles << vehicles
     assign(:user, user)
     assign(:vehicles, vehicles)
-
+    controller.session["user_id"] = user
     render
   end
 

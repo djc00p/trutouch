@@ -8,6 +8,7 @@ describe "User" do
 
   before do
     user.vehicles << vehicles
+    sign_in_as user
     vehicles
     visit profile_my_vehicles_url(user)
   end

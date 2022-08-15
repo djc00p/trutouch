@@ -15,6 +15,7 @@ RSpec.describe "vehicles/new", type: :view do
   before do
     assign(:user, user)
     assign(:vehicle, build(:vehicle))
+    controller.session["user_id"] = user
   end
 
   it "renders new vehicle form" do # rubocop:disable RSpec/ExampleLength
