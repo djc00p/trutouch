@@ -69,6 +69,7 @@ RSpec.describe "Header", type: :feature do
         service.save
       end
     end
+    let(:user) { create(:user) }
 
     it "links to the Our Services page" do
       within ".nav_links" do
@@ -92,6 +93,7 @@ RSpec.describe "Header", type: :feature do
     end
 
     it "links to the Appointment page" do
+      sign_in_as user
       click_on "Appointment"
 
       expect(page).to have_current_path(appointment_path, ignore_query: true)
