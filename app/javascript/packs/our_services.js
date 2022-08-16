@@ -1,25 +1,29 @@
-function openPage(pageName) {
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+var $detail_services = $("#detail_services");
+var $tint_services = $("#tint_services");
+var $clear_bra_services = $("#clear_bra_services");
+var $lower_body_paint_repair_services = $("#lower_body_paint_repair_services");
+var $tablink = $(".tablink");
+var $tabcontent = $(".tabcontent");
+$tabcontent.hide();
+$detail_services.show();
+
+$tablink.on("click", function () {
+  switch ($(this)[0].innerText) {
+    case "Detail Services":
+      $tabcontent.hide();
+      $detail_services.show();
+      break;
+    case "Tint Services":
+      $tabcontent.hide();
+      $tint_services.show();
+      break;
+    case "Clear Bra / Mask Services":
+      $tabcontent.hide();
+      $clear_bra_services.show();
+      break;
+    case "Lower Body Paint Repair Services":
+      $tabcontent.hide();
+      $lower_body_paint_repair_services.show();
+      break;
   }
-
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document
-  .getElementById("defaultOpen")
-  .addEventListener("click", openPage("detail_services"));
-// document
-//   .getElementById("tintOpen")
-//   .addEventListener("onclick", openPage("tint_services"));
-// document
-//   .getElementById("cbmOpen")
-//   .addEventListener("onclick", openPage("clear_bra_services"));
-// document
-//   .getElementById("lbprsOpen")
-//   .addEventListener("onclick", openPage("lbprs"));
+});
