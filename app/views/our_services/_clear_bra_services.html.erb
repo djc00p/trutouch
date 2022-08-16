@@ -1,0 +1,23 @@
+<div id="clear_bra_services" class="tabcontent">
+  <div id="clear_bra_service_header" class="">
+    <h1>Clear Bra / Mask Services</h1>
+    <p>
+      Any customer wanting their personal vehicle to receive clearbra or a mask service completed can select from any of the options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. We do offer vehicle pick up / drop off services for Free or a drop off at appointment time can be done.
+    </p>
+  </div>
+  <div id="clear_bra_service_object" class="">
+    <% @clear_bra_services.each do |service| %>
+    <section id="service-<%= service.id %>">
+      <h2><%=service.name %></h2>
+      <ul>
+        <li>Price: $<%= service.price.to_s %></li>
+        <li>
+          <p>
+            <%= service.description %>
+          </p>
+        </li>
+      </ul>
+    </section>
+    <% end %>
+  </div>
+</div>
