@@ -39,12 +39,12 @@ RSpec.describe "Our Services", type: :feature do
     visit our_services_path
   end
 
-  describe "Clear Bra / Mask Services Section" do
+  describe "Clear Bra Services Section" do
     let(:tsc) { ClearBraService.all.count }
 
-    it "has a h1 with Clear Bra / Mask Services" do
+    it "has a h1 with Clear Bra Services" do
       within "#clear_bra_service_header" do
-        expect(page).to have_css("h1", text: "Clear Bra / Mask Services")
+        expect(page).to have_css("h1", text: "Clear Bra Services")
       end
     end
 
