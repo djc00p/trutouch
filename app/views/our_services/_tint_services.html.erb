@@ -1,0 +1,36 @@
+<div id="tint_services" class="tabcontent">
+  <div id="tint_info"class="">
+    <h2>Tint Information</h2>
+    <h4>Tint % Ranges</h4>
+    <%= image_tag "tint_percentage_example_img.jpeg", alt: "Tint Percentage Example", id: "tpr"%>
+    <p>
+      Every customer has a preference how much sun they want to block. Here is an example of the different ranges of tint shading.
+    </p>
+    <p>
+      We use top of the line tint 3M and Lexen.  Please see pricing below.
+    </p>
+  </div>
+  <div id="tint_service_header"class="">
+    <h1>Tint Services</h1>
+    <p>
+      Any customer wanting their personal vehicle to receive tint service can select from any of the tint options below. All servicing is done by appointment and scheduled via email or over the phone. Each appointment can take 4 hrs +. TruTouch uses two tint companies and both sale top quality tint. TruTouch receives Lexen at a lower purchase price, and we are passing that saving on to you! Please view our "Products Used" page for tint details.
+    </p>
+  </div>
+  <div id="tint_service_object" class="">
+    <% @tint_services.each do |service| %>
+    <section id="service-<%= service.id %>">
+      <h2><%= service.name %></h2>
+      <ul>
+        <li>Tint Manufacturer: <%= service.tint_manufacturer %></li>
+        <li>Vehicle Type: <%= service.vehicle_type %></li>
+        <li>Price: $<%= service.price.to_s %></li>
+        <li>
+          <p>
+            <%= service.description %>
+          </p>
+        </li>
+      </ul>
+    </section>
+    <% end %>
+  </div>
+</div>
