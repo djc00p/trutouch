@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  before_action :authorized, only: %i[show edit update destroy verification verify]
   before_action :set_user, only: %i[show edit update destroy verification verify]
 
   # GET /profile/1 or /profile/1.json
@@ -67,7 +68,7 @@ class UsersController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_user
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   # Only allow a list of trusted parameters through.
