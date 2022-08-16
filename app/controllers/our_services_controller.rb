@@ -2,11 +2,11 @@
 
 class OurServicesController < ApplicationController
   def index
-    @ds = DetailService
-    @mds = DetailService.main_detail_services
-    @dds = DetailService.deluxe_detail_services
-    @ads = DetailService.additional_detail_services
-    @ts = TintService.all
-    @cbs = ClearBraService.all
+    @detail_service = DetailService
+    @main_detail_services = DetailService.main_detail_services
+    @deluxe_detail_services = DetailService.deluxe_detail_services
+    @additional_detail_services = DetailService.additional_detail_services
+    @tint_services = TintService.all
+    @clear_bra_services = ClearBraService.all
   end
 end
