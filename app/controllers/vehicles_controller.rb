@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class VehiclesController < ApplicationController
-  before_action :find_user, only: %i[index new create]
+  before_action :authorized
+  before_action :user, only: %i[index new create]
   before_action :set_vehicle, only: %i[show destroy]
 
   def index
@@ -35,12 +36,12 @@ class VehiclesController < ApplicationController
 
   private
 
-  def find_user
-    @user = User.find(params[:profile_id])
+  def user
+    @user = current_user
   end
 
   def set_vehicle
-    @vehicle = Vehicle.find(params[:id])
+    @vehicle = Vehicle.find_by(id: params[:id], owner_id: current_user.id)
   end
 
   def vehicle_params

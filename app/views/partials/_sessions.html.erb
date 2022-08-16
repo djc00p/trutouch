@@ -1,4 +1,4 @@
-<% if current_user %>
+<% if current_user? %>
   <% if current_page?(profile_path(current_user)) %>
     <div class="">
       <%= link_to "Sign Out", sign_out_path, method: :delete %>
