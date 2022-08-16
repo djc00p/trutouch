@@ -31,13 +31,13 @@ RSpec.describe "Our Services", type: :feature do
     let(:ddsc) { DetailService.deluxe_detail_services.count }
 
     it "has a h1 with Deluxe Detail Services" do
-      within "#deluxe_ds" do
+      within "#deluxe_detail_services" do
         expect(page).to have_css("h1", text: "Deluxe Detail Services")
       end
     end
 
     it "shows the exact amount of Deluxe Detail Service options available" do
-      within "#deluxe_ds" do
+      within "#deluxe_detail_services" do
         expect(page).to have_css("section", count: ddsc)
       end
     end
