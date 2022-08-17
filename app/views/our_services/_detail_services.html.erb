@@ -14,7 +14,18 @@
       <li>Optional Minor Paint Correction $60 added to a Details Service</li>
     </ul>
   </div>
-  <div id="main_detail_services" class="">
+  <ul class="nav nav-tabs nav-fill">
+    <li class="nav-item detail_tablink">
+      <a href="#main_detail_services" class="">Main Detail Services</a>
+    </li>
+    <li class="nav-item detail_tablink">
+      <a href="#deluxe_detail_services" class="">Deluxe Detail Services</a>
+    </li>
+    <li class="nav-item detail_tablink">
+      <a href="#additional_detail_services" class="">Additional Detail Services</a>
+    </li>
+  </ul>
+  <div id="main_detail_services" class="detail_tabcontent">
     <h1>Main Detail Services</h1>
     <% @main_detail_services.each do |service| %>
     <section id="service-<%= service.id %>">
@@ -30,7 +41,7 @@
     </section>
     <% end %>
   </div>
-  <div id="deluxe_detail_services" class="">
+  <div id="deluxe_detail_services" class="detail_tabcontent">
     <h1>Deluxe Detail Services</h1>
     <% @deluxe_detail_services.each do |service| %>
     <section id="service-<%= service.id %>">
@@ -46,7 +57,7 @@
     </section>
     <% end %>
   </div>
-  <div id="additional_detail_services" class="">
+  <div id="additional_detail_services" class="detail_tabcontent">
     <h1>Additional Detail Services</h1>
     <% @additional_detail_services.each do |service| %>
     <section id="service-<%= service.id %>">
