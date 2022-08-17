@@ -3,13 +3,21 @@
   <h1>Our Services</h1>
   <h2>FREE PICK UP / DROP OFF for all services</h2>
 </div>
-<div class="our_services">
-  <div class="">
-    <button class="tablink" id="defaultOpen">Detail Services</button>
-    <button class="tablink">Tint Services</button>
-    <button class="tablink">Clear Bra Services</button>
-    <button class="tablink">Lower Body Paint Repair Services</button>
-  </div>
+<div class="our_services" id="our_services">
+  <ul class="nav nav-tabs nav-fill sticky">
+    <li class="nav-item tablink">
+      <a href="#detail_services" class="">Detail Services</a>
+    </li>
+    <li class="nav-item tablink">
+      <a href="#tint_services" class="">Tint Services</a>
+    </li>
+    <li class="nav-item tablink">
+      <a href="#clear_bra_services" class="">Clear Bra Services</a>
+    </li>
+    <li class="nav-item tablink">
+      <a href="#lower_body_paint_repair_services" class="">Lower Body Paint Repair Services</a>
+    </li>
+  </ul>
   <div class="services">
     <%= render "detail_services" %>
     <%= render "tint_services" %>
