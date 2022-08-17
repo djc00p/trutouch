@@ -1,29 +1,33 @@
 var $detail_services = $("#detail_services");
-var $tint_services = $("#tint_services");
-var $clear_bra_services = $("#clear_bra_services");
-var $lower_body_paint_repair_services = $("#lower_body_paint_repair_services");
+var $main_detail_services = $("#main_detail_services");
 var $tablink = $(".tablink");
+var $detail_tablink = $(".detail_tablink");
 var $tabcontent = $(".tabcontent");
+var $detail_tabcontent = $(".detail_tabcontent");
+$("#defaultOpen").addClass("active");
 $tabcontent.hide();
+$detail_tabcontent.hide();
 $detail_services.show();
+$main_detail_services.show();
 
-$tablink.on("click", function () {
-  switch ($(this)[0].innerText) {
-    case "Detail Services":
-      $tabcontent.hide();
-      $detail_services.show();
-      break;
-    case "Tint Services":
-      $tabcontent.hide();
-      $tint_services.show();
-      break;
-    case "Clear Bra / Mask Services":
-      $tabcontent.hide();
-      $clear_bra_services.show();
-      break;
-    case "Lower Body Paint Repair Services":
-      $tabcontent.hide();
-      $lower_body_paint_repair_services.show();
-      break;
-  }
+$tablink.on("click", function (e) {
+  let services = downcaseUnderscore($(this));
+
+  $tabcontent.hide();
+  $(`#${services}`).show();
+
+  e.preventDefault();
 });
+
+$detail_tablink.on("click", function (e) {
+  let services = downcaseUnderscore($(this));
+
+  $detail_tabcontent.hide();
+  $(`#${services}`).show();
+
+  e.preventDefault();
+});
+
+function downcaseUnderscore(text) {
+  return text[0].innerText.split(" ").join("_").toLowerCase();
+}
