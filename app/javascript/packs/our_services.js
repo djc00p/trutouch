@@ -28,6 +28,6 @@ $detail_tablink.on("click", function (e) {
   e.preventDefault();
 });
 
-function downcaseUnderscore(text) {
-  return text[0].innerText.split(" ").join("_").toLowerCase();
+function downcaseUnderscore(element) {
+  return element[0].innerText.split(" ").join("_").toLowerCase();
 }
