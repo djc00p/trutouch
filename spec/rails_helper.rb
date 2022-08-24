@@ -12,7 +12,7 @@ require "capybara/rails"
 require "support/factory_bot"
 require "simplecov"
 require "vcr_setup"
-require_relative "support/sign_in_helpers"
+Dir[File.join(__dir__, 'support', '*_helpers.rb')].each { |file| require_relative file }
 
 SimpleCov.start
 SmsSpec.driver = :"twilio-ruby"
