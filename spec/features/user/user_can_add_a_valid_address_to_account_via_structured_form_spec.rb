@@ -4,19 +4,17 @@ require "rails_helper"
 
 describe "User" do
   let(:user) { create(:user) }
+  let(:structured_address) { {housenumber: "9551", street: "S University Blvd", city: "Highlands Ranch", state: "Colorado", zip_code: "80126"} }
 
   before do
     user
+    structured_address
     sign_in_as user
     click_on "Add Address"
-    choose("structured-form")
   end
 
-  it "is able to create new address to user by filling in the structured form", :vcr do # rubocop:disable RSpec/ExampleLength
-    fill_in "address[housenumber]", with: "9551"
-    fill_in "address[street]", with: "S University Blvd"
-    fill_in "address[city]", with: "Highlands Ranch"
-    fill_in "address[zip_code]", with: "80126"
+  it "is able to create new address to user by filling in the structured form", :vcr do
+    structured_address_form_fill_in structured_address
 
     click_button "Create Address"
 
