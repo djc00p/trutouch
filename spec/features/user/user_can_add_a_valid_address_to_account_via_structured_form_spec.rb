@@ -4,7 +4,9 @@ require "rails_helper"
 
 describe "User" do
   let(:user) { create(:user) }
-  let(:structured_address) { {housenumber: "9551", street: "S University Blvd", city: "Highlands Ranch", state: "Colorado", zip_code: "80126"} }
+  let(:structured_address) do
+    { housenumber: "9551", street: "S University Blvd", city: "Highlands Ranch", state: "Colorado", zip_code: "80126" }
+  end
 
   before do
     user
