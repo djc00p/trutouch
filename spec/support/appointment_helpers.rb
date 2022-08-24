@@ -3,17 +3,17 @@
 require "rails_helper"
 
 module AppointmentHelpers
-  def fill_in_address_single_line_form(address)
+  def single_line_address_form_fill_in(address)
     fill_in "address[address_line1]", with: address
   end
 
-  def fill_in_address_structured_form(address)
-    check "structured-form"
+  def structured_address_form_fill_in(address)
+    choose "structured-form"
 
     fill_in "address[housenumber]", with: address[:housenumber]
     fill_in "address[street]", with: address[:street]
     fill_in "address[city]", with: address[:city]
-    fill_in "address[state]", with: address[:state]
+    select address[:state], from: "address[state]"
     fill_in "address[zip_code]", with: address[:zip_code]
   end
 
@@ -39,14 +39,14 @@ module AppointmentHelpers
     end
   end
 
-  def fill_in_customer_form(customer)
+  def customer_form_fill_in(customer)
     fill_in "customer[first_name]", with: customer[:first_name]
     fill_in "customer[last_name]", with: customer[:last_name]
     fill_in "customer[email]", with: customer[:email]
     fill_in "customer[phone_number]", with: customer[:phone_number]
   end
 
-  def fill_in_user_form(user)
+  def user_form_fill_in(user)
     fill_in "user[first_name]", with: user[:first_name]
     fill_in "user[last_name]", with: user[:last_name]
     fill_in "user[email]", with: user[:email]
