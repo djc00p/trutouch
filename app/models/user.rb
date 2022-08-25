@@ -45,24 +45,21 @@ class User < ApplicationRecord
   end
 
   def my_addresses
-    if customer_id.nil?
-      addresses
-    elsif !customer_id.nil? && addresses.length > 0
-      customer.addresses << addresses
-      customer.addresses
-    else
-      customer.addresses
-    end
+    customer_associations(addresses)
   end
 
   def my_vehicles
+    customer_associations(vehicles)
+  end
+
+  def customer_associations(association)
     if customer_id.nil?
-      vehicles
-    elsif !customer_id.nil? && vehicles.length > 0
-      customer.vehicles << vehicles
-      customer.vehicles
+      association
+    elsif !customer_id.nil? && association.length > 0
+      customer.association << association
+      customer.association
     else
-      customer.vehicles
+      customer.association
     end
   end
 
