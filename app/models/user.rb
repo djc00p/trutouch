@@ -55,7 +55,7 @@ class User < ApplicationRecord
   def customer_associations(association)
     if customer_id.nil?
       association
-    elsif !customer_id.nil? && association.length > 0
+    elsif !customer_id.nil? && association.length.positive?
       customer.association << association
       customer.association
     else
