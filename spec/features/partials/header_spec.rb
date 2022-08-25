@@ -25,37 +25,37 @@ RSpec.describe "Header", type: :feature do
 
   describe "Nav" do
     it "has a link to the Home page" do
-      within ".nav_links" do
+      within "#nav_links" do
         expect(page).to have_link("Home")
       end
     end
 
     it "has a link to the Our Services page" do
-      within ".nav_links" do
+      within "#nav_links" do
         expect(page).to have_link("Our Services")
       end
     end
 
     it "has a link to the Products Used page" do
-      within ".nav_links" do
+      within "#nav_links" do
         expect(page).to have_link("Products Used")
       end
     end
 
     it "has a link to the Portfolio page" do
-      within ".nav_links" do
+      within "#nav_links" do
         expect(page).to have_link("Portfolio")
       end
     end
 
     it "has a link to the Appointment page" do
-      within ".nav_links" do
+      within "#nav_links" do
         expect(page).to have_link("Appointment")
       end
     end
 
     it "has a link to the Contact Us page" do
-      within ".nav_links" do
+      within "#nav_links" do
         expect(page).to have_link("Contact Us")
       end
     end
@@ -72,7 +72,7 @@ RSpec.describe "Header", type: :feature do
     let(:user) { create(:user) }
 
     it "links to the Our Services page" do
-      within ".nav_links" do
+      within "#nav_links" do
         details
         click_on "Our Services"
 
