@@ -1,19 +1,21 @@
 <% if current_user? %>
   <% if current_page?(profile_path(current_user)) %>
-    <div class="">
-      <%= link_to "Sign Out", sign_out_path, method: :delete %>
+    <div class="navbar-nav flex-row">
+      <%= link_to "Sign Out", sign_out_path, { method: :delete, class: "nav-item nav-link session_links", style:"padding: 8px 10px;"} %>
     </div>
   <% else %>
-    <div class="">
-      <%= link_to "Profile", profile_path(current_user) %> |
-      <%= link_to "Sign Out", sign_out_path, method: :delete %>
+    <div class="navbar-nav flex-row">
+      <%= link_to "Profile", profile_path(current_user), { class: "nav-item nav-link session_links"} %>
+      <span style="padding: 7px 10px; color: white;">|</span>
+      <%= link_to "Sign Out", sign_out_path, { method: :delete, class: "nav-item nav-link session_links", style:"padding: 8px 10px 8px 0px;"} %>
     </div>
   <% end %>
 <% elsif current_page?(sign_in_path) || current_page?(sign_up_path) %>
 <% else %>
-  <div class="si_su">
-    <%= link_to "Sign In", sign_in_path %> |
-    <%= link_to "Sign Up", sign_up_path %>
+  <div class="si_su navbar-nav flex-row">
+    <%= link_to "Sign In", sign_in_path, { class: "nav-item nav-link session_links"} %>
+    <span style="padding: 8px 10px; color: white;">|</span>
+    <%= link_to "Sign Up", sign_up_path, { class: "nav-item nav-link session_links", style:"padding: 8px 10px 8px 0px;"} %>
   </div>
 <% end %>
 <%= javascript_pack_tag "sessions" %>
