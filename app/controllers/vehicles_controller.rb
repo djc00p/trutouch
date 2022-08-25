@@ -6,7 +6,7 @@ class VehiclesController < ApplicationController
   before_action :set_vehicle, only: %i[show destroy]
 
   def index
-    @vehicles = @user.vehicles
+    @vehicles = @user.my_vehicles
   end
 
   def new
