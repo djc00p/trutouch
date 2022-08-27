@@ -45,21 +45,23 @@ class User < ApplicationRecord
   end
 
   def my_addresses
-    customer_associations(addresses)
+    customer_associations(addresses, "addresses")
   end
 
   def my_vehicles
-    customer_associations(vehicles)
+    customer_associations(vehicles, "vehicles")
   end
 
-  def customer_associations(association)
+  def customer_associations(associations, association_type)
     if customer_id.nil?
-      association
-    elsif !customer_id.nil? && association.length.positive?
-      customer.association << association
-      customer.association
+      associations
+    elsif !customer_id.nil? && associations.length.positive?
+      # The send() method allows the string given through association_type to be converted to a method call.
+      # ex. customer.send("addresses") == customer.addresses
+      customer.send(association_type) << associations
+      customer.send(association_type)
     else
-      customer.association
+      customer.send(association_type)
     end
   end
 
