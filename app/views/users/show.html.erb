@@ -34,7 +34,7 @@
       <%= render "my_vehicles" %>
       <div class="btn-group" role="group" >
         <div class="">
-          <%if @user.vehicles.length > 0%>
+          <%if @user.my_vehicles.length > 0%>
           <%=
           button_to "My Vehicles",
           profile_my_vehicles_path(@user),
@@ -49,7 +49,7 @@
           profile_add_my_vehicle_path(@user),
           method: :get,
           class: "btn btn-success",
-          disabled: @user.vehicles.size >= 10
+          disabled: @user.my_vehicles.size >= 10
           %>
         </div>
       </div>
