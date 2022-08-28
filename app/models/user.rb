@@ -58,8 +58,7 @@ class User < ApplicationRecord
     elsif !customer_id.nil? && associations.length.positive?
       # The send() method allows the string given through association_type to be converted to a method call.
       # ex. customer.send("addresses") == customer.addresses
-      customer.send(association_type) << associations
-      customer.send(association_type)
+      customer.send(association_type) + associations
     else
       customer.send(association_type)
     end
