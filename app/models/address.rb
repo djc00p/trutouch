@@ -44,4 +44,16 @@ class Address < ApplicationRecord
   def search_results(address)
     confirm_address(address)
   end
+
+  def addresses_user
+    klass = Object.const_get addressable_type
+    addressable_user = klass.find(addressable_id)
+
+    case addressable_type
+    when "Customer"
+      addressable_user.user
+    when "User"
+      addressable_user
+    end
+  end
 end
