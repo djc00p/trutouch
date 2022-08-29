@@ -1,17 +1,5 @@
 <%= form_with(model: address, url: profile_addresses_path) do |form| %>
-<div class="">
-  <h3 style="text-align:center">Form Style</h3>
-  <div class="form-select">
-    <div class="">
-      <input type="radio" id="single-line-form" name="single-line-form" checked="checked">
-      <label for="single-line-form">Single Line Form</label>
-    </div>
-    <div class="">
-      <input type="radio" id="structured-form" name="structured-form">
-      <label for="structured-form">Structured Form</label>
-    </div>
-  </div>
-</div>
+  <%= render "form_style_select" %>
   <%= render "single_line_field", form: form %>
   <%= render "structured_fields", form: form %>
   <div class="actions">

@@ -7,6 +7,7 @@ describe "User" do
 
   before do
     user
+    sign_in_as user
     visit verification_url(user)
     user.reload
   end

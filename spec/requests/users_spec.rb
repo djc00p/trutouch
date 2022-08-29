@@ -29,6 +29,7 @@ RSpec.describe "/users", type: :request do
 
   before do |test|
     user unless test.metadata[:no_user_needed]
+    post_sign_in_as user unless test.metadata[:no_user_needed]
   end
 
   describe "GET /show" do
@@ -39,7 +40,7 @@ RSpec.describe "/users", type: :request do
   end
 
   describe "GET /new" do
-    it "renders a successful response" do
+    it "renders a successful response", :no_user_needed do
       get sign_up_url
       expect(response).to be_successful
     end

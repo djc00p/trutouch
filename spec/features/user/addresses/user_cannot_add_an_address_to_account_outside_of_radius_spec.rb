@@ -4,18 +4,15 @@ require "rails_helper"
 
 describe "User" do
   let(:user) { create(:user) }
-  let(:invalid_address) { "752 E Tecnology Way, Denver, CO 80237" }
+  let(:invalid_address) { "650 S R L Thornton Fwy, Dallas, TX 75203" }
 
   before do
     user
-    visit sign_in_path
-    fill_in "session[email]", with: user.email
-    fill_in "session[password]", with: user.password
-    click_button "Sign In"
+    sign_in_as user
     click_on "Add Address"
   end
 
-  it "is not able to add new address to user because it could not be confirmed", :vcr do
+  it "is not able to add new address to user because out side our radius or cant be found", :vcr do
     fill_in "address[address_line1]", with: invalid_address
 
     click_button "Create Address"

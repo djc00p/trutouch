@@ -13,6 +13,17 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    return unless session[:user_id]
+
+    @current_user ||= User.includes(:addresses, :vehicles,
+                                    customer: %i[addresses vehicles]).find(session[:user_id])
+  end
+
+  def current_user?
+    !!current_user
+  end
+
+  def authorized
+    redirect_to sign_in_path, flash: { warning: "Please sign in" } unless current_user?
   end
 end

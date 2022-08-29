@@ -4,14 +4,15 @@ require "rails_helper"
 
 RSpec.describe "users/show", type: :view do
   before do
-    @user = assign(:user, User.create!(
-                            first_name: "First Name",
-                            last_name: "Last Name",
-                            phone_number: "+14123736103",
-                            email: "Email",
-                            password: "Password Digest",
-                            prefered_method_of_contact: "text"
-                          ))
+    user = assign(:user, User.create!(
+                           first_name: "First Name",
+                           last_name: "Last Name",
+                           phone_number: "+14123736103",
+                           email: "Email",
+                           password: "Password Digest",
+                           prefered_method_of_contact: "text"
+                         ))
+    controller.session["user_id"] = user.id
     render
   end
 

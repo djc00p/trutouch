@@ -1,7 +1,7 @@
 <div class="addresses-container">
-  <% if @user.addresses.length > 0 %>
+  <% if @user.my_addresses.length > 0 %>
     <h2><strong>My Addresses</strong></h2>
-      <% @user.addresses.each do |address|%>
+      <% @user.my_addresses.each do |address|%>
       <ul>
         <div class="" id="<%= address.id %>">
           <li> <%= address.formatted_address %></li>

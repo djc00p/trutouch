@@ -2,23 +2,15 @@
 
 require "rails_helper"
 
-describe "User" do
-  let(:user) { create(:user) }
-
-  before do
-    user
-
-    visit sign_in_path
-
-    fill_in "session[email]", with: user.email
-    fill_in "session[password]", with: user.password
-
-    click_button "Sign In"
+module SignInHelpers
+  def post_sign_in_as(user)
+    post "/sign_in", params: { session: { email: user.email, password: user.password } }
   end
 
-  it "can sign out" do
-    click_on "Sign Out"
-
-    expect(page).to have_content("See Ya! We look forward to your next visit!")
+  def sign_in_as(user)
+    visit sign_in_path
+    fill_in "session[email]", with: user.email
+    fill_in "session[password]", with: user.password
+    click_button "Sign In"
   end
 end

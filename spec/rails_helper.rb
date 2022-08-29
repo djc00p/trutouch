@@ -12,6 +12,7 @@ require "capybara/rails"
 require "support/factory_bot"
 require "simplecov"
 require "vcr_setup"
+Dir[File.join(__dir__, "support", "*_helpers.rb")].each { |file| require_relative file }
 
 SimpleCov.start
 SmsSpec.driver = :"twilio-ruby"
@@ -39,9 +40,10 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include SignInHelpers
+  config.include AppointmentHelpers
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.

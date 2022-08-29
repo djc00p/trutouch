@@ -9,6 +9,10 @@ RSpec.describe "/addresses", type: :request do
   let(:invalid_address) { { address_line1: "7582 E Tecnology Way, Denver, CO 80237" } }
   let(:addresses) { create_list(:address, 2, validation: "Confirmed", addressable: user) }
 
+  before do
+    post_sign_in_as user
+  end
+
   describe "GET /new" do
     it "renders a successful response" do
       get new_profile_address_url(user)

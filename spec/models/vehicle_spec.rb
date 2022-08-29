@@ -37,7 +37,7 @@ RSpec.describe Vehicle, type: :model do
     end
 
     it "can create a string of production vehicle classification info" do
-      expect(vehicle.production_vehicle_classification(production_vehicle)).to match(classification_string)
+      expect(vehicle.production_vehicle_classification).to match(classification_string)
     end
 
     it "can assign vehicle classification info from production vehicle" do

@@ -44,7 +44,7 @@ RSpec.describe "Our Services", type: :feature do
     let(:tsc) { TintService.tint_services.count }
 
     it "shows the exact amount of Tint Service options available" do
-      within "#tso" do
+      within "#tint_service_object" do
         expect(page).to have_css("section", count: tsc)
       end
     end

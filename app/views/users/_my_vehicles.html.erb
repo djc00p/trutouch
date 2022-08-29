@@ -1,7 +1,7 @@
 <div class="">
-<% if @user.vehicles.length > 0 %>
+<% if @user.my_vehicles.length > 0 %>
   <h2><strong>My Vehicles</strong></h2>
-    <% @user.vehicles.limit(5).each do |vehicle|%>
+    <% @user.my_vehicles.limit(5).each do |vehicle|%>
     <ul>
       <li>Color: <%= vehicle.color %></li>
       <li>Year: <%= vehicle.year %></li>

@@ -9,10 +9,10 @@ class Vehicle < ApplicationRecord
 
   # Instance Methods
   def production_vehicle
-    ProductionVehicle.find_by(make_model_split, production_year: year)
+    @production_vehicle ||= ProductionVehicle.find_by(make_model_split, production_year: year)
   end
 
-  def production_vehicle_classification(production_vehicle)
+  def production_vehicle_classification
     return unless production_vehicle
 
     production_vehicle.attributes.fetch_values("vehicle_size", "vehicle_type", "vehicle_class").compact.join(" ")
@@ -35,7 +35,7 @@ class Vehicle < ApplicationRecord
   end
 
   def update_vehicle_make_model_and_classification
-    assigned_classification = production_vehicle_classification(production_vehicle)
+    assigned_classification = production_vehicle_classification
 
     update(**make_model_split, classification: assigned_classification)
   end

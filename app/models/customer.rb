@@ -2,7 +2,7 @@
 
 class Customer < ApplicationRecord
   # Associations
-  has_one :user, dependent: :destroy
+  has_one :user, dependent: :nullify
   has_many :vehicles, as: :owner, dependent: :destroy
   has_many :addresses, as: :addressable, dependent: :destroy
 

@@ -12,7 +12,8 @@
   </head>
   <body>
     <%= render "partials/header" %>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 140px;">
+      <%= render "partials/covid_19" %>
       <% flash.each do |type, msg| %>
         <div class="alert alert-<%= type %>">
           <%= msg %>
