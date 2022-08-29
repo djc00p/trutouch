@@ -24,22 +24,23 @@ class AddressesController < ApplicationController
   end
 
   def destroy
-    @user = @address.addresses_user
     @address.destroy
     flash[:success] = "Your address has been deleted!"
-    redirect_to profile_url(@user)
+    redirect_to profile_url(current_user)
   end
 
   def confirm
-    @address.update(validation: "confirmed")
+    @address.update(validation: "Confirmed")
     flash[:success] = "Your address has been confirmed!"
-    redirect_to profile_url(@address.addressable_id)
+    redirect_to profile_url(current_user)
   end
 
   private
 
   def set_address
-    @address = Address.find(params[:id])
+    @address = Address.where(addressable: current_user)
+                      .or(Address.where(addressable: current_user.customer))
+                      .find(params[:id])
   end
 
   def address_params
