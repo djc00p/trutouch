@@ -45,27 +45,32 @@ class User < ApplicationRecord
   end
 
   def my_addresses
-    customer_associations(addresses, "address")
+    user_customer_associations("Address", "addressable_type", "addressable_id", "address_line1")
   end
 
   def my_vehicles
-    customer_associations(vehicles, "vehicle")
+    user_customer_associations("Vehicle", "owner_type", "owner_id", "year, color, make, model")
   end
 
-  def customer_associations(associations, association_type)
+  def user_customer_associations(association_type, polymorphic_type, polymorphic_id, distinctions)
+    # The send() method allows the string given through association_type to be converted to a method call.
+    # ex. customer.send("addresses") == customer.addresses
+    associations = send(association_type.downcase.pluralize)
+    
     if customer_id.nil?
       associations
     elsif !customer_id.nil? && associations.length.positive?
-      # customer.send(association_type) + associations
+      distinct_user_customer_associations(association_type, polymorphic_type, polymorphic_id, distinctions)
     else
-      # The send() method allows the string given through association_type to be converted to a method call.
-      # ex. customer.send("addresses") == customer.addresses
-      customer.send(association_type.pluralize)
+      customer.send(association_type.downcase.pluralize)
     end
   end
 
-  def customer_user(associations, association_type)
-
+  def distinct_user_customer_associations(association_type, polymorphic_type, polymorphic_id, distinctions)
+    klass = Object.const_get association_type
+    klass.select("DISTINCT on (#{distinctions}) *")
+         .where({ polymorphic_type => %w[User Customer] })
+         .where({ polymorphic_id => [id, customer_id] })
   end
 
   private
